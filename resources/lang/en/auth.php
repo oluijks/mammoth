@@ -16,6 +16,7 @@ return [
     'failed' => 'These credentials do not match our records.',
     'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
 
-    'login-message' => 'You are now logged in.' // Todo: change this
+    'sign-in-message' => '<strong>Welcome</strong> :name. You are now signed in.',
+    'sign-out-message' => '<strong>Goodbye!</strong> You are now signed out.',
 
 ];

@@ -84,6 +84,19 @@ class AuthController extends Controller
      */
     protected function authenticated(Request $request, User $user)
     {
-        return redirect('/')->with('status', 'You are now logged in.');
+        return redirect('/')->with('status', trans('auth.sign-in-message', ['name' => $user->name]));
+    }
+
+    /**
+     * Log the user out of the application.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function getLogout()
+    {
+        Auth::logout();
+
+        return redirect(property_exists($this, 'redirectAfterLogout') ? $this->redirectAfterLogout : '/')
+            ->with('status', trans('auth.sign-out-message'));
     }
 }
