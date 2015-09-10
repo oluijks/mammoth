@@ -7,38 +7,23 @@
  * See LICENCE for license details.
  */
 
-get('/', function () {
-    return view('welcome');
-});
+get('/', ['as' => 'home', 'uses' => 'PageController@welcome']);
+get('/about', ['as' => 'about', 'uses' => 'PageController@about']);
+get('/contact', ['as' => 'contact', 'uses' => 'PageController@contact']);
 
-get('/about', function () {
-    return view('pages.about');
-});
-
-get('/contact', function () {
-    return view('pages.contact');
-});
-
-/*
-Route::controllers([
-    'auth' => 'Auth\AuthController',
-    'password' => 'Auth\PasswordController',
-]);
-*/
-
-// Authentication routes...
-Route::get('auth/login', 'Auth\AuthController@getLogin');
-Route::post('auth/login', 'Auth\AuthController@postLogin');
-Route::get('auth/logout', 'Auth\AuthController@getLogout');
+// Authentication routes
+get('auth/login', ['as' => 'sign-in', 'uses' => 'Auth\AuthController@getLogin']);
+post('auth/login', 'Auth\AuthController@postLogin');
+get('auth/logout', ['as' => 'logout', 'uses' => 'Auth\AuthController@getLogout']);
 
 // Registration routes...
-Route::get('auth/register', 'Auth\AuthController@getRegister');
-Route::post('auth/register', 'Auth\AuthController@postRegister');
+get('auth/register', ['as' => 'sign-up', 'uses' => 'Auth\AuthController@getRegister']);
+post('auth/register', 'Auth\AuthController@postRegister');
 
 // Password reset link request routes...
-Route::get('password/email', 'Auth\PasswordController@getEmail');
-Route::post('password/email', 'Auth\PasswordController@postEmail');
+get('password/email', ['as' => 'email-password', 'uses' => 'Auth\PasswordController@getEmail']);
+post('password/email', 'Auth\PasswordController@postEmail');
 
 // Password reset routes...
-Route::get('password/reset/{token}', 'Auth\PasswordController@getReset');
-Route::post('password/reset', 'Auth\PasswordController@postReset');
+get('password/reset/{token}', ['as' => 'reset-password', 'uses' => 'Auth\PasswordController@getReset']);
+post('password/reset', 'Auth\PasswordController@postReset');
