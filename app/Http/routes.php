@@ -1,16 +1,20 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the controller to call when that URI is requested.
-|
-*/
+/**
+ * Application routes
+ *
+ * Copyright © 2015 Mammoth. All rights reserved.
+ * See LICENCE for license details.
+ */
 
-Route::get('/', function () {
+get('/', function () {
     return view('welcome');
+});
+
+get('/about', function () {
+    return view('pages.about');
+});
+
+get('/contact', function () {
+    return view('pages.contact');
 });

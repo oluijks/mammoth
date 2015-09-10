@@ -1,45 +1,16 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Laravel</title>
+@extends('layout.default')
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+@section('title', ':: Welcome')
 
-        <style>
-            html, body {
-                height: 100%;
-            }
-
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato';
-            }
-
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
-
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
-
-            .title {
-                font-size: 96px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="content">
-                <div class="title">Laravel 5</div>
+@section('content')
+    <div class="row">
+        <div class="col-md-12">
+            <div class="text-center">
+                <img src="{!! URL::asset('img/woolly-mammoth.jpg') !!}" alt="Mammoth">
+                <br><br>
+                <p>Alias animi consequntur deleniti esse facere obcacati provident recusandae rerum, vitae?</p>
             </div>
         </div>
-    </body>
-</html>
+    </div>
+@endsection
+
