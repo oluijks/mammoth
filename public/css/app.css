@@ -5037,7 +5037,9 @@ button.close {
     display: none !important; } }
 
 html {
-  overflow-y: scroll; }
+  /*overflow-y: scroll;*/
+  position: relative;
+  min-height: 100%; }
 
 /*
  * Remove text-shadow in selection highlight:
@@ -5057,7 +5059,12 @@ html {
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
-  min-height: 100%; }
+  min-height: 100%;
+  margin-bottom: 60px; }
+
+.navbar-footer {
+  background-color: #B3C5D0;
+  border-color: #93adbd; }
 
 input[type="checkbox"] {
   margin: 6px 0 !important;

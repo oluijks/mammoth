@@ -12,7 +12,9 @@
 // ==========================================================================
 
 html {
-    overflow-y: scroll;
+  /*overflow-y: scroll;*/
+  position: relative;
+  min-height: 100%;
 }
 
 /*
@@ -37,6 +39,12 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
   min-height: 100%;
+  margin-bottom: 60px;
+}
+
+.navbar-footer {
+  background-color: #B3C5D0;
+  border-color: darken(#B3C5D0, 10%);
 }
 
 input[type="checkbox"] {

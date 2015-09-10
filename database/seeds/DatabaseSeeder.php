@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * Database seeders
+ *
+ * Copyright 2015 Mammoth. All rights reserved.
+ * See LICENCE for license details.
+ */
+
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
 
@@ -15,6 +22,7 @@ class DatabaseSeeder extends Seeder
         Model::unguard();
 
         $this->call(UserTableSeeder::class);
+        $this->command->info('User table seeded!');
 
         Model::reguard();
     }
