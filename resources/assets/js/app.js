@@ -38,11 +38,26 @@
 
   window.MAMMOTH = MAMMOTH;
 
-  window.setTimeout(function() {
-    $('.alert-dismissible').fadeTo(500, 0).slideUp(500, function () {
-      $(this).remove();
-    });
-  }, 5000);
+  $.notifyDefaults({
+    allow_dismiss: true,
+    newest_on_top: true,
+    placement: {
+      from: "top",
+      align: "right"
+    },
+    offset: {
+      x: 15,
+      y: 70
+    },
+    spacing: 10,
+    z_index: 1031,
+    delay: 5000,
+    timer: 1000,
+    animate: {
+      enter: 'animated fadeInRight',
+      exit: 'animated fadeOutRight'
+    }
+  });
 
   console.info('Mammoth App ' + MAMMOTH.Version + ' started...');
 }());

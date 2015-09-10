@@ -19,6 +19,7 @@ elixir(function(mix) {
   mix.scripts([
     '/../../../node_modules/jquery/dist/jquery.js',
     '/../../../node_modules/bootstrap-sass/assets/javascripts/bootstrap.js',
+    '/../../../bower_components/remarkable-bootstrap-notify/bootstrap-notify.js'
   ], 'public/js/vendor/vendors.js');
 
 });

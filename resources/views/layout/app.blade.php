@@ -20,6 +20,7 @@
 </footer>
 <script src="{!! URL::asset('js/vendor/vendors.js') !!}"></script>
 <script src="{!! URL::asset('js/app.js') !!}"></script>
+@include('layout.partials.session-status')
 @include('partials.webfonts')
 @include('partials.ga')
 </body>

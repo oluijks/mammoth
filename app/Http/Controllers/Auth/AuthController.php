@@ -76,6 +76,30 @@ class AuthController extends Controller
     }
 
     /**
+     * Handle a registration request for the application.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function postRegister(Request $request)
+    {
+        $validator = $this->validator($request->all());
+
+        if ($validator->fails()) {
+            $this->throwValidationException(
+                $request, $validator
+            );
+        }
+
+        Auth::login($this->create($request->all()));
+
+        return redirect($this->redirectPath())
+            ->with('status', trans('auth.sign-in-message', ['name' => Auth::user()->name]))
+            ->with('type', 'info')
+            ->with('image', 'mammoth_happy.png');
+    }
+
+    /**
      * Handle an authentication attempt.
      *
      * @param Request $request
@@ -84,7 +108,10 @@ class AuthController extends Controller
      */
     protected function authenticated(Request $request, User $user)
     {
-        return redirect('/')->with('status', trans('auth.sign-in-message', ['name' => $user->name]));
+        return redirect('/')
+            ->with('status', trans('auth.sign-in-message', ['name' => $user->name]))
+            ->with('type', 'info')
+            ->with('image', 'mammoth_happy.png');
     }
 
     /**
@@ -97,6 +124,8 @@ class AuthController extends Controller
         Auth::logout();
 
         return redirect(property_exists($this, 'redirectAfterLogout') ? $this->redirectAfterLogout : '/')
-            ->with('status', trans('auth.sign-out-message'));
+            ->with('status', trans('auth.sign-out-message'))
+            ->with('type', 'info')
+            ->with('image', 'mammoth_seated.png');
     }
 }
