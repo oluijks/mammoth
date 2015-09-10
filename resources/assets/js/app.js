@@ -28,15 +28,13 @@
   }
 }());
 
-(function() {
+(function ($) {
   'use strict';
 
   let MAMMOTH = MAMMOTH || {};
 
   MAMMOTH.Version = '0.0.1';
   MAMMOTH.Url  = 'http://mammoth.app';
-
-  window.MAMMOTH = MAMMOTH;
 
   $.notifyDefaults({
     allow_dismiss: true,
@@ -59,5 +57,7 @@
     }
   });
 
+  window.MAMMOTH = MAMMOTH;
+
   console.info('Mammoth App ' + MAMMOTH.Version + ' started...');
-}());
+}(jQuery));

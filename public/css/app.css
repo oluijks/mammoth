@@ -7372,7 +7372,8 @@ html {
  */
 ::-moz-selection {
   background: #DEE6E9;
-  text-shadow: none; }
+  text-shadow: none;
+  overflow-x: hidden; }
 
 ::selection {
   background: #DEE6E9;

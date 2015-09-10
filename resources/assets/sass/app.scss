@@ -29,6 +29,7 @@ html {
 ::-moz-selection {
   background: $body-bg;
   text-shadow: none;
+  overflow-x: hidden;
 }
 
 ::selection {
