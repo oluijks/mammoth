@@ -14,7 +14,7 @@ get('/contact', ['as' => 'contact', 'uses' => 'PageController@contact']);
 // Authentication routes
 get('/sign-in', ['as' => 'sign-in', 'uses' => 'Auth\AuthController@getLogin']);
 post('auth/login', 'Auth\AuthController@postLogin');
-get('auth/logout', ['as' => 'logout', 'uses' => 'Auth\AuthController@getLogout']);
+get('auth/logout', ['as' => 'sign-out', 'uses' => 'Auth\AuthController@getLogout']);
 
 // Registration routes...
 get('/sign-up', ['as' => 'sign-up', 'uses' => 'Auth\AuthController@getRegister']);

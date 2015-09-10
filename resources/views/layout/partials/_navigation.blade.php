@@ -11,18 +11,18 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Mammoth</a>
+            <a class="navbar-brand" href="{{ route('home') }}">Mammoth</a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li class="{{ Route::is('home') ? 'active' : '' }}">
-                    <a href="/">Home <span class="sr-only">(current)</span></a>
+                    <a href="{{ route('home') }}">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="{{ Route::is('about') ? 'active' : '' }}">
-                    <a href="/about">About</a>
+                    <a href="{{ route('about') }}">About</a>
                 </li>
                 <li class="{{ Route::is('contact') ? 'active' : '' }}">
-                    <a href="/contact">Contact</a>
+                    <a href="{{ route('contact') }}">Contact</a>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -39,12 +39,12 @@
                         <li><a href="#">Another action</a></li>
                         <li><a href="#">Something else here</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="/auth/logout">Sign out</a></li>
+                        <li><a href="{{ route('sign-out') }}">Sign out</a></li>
                     </ul>
                 </li>
             @else
-            <li class="{{ Route::is('sign-in') ? 'active' : '' }}"><a href="/sign-in">Sign in</a></li>
-            <li class="{{ Route::is('sign-up') ? 'active' : '' }}"><a href="/sign-up">Sign up</a></li>
+            <li class="{{ Route::is('sign-in') ? 'active' : '' }}"><a href="{{ route('sign-in') }}">Sign in</a></li>
+            <li class="{{ Route::is('sign-up') ? 'active' : '' }}"><a href="{{ route('sign-up') }}">Sign up</a></li>
             @endif
             </ul>
         </div>
