@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Events;
+namespace Mammoth\Events;
 
 abstract class Event
 {

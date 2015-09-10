@@ -5,8 +5,6 @@
  * See LICENCE for license details.
  */
 
-import '../../../node_modules/bootstrap-sass/assets/javascripts/bootstrap';
-
 // Avoid `console` errors in browsers that lack a console.
 (function() {
   var method;
@@ -28,6 +26,17 @@ import '../../../node_modules/bootstrap-sass/assets/javascripts/bootstrap';
       console[method] = noop;
     }
   }
+}());
 
-  console.info('Mammoth app started...');
+(function() {
+  "use strict";
+
+  let MAMMOTH = MAMMOTH || {};
+
+  MAMMOTH.Version = '0.0.1';
+  MAMMOTH.Url  = 'http://mammoth.app';
+
+  window.MAMMOTH = MAMMOTH;
+
+  console.info('Mammoth App ' + MAMMOTH.Version + ' started...');
 }());

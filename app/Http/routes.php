@@ -18,3 +18,8 @@ get('/about', function () {
 get('/contact', function () {
     return view('pages.contact');
 });
+
+Route::controllers([
+    'auth' => 'Auth\AuthController',
+    'password' => 'Auth\PasswordController',
+]);

@@ -16,4 +16,9 @@ elixir(function(mix) {
     'app.js'
   ], 'public/js/app.js');
 
+  mix.scripts([
+    '/../../../node_modules/jquery/dist/jquery.js',
+    '/../../../node_modules/bootstrap-sass/assets/javascripts/bootstrap.js',
+  ], 'public/js/vendor/vendors.js');
+
 });

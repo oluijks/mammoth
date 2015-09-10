@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace Mammoth\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
