@@ -1,3 +1,4 @@
+{{-- http://bootstrap-growl.remabledesigns.com/ --}}
 @if (session('status'))
     <script>
         $.notify({
