@@ -4272,6 +4272,30 @@ tbody.collapse.in {
   .panel-danger > .panel-footer + .panel-collapse > .panel-body {
     border-bottom-color: #ebccd1; }
 
+.close {
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: 0.2;
+  filter: alpha(opacity=20); }
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.5;
+    filter: alpha(opacity=50); }
+
+button.close {
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none; }
+
 .modal-open {
   overflow: hidden; }
 
@@ -5034,6 +5058,13 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
   min-height: 100%; }
+
+input[type="checkbox"] {
+  margin: 6px 0 !important;
+  margin-left: -20px !important; }
+
+.alert-dismissible .close {
+  top: 1px !important; }
 
 .browserupgrade {
   margin: 0; }

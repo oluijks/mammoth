@@ -39,6 +39,15 @@ body {
   min-height: 100%;
 }
 
+input[type="checkbox"] {
+  margin: 6px 0 !important;
+  margin-left: -20px !important;
+}
+
+.alert-dismissible .close {
+  top: 1px !important;
+}
+
 // Browser Upgrade Prompt
 // ==========================================================================
 

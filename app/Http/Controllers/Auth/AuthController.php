@@ -2,7 +2,9 @@
 
 namespace Mammoth\Http\Controllers\Auth;
 
+use Auth;
 use Mammoth\User;
+use Illuminate\Http\Request;
 use Validator;
 use Mammoth\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
@@ -24,9 +26,22 @@ class AuthController extends Controller
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
 
     /**
+     * @var string
+     */
+    protected $loginPath = '/auth/login';
+
+    /**
+     * @var string
+     */
+    protected $redirectTo = '/';
+
+    /**
+     * @var string
+     */
+    protected $redirectAfterLogout = '/';
+
+    /**
      * Create a new authentication controller instance.
-     *
-     * @return void
      */
     public function __construct()
     {
@@ -61,5 +76,17 @@ class AuthController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+    }
+
+    /**
+     * Handle an authentication attempt.
+     *
+     * @param Request $request
+     * @param User $user
+     * @return Response
+     */
+    protected function authenticated(Request $request, User $user)
+    {
+        return redirect('/')->with('status', 'You are now logged in.');
     }
 }
