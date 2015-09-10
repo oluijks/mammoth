@@ -43,8 +43,8 @@
                     </ul>
                 </li>
             @else
-            <li class="{{ Route::is('sign-in') ? 'active' : '' }}"><a href="/auth/login">Sign in</a></li>
-            <li class="{{ Route::is('sign-up') ? 'active' : '' }}"><a href="/auth/register">Sign up</a></li>
+            <li class="{{ Route::is('sign-in') ? 'active' : '' }}"><a href="/sign-in">Sign in</a></li>
+            <li class="{{ Route::is('sign-up') ? 'active' : '' }}"><a href="/sign-up">Sign up</a></li>
             @endif
             </ul>
         </div>

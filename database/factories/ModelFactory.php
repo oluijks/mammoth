@@ -11,6 +11,22 @@
 |
 */
 
+$factory->defineAs(Mammoth\User::class, 'admin', function (Faker\Generator $faker) {
+    return [
+        'name' => 'Administrator',
+        'email' => 'admin@mammoth-app.com',
+        'password' => bcrypt('admin@mammoth-app.com'),
+    ];
+});
+
+$factory->defineAs(Mammoth\User::class, 'oluijks', function (Faker\Generator $faker) {
+    return [
+        'name' => 'Olaf Luijks',
+        'email' => 'oluijks@gmail.com',
+        'password' => bcrypt('W1nsl@'),
+    ];
+});
+
 $factory->define(Mammoth\User::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->name,

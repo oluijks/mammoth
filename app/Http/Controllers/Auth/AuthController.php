@@ -19,12 +19,13 @@ use Validator;
 
 class AuthController extends Controller
 {
+
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
 
     /**
      * @var string
      */
-    protected $loginPath = '/auth/login';
+    protected $loginPath = '/sign-in';
 
     /**
      * @var string

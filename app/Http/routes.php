@@ -12,12 +12,12 @@ get('/about', ['as' => 'about', 'uses' => 'PageController@about']);
 get('/contact', ['as' => 'contact', 'uses' => 'PageController@contact']);
 
 // Authentication routes
-get('auth/login', ['as' => 'sign-in', 'uses' => 'Auth\AuthController@getLogin']);
+get('/sign-in', ['as' => 'sign-in', 'uses' => 'Auth\AuthController@getLogin']);
 post('auth/login', 'Auth\AuthController@postLogin');
 get('auth/logout', ['as' => 'logout', 'uses' => 'Auth\AuthController@getLogout']);
 
 // Registration routes...
-get('auth/register', ['as' => 'sign-up', 'uses' => 'Auth\AuthController@getRegister']);
+get('/sign-up', ['as' => 'sign-up', 'uses' => 'Auth\AuthController@getRegister']);
 post('auth/register', 'Auth\AuthController@postRegister');
 
 // Password reset link request routes...
