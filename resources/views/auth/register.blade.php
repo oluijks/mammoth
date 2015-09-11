@@ -5,15 +5,13 @@
 	<div class="row">
 		<div class="col-md-8 col-md-offset-4">
 			<div class="panel panel-default">
-				<div class="panel-heading">Sign Up for an account</div>
+				<div class="panel-heading">{{ trans('forms.sign-up-account') }}</div>
 				<div class="panel-body">
                     @include('layout.partials.session-error')
-
 					<form class="form-horizontal" role="form" method="POST" action="{{ url('/auth/register') }}">
                         {!! csrf_field() !!}
-
 						<div class="form-group">
-							<label class="col-md-4 control-label hidden-xs">Name</label>
+							<label class="col-md-4 control-label hidden-xs">{{ trans('forms.name') }}</label>
 							<div class="col-md-6">
 								<input type="text"
                                        class="form-control"
@@ -22,9 +20,8 @@
                                        value="{{ old('name') }}">
 							</div>
 						</div>
-
 						<div class="form-group">
-							<label class="col-md-4 control-label hidden-xs">E-Mail Address</label>
+							<label class="col-md-4 control-label hidden-xs">{{ trans('forms.email-address') }}</label>
 							<div class="col-md-6">
 								<input type="email"
                                        class="form-control"
@@ -33,9 +30,8 @@
                                        value="{{ old('email') }}">
 							</div>
 						</div>
-
 						<div class="form-group">
-							<label class="col-md-4 control-label hidden-xs">Password</label>
+							<label class="col-md-4 control-label hidden-xs">{{ trans('forms.password') }}</label>
 							<div class="col-md-6">
 								<input type="password"
                                        class="form-control"
@@ -43,9 +39,8 @@
                                        placeholder="Password">
 							</div>
 						</div>
-
 						<div class="form-group">
-							<label class="col-md-4 control-label hidden-xs">Confirm Password</label>
+							<label class="col-md-4 control-label hidden-xs">{{ trans('forms.confirm-password') }}</label>
 							<div class="col-md-6">
 								<input type="password"
                                        class="form-control"
@@ -53,11 +48,10 @@
                                        placeholder="Confirm Password">
 							</div>
 						</div>
-
 						<div class="form-group">
 							<div class="col-md-6 col-md-offset-4">
 								<button type="submit" class="btn btn-primary">
-									Sign Up
+                                    {{ trans('forms.create-account') }}
 								</button>
 							</div>
 						</div>
