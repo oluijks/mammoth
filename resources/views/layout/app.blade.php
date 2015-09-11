@@ -6,8 +6,7 @@
 <body>
 @include('partials.browserupgrade')
 @include('layout.partials._navigation')
-<div class="container">
-@include('layout.partials.session-status')
+<div class="container" id="app">
 @yield('content')
 </div>
 @include('layout.partials.footer')
