@@ -7386,7 +7386,8 @@ body {
 
 .navbar-footer {
   background-color: #B3C5D0;
-  border-color: #93adbd; }
+  border-color: #93adbd;
+  opacity: 0.9; }
 
 input[type="checkbox"] {
   margin: 6px 0 !important;

@@ -76,7 +76,7 @@ return [
     'unique'               => 'The :attribute has already been taken.',
     'url'                  => 'The :attribute format is invalid.',
 
-    'input_problems'        => 'There were some problems with your input.',
+    'input_problems'        => 'There were some problems',
 
     /*
     |--------------------------------------------------------------------------
