@@ -7359,7 +7359,7 @@ Copyright (c) 2015 Daniel Eden
   animation-name: slideOutUp; }
 
 html {
-  /*overflow-y: scroll;*/
+  overflow-y: scroll;
   position: relative;
   min-height: 100%; }
 
@@ -7382,8 +7382,7 @@ html {
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
-  min-height: 100%;
-  margin-bottom: 60px; }
+  margin: 0 0 130px; }
 
 .navbar-footer {
   background-color: #B3C5D0;

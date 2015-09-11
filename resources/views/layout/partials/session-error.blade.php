@@ -1,8 +1,7 @@
 @if (count($errors) > 0)
     <div class="alert alert-danger">
-        <i class="glyphicon glyphicon-warning-sign"></i>
-        <strong>Whoops!</strong> There were some problems with your input.<br><br>
-        <ul>
+        <p><strong>{{ trans('validation.input_problems') }}</strong></p><br>
+        <ul class="list-unstyled">
             @foreach ($errors->all() as $error)
                 <li>{{ $error }}</li>
             @endforeach

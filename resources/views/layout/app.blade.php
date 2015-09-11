@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="nojs">
+<html lang="{{ config('app.locale')  }}" class="nojs">
 <head>
 @include('partials.meta')
 </head>
@@ -13,6 +13,8 @@
 @include('partials.scripts')
 @include('layout.partials.session-status')
 @include('partials.webfonts')
+@if (App::environment('production'))
 @include('partials.ga')
+@endif
 </body>
 </html>

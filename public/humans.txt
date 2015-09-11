@@ -3,7 +3,7 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Olaf Luijks -- Developer
 
 # THANKS
 
@@ -11,5 +11,6 @@
 
 # TECHNOLOGY COLOPHON
 
-    CSS3, HTML5
-    Apache Server Configs, jQuery, Modernizr, Normalize.css
+    Laravel 5
+    CSS3, HTML5, PHP
+    Apache Server Configs, Vue, jQuery, Modernizr, Twitter Bootstrap, Normalize.css

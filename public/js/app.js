@@ -9975,15 +9975,16 @@ module.exports = Watcher
 
   var Vue = require('vue');
 
-  var copyright = new Vue({
+  /*
+  let copyright = new Vue({
     el: '#copyright',
     data: { copyright: 'Copyright &copy; 2015 Mammoth', done: true }
   });
-
-  var madeBy = new Vue({
+   let madeBy = new Vue({
     el: '#made-by',
     data: { madeBy: 'Made with &hearts; by Olaf', done: true }
   });
+  */
 
   var MAMMOTH = MAMMOTH || {};
 
