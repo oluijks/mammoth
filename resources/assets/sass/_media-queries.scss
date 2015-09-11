@@ -6,7 +6,12 @@
  */
 
 // Small devices (tablets, 768px and up)
-@media (min-width: $screen-sm-min) {}
+@media (min-width: $screen-sm-min) {
+  ::-webkit-input-placeholder { color: transparent !important; }
+  ::-moz-placeholder          { color: transparent !important; }
+  :-ms-input-placeholder      { color: transparent !important; }
+  input:-moz-placeholder      { color: transparent !important; }
+}
 
 // Medium devices (desktops, 992px and up)
 @media (min-width: $screen-md-min) {}

@@ -43,19 +43,9 @@ body {
   margin: 0 0 130px;
 }
 
-.navbar-footer {
-  background-color: #B3C5D0;
-  border-color: darken(#B3C5D0, 10%);
-  opacity: 0.9;
-}
-
 input[type="checkbox"] {
   margin: 6px 0 !important;
   margin-left: -20px !important;
-}
-
-.alert-dismissible .close {
-  top: 1px !important;
 }
 
 [data-notify="progressbar"] {
@@ -69,6 +59,16 @@ input[type="checkbox"] {
 
 [data-notify="icon"] {
   height: 50px;
+}
+
+[data-notify="message"] {
+  padding-left: 10px;
+}
+
+.navbar-footer {
+  background-color: #B3C5D0;
+  border-color: darken(#B3C5D0, 10%);
+  opacity: 0.9;
 }
 
 // Browser Upgrade Prompt

@@ -7384,17 +7384,9 @@ body {
   font-weight: 400;
   margin: 0 0 130px; }
 
-.navbar-footer {
-  background-color: #B3C5D0;
-  border-color: #93adbd;
-  opacity: 0.9; }
-
 input[type="checkbox"] {
   margin: 6px 0 !important;
   margin-left: -20px !important; }
-
-.alert-dismissible .close {
-  top: 1px !important; }
 
 [data-notify="progressbar"] {
   margin-bottom: 0px;
@@ -7407,6 +7399,14 @@ input[type="checkbox"] {
 [data-notify="icon"] {
   height: 50px; }
 
+[data-notify="message"] {
+  padding-left: 10px; }
+
+.navbar-footer {
+  background-color: #B3C5D0;
+  border-color: #93adbd;
+  opacity: 0.9; }
+
 .browserupgrade {
   margin: 0; }
 
@@ -7416,5 +7416,14 @@ input[type="checkbox"] {
  * Copyright 2015 Mammoth. All rights reserved.
  * See LICENCE for license details.
  */
+@media (min-width: 768px) {
+  ::-webkit-input-placeholder {
+    color: transparent !important; }
+  ::-moz-placeholder {
+    color: transparent !important; }
+  :-ms-input-placeholder {
+    color: transparent !important; }
+  input:-moz-placeholder {
+    color: transparent !important; } }
 
 /*# sourceMappingURL=app.css.map */
