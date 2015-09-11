@@ -21,4 +21,6 @@ elixir(function(mix) {
     '/../../../bower_components/remarkable-bootstrap-notify/bootstrap-notify.js'
   ], 'public/js/vendor/vendors.js');
 
+  mix.version(['css/app.css', 'js/app.js', 'js/vendor/vendors.js']);
+
 });

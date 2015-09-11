@@ -3,7 +3,7 @@
 <meta name="_token" content="{!! csrf_token() !!}"/>
 <title>Mammoth @yield('title', ':: Welcome')</title>
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link href="{!! URL::asset('css/app.css') !!}" rel="stylesheet">
+<link href="{!! URL::asset(elixir('css/app.css')) !!}" rel="stylesheet">
 <style>html.js .nojs { display: none; }</style>
 <script>
     document.documentElement.className = document.documentElement.className.replace('nojs','js');
