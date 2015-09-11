@@ -13,6 +13,7 @@
   require('./notify-defaults');
 
   let Vue = require('vue');
+  /* Vue.use(require('vue-resource')); */
 
   /*
   let copyright = new Vue({
@@ -26,11 +27,20 @@
   });
   */
 
- let MAMMOTH = MAMMOTH || {};
+  let MAMMOTH = MAMMOTH || {};
 
   MAMMOTH.Version = '0.0.1';
   MAMMOTH.Url  = 'http://mammoth.app';
   window.MAMMOTH = MAMMOTH;
+  /* window.Vue = Vue; */
+
+  /*
+  $.ajaxSetup({
+    headers: {
+      'X-CSRF-Token': $('meta[name=_token]').attr('content'),
+    }
+  });
+  */
 
   console.info('Mammoth App ' + MAMMOTH.Version + ' started...');
 

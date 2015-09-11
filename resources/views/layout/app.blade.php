@@ -11,6 +11,7 @@
 </div>
 @include('layout.partials.footer')
 @include('partials.scripts')
+@yield('scripts')
 @include('layout.partials.session-status')
 @include('partials.webfonts')
 @if (App::environment('production'))

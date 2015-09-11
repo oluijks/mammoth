@@ -8,7 +8,11 @@
 				<div class="panel-heading">{{ trans('forms.sign-in-account') }}</div>
 				<div class="panel-body">
 					@include('layout.partials.session-error')
-					<form class="form-horizontal" role="form" method="POST" action="{{ url('/auth/login') }}">
+					<form class="form-horizontal"
+                          role="form"
+                          method="POST"
+                          action="{{ url('/auth/login') }}">
+                        {{-- <form class="form-horizontal" v-on="submit: login"> --}}
                         {!! csrf_field() !!}
 						<div class="form-group">
 							<label class="col-md-4 control-label hidden-xs">{{ trans('forms.email-address') }}</label>
@@ -17,7 +21,8 @@
                                        class="form-control"
                                        name="email"
                                        placeholder="E-Mail"
-                                       value="{{ old('email') }}">
+                                       value="{{ old('email') }}"
+                                       {{-- v-model="email" --}}>
 							</div>
 						</div>
 						<div class="form-group">
@@ -26,7 +31,8 @@
 								<input type="password"
                                        class="form-control"
                                        name="password"
-                                       placeholder="Password">
+                                       placeholder="Password"
+                                       {{-- v-model="password" --}}>
 							</div>
 						</div>
 						<div class="form-group">
@@ -53,3 +59,47 @@
 	</div>
 </div>
 @endsection
+
+{{--
+@section('scripts')
+    <script>
+        (function ($) {
+
+            'use strict';
+
+            var Vue = window.Vue;
+
+            Vue.http.headers.common['X-CSRF-TOKEN'] = document.querySelector('input[name="_token"]').getAttribute('value');
+            var url = "{{ url('/auth/login') }}";
+
+            var login = new Vue({
+                el: '.panel-body',
+                data: {
+                    email: '',
+                    password: '',
+                    response: []
+                },
+                methods: {
+                    login: function (event) {
+                        event.preventDefault();
+
+                        var payload = {
+                            email: this.email,
+                            password: this.password,
+                        };
+
+                        this.$http.post(url, payload, function (data, status, request) {
+
+                            this.response = data;
+                            console.info(this.response);
+
+                        }).error(function (data, status, request) {
+                            console.log("Error:" + JSON.stringify(data));
+                        });
+                    }
+                }
+            });
+        }(jQuery));
+    </script>
+@endsection
+--}}
