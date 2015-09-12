@@ -31,3 +31,13 @@ $factory->define(Mammoth\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(60),
     ];
 });
+
+$factory->define(Mammoth\Blog::class, function (Faker\Generator $faker) {
+    $slug = $faker->realText(50);
+    return [
+        'slug' => str_slug($slug),
+        'title' => $slug,
+        'excerpt' => $faker->realText(500),
+        'body' => $faker->realText(1000),
+    ];
+});

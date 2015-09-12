@@ -3,7 +3,8 @@
 
         <div class="row">
             <div class="col-md-3">
-                <img style="float: right;" src="{!! URL::asset('img/mammoth-icons/Mammooth_128x128.png') !!}"
+                <img class="img-responsive hidden-xs"
+                    style="float: right;" src="{!! URL::asset('img/mammoth-icons/Mammooth_128x128.png') !!}"
                      alt=""
                      width="128"
                      height="128">

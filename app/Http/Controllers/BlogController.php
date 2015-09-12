@@ -11,6 +11,7 @@ namespace Mammoth\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Mammoth\Blog;
 use Mammoth\Http\Requests;
 use Mammoth\Http\Controllers\Controller;
 
@@ -23,7 +24,8 @@ class BlogController extends Controller
      */
     public function index()
     {
-        return view('blog.index');
+        $blogs = Blog::paginate(5);
+        return view('blog.index', compact('blogs'));
     }
 
     /**
@@ -33,7 +35,7 @@ class BlogController extends Controller
      */
     public function create()
     {
-        //
+        return view('blog.create');
     }
 
     /**
@@ -53,9 +55,11 @@ class BlogController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function show($id)
+    public function show($slug)
     {
-        //
+        $blog = Blog::where('slug', $slug)->first();
+
+        return view('blog.show', compact('blog'));
     }
 
     /**
@@ -66,7 +70,7 @@ class BlogController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('blog.edit');
     }
 
     /**

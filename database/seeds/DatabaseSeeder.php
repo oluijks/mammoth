@@ -24,6 +24,9 @@ class DatabaseSeeder extends Seeder
         $this->call(UserTableSeeder::class);
         $this->command->info('User table seeded!');
 
+        $this->call(BlogTableSeeder::class);
+        $this->command->info('Blog table seeded!');
+
         Model::reguard();
     }
 }

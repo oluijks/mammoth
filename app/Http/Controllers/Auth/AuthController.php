@@ -67,7 +67,7 @@ class AuthController extends Controller
         return redirect(property_exists($this, 'redirectAfterLogout') ? $this->redirectAfterLogout : '/')
             ->with('status', trans('auth.sign-out-message'))
             ->with('type', 'success')
-            ->with('image', 'Mammooth_48x48.png');
+            ->with('image', 'Mammoth_Seated_48x48.png');
     }
 
     /**

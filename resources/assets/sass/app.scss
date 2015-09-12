@@ -38,6 +38,10 @@ body {
   margin: 0 0 70px;
 }
 
+.navbar-brand {
+  padding: 5.5px 15px;
+}
+
 input[type="checkbox"] {
   margin: 5px 0 !important;
   margin-left: -20px !important;
@@ -84,6 +88,10 @@ input[type="checkbox"] {
 
 [data-notify="dismiss"] {
   top: -10px;
+}
+
+.list-group-item.blog-archive {
+  background-color: #485563;
 }
 
 // Footer

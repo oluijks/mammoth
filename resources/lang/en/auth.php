@@ -13,6 +13,6 @@ return [
     'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
 
     'sign-in-message' => 'Welcome :name, good to have you around',
-    'sign-out-message' => 'Goodbye, Goodbye. We hope to see you soon',
+    'sign-out-message' => 'Goodbye. I hope to see you again soon',
 
 ];

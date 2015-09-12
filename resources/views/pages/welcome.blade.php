@@ -32,9 +32,8 @@
                 <h2>M-App</h2>
 
                 <p>Big mammoth is BIG!</p>
-                <p>Build on top of Laravel so </p>
 
-                <p><a class="btn btn-default btn-block" href="#" role="button">View details »</a></p>
+                <p><a class="btn btn-default btn-block" href="#" role="button">View details &raquo;</a></p>
             </div>
 
             <div class="col-md-6 col-lg-3">
@@ -47,7 +46,7 @@
 
                 <p>Big mammoth WRITES!</p>
 
-                <p><a class="btn btn-default btn-block" href="#" role="button">View details »</a></p>
+                <p><a class="btn btn-default btn-block" href="{{ route('blog.index') }}" role="button">View details &raquo;</a></p>
             </div>
 
             <div class="col-md-6 col-lg-3">
@@ -60,7 +59,7 @@
 
                 <p>Big mammoth is BIG!</p>
 
-                <p><a class="btn btn-default btn-block" href="#" role="button">View details »</a></p>
+                <p><a class="btn btn-default btn-block" href="" role="button">View details &raquo;</a></p>
             </div>
 
             <div class="col-md-6 col-lg-3">
@@ -73,7 +72,7 @@
 
                 <p>Big mammoth is SOCIAL!</p>
 
-                <p><a class="btn btn-default btn-block" href="#" role="button">View details »</a></p>
+                <p><a class="btn btn-default btn-block" href="#" role="button">View details &raquo;</a></p>
             </div>
 
         </div>

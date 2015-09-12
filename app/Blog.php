@@ -25,6 +25,6 @@ class Blog extends Model
      *
      * @var array
      */
-    protected $fillable = ['title', 'body'];
+    protected $fillable = ['slug', 'title', 'excerpt', 'body'];
 
 }

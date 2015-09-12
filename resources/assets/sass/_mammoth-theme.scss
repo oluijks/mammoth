@@ -1283,7 +1283,7 @@ p {
 .lead {
   margin-bottom: 21px;
   font-size: 17px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.4;
 }
 @media (min-width: 768px) {
@@ -4941,13 +4941,13 @@ a.label:focus {
   min-width: 10px;
   padding: 3px 7px;
   font-size: 13px;
-  font-weight: 300;
+  font-weight: 400;
   color: #ebebeb;
   line-height: 1;
   vertical-align: middle;
   white-space: nowrap;
   text-align: center;
-  background-color: #4e5d6c;
+  /* background-color: #4e5d6c; */
   border-radius: 10px;
 }
 .badge:empty {
@@ -5320,8 +5320,9 @@ button.list-group-item {
 .list-group-item.active:focus {
   z-index: 2;
   color: #ffffff;
-  background-color: #df691a;
-  border-color: #df691a;
+  /* background-color: #df691a; */
+  background-color: transparent;
+  /* border-color: #df691a; */
 }
 .list-group-item.active .list-group-item-heading,
 .list-group-item.active:hover .list-group-item-heading,
