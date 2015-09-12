@@ -46,33 +46,38 @@ class AuthController extends Controller
     }
 
     /**
-     * Get a validator for an incoming registration request.
+     * Show the application login form.
      *
-     * @param  array  $data
-     * @return \Illuminate\Contracts\Validation\Validator
+     * @return \Illuminate\Http\Response
      */
-    protected function validator(array $data)
+    public function getLogin()
     {
-        return Validator::make($data, [
-            'name' => 'required|max:255',
-            'email' => 'required|email|max:255|unique:users',
-            'password' => 'required|confirmed|min:6',
-        ]);
+        return view('auth.sign-in');
     }
 
     /**
-     * Create a new user instance after a valid registration.
+     * Log the user out of the application.
      *
-     * @param  array  $data
-     * @return User
+     * @return \Illuminate\Http\Response
      */
-    protected function create(array $data)
+    public function getLogout()
     {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => bcrypt($data['password']),
-        ]);
+        Auth::logout();
+
+        return redirect(property_exists($this, 'redirectAfterLogout') ? $this->redirectAfterLogout : '/')
+            ->with('status', trans('auth.sign-out-message'))
+            ->with('type', 'info')
+            ->with('image', 'mammoth_seated.png');
+    }
+
+    /**
+     * Show the application registration form.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function getRegister()
+    {
+        return view('auth.sign-up');
     }
 
     /**
@@ -172,17 +177,32 @@ class AuthController extends Controller
     }
 
     /**
-     * Log the user out of the application.
+     * Create a new user instance after a valid registration.
      *
-     * @return \Illuminate\Http\Response
+     * @param  array  $data
+     * @return User
      */
-    public function getLogout()
+    protected function create(array $data)
     {
-        Auth::logout();
+        return User::create([
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'password' => bcrypt($data['password']),
+        ]);
+    }
 
-        return redirect(property_exists($this, 'redirectAfterLogout') ? $this->redirectAfterLogout : '/')
-            ->with('status', trans('auth.sign-out-message'))
-            ->with('type', 'info')
-            ->with('image', 'mammoth_seated.png');
+    /**
+     * Get a validator for an incoming registration request.
+     *
+     * @param  array  $data
+     * @return \Illuminate\Contracts\Validation\Validator
+     */
+    protected function validator(array $data)
+    {
+        return Validator::make($data, [
+            'name' => 'required|max:255',
+            'email' => 'required|email|max:255|unique:users',
+            'password' => 'required|confirmed|min:6',
+        ]);
     }
 }

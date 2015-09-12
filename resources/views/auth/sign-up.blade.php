@@ -1,5 +1,7 @@
 @extends('layout.app')
 
+@section('title', ':: ' . trans('forms.sign-up-account'))
+
 @section('content')
 <div class="container-fluid">
 	<div class="row">
@@ -10,7 +12,8 @@
                     @include('layout.partials.session-error')
 					<form class="form-horizontal" role="form" method="POST" action="{{ url('/auth/register') }}">
                         {!! csrf_field() !!}
-						<div class="form-group">
+
+						<div class="form-group @if (count($errors) > 0) has-error @endif ">
 							<label class="col-md-4 control-label hidden-xs">{{ trans('forms.name') }}</label>
 							<div class="col-md-6">
 								<input type="text"
@@ -20,7 +23,8 @@
                                        value="{{ old('name') }}">
 							</div>
 						</div>
-						<div class="form-group">
+
+                        <div class="form-group @if (count($errors) > 0) has-error @endif ">
 							<label class="col-md-4 control-label hidden-xs">{{ trans('forms.email-address') }}</label>
 							<div class="col-md-6">
 								<input type="email"
@@ -30,7 +34,7 @@
                                        value="{{ old('email') }}">
 							</div>
 						</div>
-						<div class="form-group">
+                        <div class="form-group @if (count($errors) > 0) has-error @endif ">
 							<label class="col-md-4 control-label hidden-xs">{{ trans('forms.password') }}</label>
 							<div class="col-md-6">
 								<input type="password"
@@ -39,7 +43,7 @@
                                        placeholder="Password">
 							</div>
 						</div>
-						<div class="form-group">
+                        <div class="form-group @if (count($errors) > 0) has-error @endif ">
 							<label class="col-md-4 control-label hidden-xs">{{ trans('forms.confirm-password') }}</label>
 							<div class="col-md-6">
 								<input type="password"
@@ -50,11 +54,12 @@
 						</div>
 						<div class="form-group">
 							<div class="col-md-6 col-md-offset-4">
-								<button type="submit" class="btn btn-primary">
+								<button type="submit" class="btn btn-success btn-block">
                                     {{ trans('forms.create-account') }}
 								</button>
 							</div>
 						</div>
+                        <p class="help-block text-center">{{ trans('forms.agree_terms') }}</p>
 					</form>
 				</div>
 			</div>

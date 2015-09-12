@@ -10,7 +10,7 @@
                      class="center-block img-responsive"
                      alt="Mammoth">
                 <br>
-                <p v-text="message" id="welcome-message"></p>
+                <p id="welcome-message">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consequuntur, dolorum enim eveniet explicabo in nemo pariatur praesentium quibusdam sunt. Consequuntur, saepe, suscipit! Id illum iste iusto molestiae odio voluptas?</p>
             </div>
         </div>
     </div>

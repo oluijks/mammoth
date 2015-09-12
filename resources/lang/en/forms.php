@@ -19,5 +19,6 @@ return [
     'name'              => 'Name',
     'confirm-password'  => 'Confirm Password',
     'create-account'    => 'Create account',
+    'agree_terms'       => 'By clicking Create account, you agree to our Terms, Data Policy and Cookie Use.',
 
 ];
