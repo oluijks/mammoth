@@ -8,7 +8,7 @@
             <div class="col-md-8 col-md-push-2">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
-                        <h3 class="panel-title">About</h3>
+                        <h3 class="panel-title">Contact</h3>
                     </div>
                     <div class="panel-body">
                         <p>

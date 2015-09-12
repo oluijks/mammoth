@@ -1,10 +1,22 @@
 @if (count($errors) > 0)
     <div class="alert alert-danger">
-        <p><strong>{{ trans('validation.form_problems') }}</strong></p><br>
-        <ul class="list-unstyled">
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
+
+        <div class="row">
+            <div class="col-md-3">
+                <img style="float: right;" src="{!! URL::asset('img/mammoth-icons/Mammooth_128x128.png') !!}"
+                     alt=""
+                     width="128"
+                     height="128">
+                </p>
+            </div>
+            <div class="col-md-9">
+                <h4>{{ trans('validation.form_problems') }}</h4><br>
+                <ul class="list-unstyled">
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        </div>
     </div>
 @endif

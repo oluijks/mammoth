@@ -2,7 +2,7 @@
 @if (session('status'))
     <script>
         $.notify({
-            icon: '{!! URL::asset('img/' . session('image')) !!}',
+            icon: '{!! URL::asset('img/mammoth-icons/' . session('image')) !!}',
             message: '{!! session('status') !!}'
         },{
             type: '{{ session('type') }}',

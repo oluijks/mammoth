@@ -5,8 +5,11 @@
  * See LICENCE for license details.
  */
 
-@import "mammoth-theme";
+// @import "mammoth-theme";
+
 @import "bootstrap";
+@import "mammoth-theme-variables";
+@import "mammoth-theme";
 @import "animate";
 
 // Global styles
@@ -31,13 +34,16 @@ html {
 
 body {
   font-family: $font-family-sans-serif;
-  font-weight: 400;
   margin: 0 0 130px;
 }
 
 input[type="checkbox"] {
-  margin: 6px 0 !important;
+  margin: 5px 0 !important;
   margin-left: -20px !important;
+}
+
+.thumbnail {
+  border: 1px solid #40403d;
 }
 
 // Browser Upgrade Prompt
@@ -71,9 +77,10 @@ input[type="checkbox"] {
 // ==========================================================================
 
 .navbar-footer {
-  background-color: #B3C5D0;
+  background-color: $gray-lighter; // #B3C5D0
   border-color: darken(#B3C5D0, 10%);
   opacity: 0.9;
+  color: $gray-light;
 }
 
 // Media queries
