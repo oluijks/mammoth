@@ -6,7 +6,7 @@
  */
 
 $.notifyDefaults({
-  allow_dismiss: true,
+  allow_dismiss: false,
   newest_on_top: true,
   placement: {
     from: 'top',

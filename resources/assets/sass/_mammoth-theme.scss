@@ -3176,7 +3176,7 @@ fieldset[disabled] .btn-primary.active {
 }
 .btn-success {
   color: #ffffff;
-  background-color: #5cb85c;
+  background-color: #449d44; // 5cb85c
   border-color: transparent;
 }
 .btn-success:focus,
@@ -3187,7 +3187,7 @@ fieldset[disabled] .btn-primary.active {
 }
 .btn-success:hover {
   color: #ffffff;
-  background-color: #449d44;
+  background-color: #5cb85c; // 449d44
   border-color: rgba(0, 0, 0, 0);
 }
 .btn-success:active,
@@ -5477,10 +5477,8 @@ button.list-group-item-danger.active:focus {
 .panel-heading {
   padding: 10px 15px;
   border-bottom: 1px solid transparent;
-  /*
-  border-top-right-radius: -1;
-  border-top-left-radius: -1;
-  */
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
 }
 .panel-heading > .dropdown .dropdown-toggle {
   color: inherit;
@@ -6871,6 +6869,10 @@ label,
   font-weight: 300;
 }
 */
+.help-block {
+  font-size: 14px;
+  padding-top: 10px;
+}
 .input-addon,
 .input-group-addon {
   color: #ebebeb;

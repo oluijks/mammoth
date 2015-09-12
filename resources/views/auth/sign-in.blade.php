@@ -49,7 +49,7 @@
 						</div>
 						<div class="form-group">
 							<div class="col-md-6 col-md-offset-4">
-								<button type="submit" class="btn btn-primary">{{ trans('forms.sign-in') }}</button>
+								<button type="submit" class="btn btn-success">{{ trans('forms.sign-in') }}</button>
 								<a class="btn btn-link"
                                    href="{{ route('sign-up') }}">{{ trans('forms.sign-up-account') }}</a>
 							</div>

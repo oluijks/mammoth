@@ -10,6 +10,7 @@
 get('/', ['as' => 'home', 'uses' => 'PageController@welcome']);
 get('/about', ['as' => 'about', 'uses' => 'PageController@about']);
 get('/contact', ['as' => 'contact', 'uses' => 'PageController@contact']);
+Route::resource('/blog', 'BlogController@index');
 
 // Authentication routes
 get('/sign-in', ['as' => 'sign-in', 'uses' => 'Auth\AuthController@getLogin']);

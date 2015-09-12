@@ -1,4 +1,4 @@
-<nav class="navbar navbar-inverse navbar-default">
+<nav class="navbar navbar-inverse navbar-default navbar-fixed-top">
     <div class="container">
         <div class="navbar-header">
             <button type="button"
@@ -23,6 +23,9 @@
                 </li>
                 <li class="{{ Route::is('contact') ? 'active' : '' }}">
                     <a href="{{ route('contact') }}">Contact</a>
+                </li>
+                <li class="{{ Route::is('blog') ? 'active' : '' }}">
+                    <a href="{{ route('blog.index') }}">Blog</a>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">

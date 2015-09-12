@@ -4,7 +4,7 @@
 
 @section('content')
 
-    <div>
+    <div class="row-callout">
         <div class="row">
             <div class="col-md-12">
                 <div class="text-center">
@@ -25,17 +25,18 @@
         <div class="row text-center">
             <div class="col-md-6 col-lg-3">
                 <img src="{!! URL::asset('img/mammoth-icons/Mammoth_Happy_256x256.png') !!}"
-                     alt=""
+                     alt="Happy Mammoth"
                      width="256"
                      height="256">
 
                 <h2>M-App</h2>
 
                 <p>Big mammoth is BIG!</p>
+                <p>Build on top of Laravel so </p>
 
                 <p><a class="btn btn-default btn-block" href="#" role="button">View details »</a></p>
             </div>
-            <!-- /.col-lg-4 -->
+
             <div class="col-md-6 col-lg-3">
                 <img src="{!! URL::asset('img/mammoth-icons/Mammoth_Seated_256x256.png') !!}"
                      alt=""
@@ -44,11 +45,11 @@
 
                 <h2>M-Blog</h2>
 
-                <p>Big mammoth is WRITES!</p>
+                <p>Big mammoth WRITES!</p>
 
                 <p><a class="btn btn-default btn-block" href="#" role="button">View details »</a></p>
             </div>
-            <!-- /.col-lg-4 -->
+
             <div class="col-md-6 col-lg-3">
                 <img src="{!! URL::asset('img/mammoth-icons/Mammooth_256x256.png') !!}"
                      alt=""
@@ -61,7 +62,7 @@
 
                 <p><a class="btn btn-default btn-block" href="#" role="button">View details »</a></p>
             </div>
-            <!-- /.col-lg-4 -->
+
             <div class="col-md-6 col-lg-3">
                 <img src="{!! URL::asset('img/mammoth-icons/Mammoth_Back_256x256.png') !!}"
                      alt=""
@@ -70,14 +71,13 @@
 
                 <h2>M-Social</h2>
 
-                <p>Big mammoth is BIG!</p>
+                <p>Big mammoth is SOCIAL!</p>
 
                 <p><a class="btn btn-default btn-block" href="#" role="button">View details »</a></p>
             </div>
-            <!-- /.col-lg-4 -->
-        </div>
-        <!-- /.row -->
-    </div>
 
+        </div>
+
+    </div>
 @endsection
 

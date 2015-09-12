@@ -33,8 +33,9 @@ html {
 }
 
 body {
+  padding-top: 70px;
   font-family: $font-family-sans-serif;
-  margin: 0 0 130px;
+  margin: 0 0 70px;
 }
 
 input[type="checkbox"] {
@@ -44,6 +45,14 @@ input[type="checkbox"] {
 
 .thumbnail {
   border: 1px solid #40403d;
+}
+
+.hearts {
+  color: $brand-primary;
+}
+
+.row-callout {
+  padding-bottom: 20px;
 }
 
 // Browser Upgrade Prompt
@@ -71,6 +80,10 @@ input[type="checkbox"] {
 
 [data-notify="message"] {
   padding-left: 10px;
+}
+
+[data-notify="dismiss"] {
+  top: -10px;
 }
 
 // Footer
