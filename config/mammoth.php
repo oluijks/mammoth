@@ -9,5 +9,14 @@
 
 return [
 
-    'version' => '0.0.1'
+    'version' => '0.0.1',
+
+    'modules' => [
+        'Admin',
+        'Auth',
+        'Blog',
+        'Forum',
+        'Pages',
+        'Social'
+    ],
 ];

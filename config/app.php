@@ -145,6 +145,8 @@ return [
         Mammoth\Providers\EventServiceProvider::class,
         Mammoth\Providers\RouteServiceProvider::class,
 
+        Mammoth\Providers\ModuleServiceProvider::class,
+
     ],
 
     /*
