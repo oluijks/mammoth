@@ -18,6 +18,14 @@ use Mammoth\Http\Controllers\Controller;
 class AdminController extends Controller
 {
     /**
+     * Create a new authentication controller instance.
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    /**
      * Shows the admin index page
      *
      * @return \Illuminate\View\View
