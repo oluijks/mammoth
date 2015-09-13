@@ -1,10 +1,10 @@
 @extends('layout.app')
 
-@section('title', ':: Be right back')
+@section('title', ':: 404 Page not found')
 
 @section('content')
 
-    @include('partials.default-page-header', ['pageHeader' => '503', 'quote' => false])
+    @include('partials.default-page-header', ['pageHeader' => '404', 'quote' => false])
 
     <div class="container">
         <div class="row">
@@ -14,7 +14,10 @@
                         <h3 class="panel-title">Page not found</h3>
                     </div>
                     <div class="panel-body">
-                        <p>Be right back.</p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae deleniti dolorum exercitationem,
+                            fugiat, impedit incidunt inventore iusto nam non odio praesentium quibusdam.
+                        </p>
                     </div>
                 </div>
             </div>
