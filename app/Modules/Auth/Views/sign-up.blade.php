@@ -1,6 +1,6 @@
 @extends('layout.app')
 
-@section('title', ':: ' . trans('forms.sign-up-account'))
+@section('title', ':: ' . trans('Auth::forms.sign-up-account'))
 
 @section('content')
 
@@ -10,14 +10,14 @@
 	<div class="row">
 		<div class="col-md-8 col-md-offset-4">
 			<div class="panel panel-default">
-				<div class="panel-heading">{{ trans('forms.sign-up-account') }}</div>
+				<div class="panel-heading">{{ trans('Auth::forms.sign-up-account') }}</div>
 				<div class="panel-body">
                     @include('layout.partials.session-error')
 					<form class="form-horizontal" role="form" method="POST" action="{{ url('/auth/register') }}">
                         {!! csrf_field() !!}
 
 						<div class="form-group @if (count($errors) > 0) has-error @endif ">
-							<label class="col-md-4 control-label hidden-xs">{{ trans('forms.name') }}</label>
+							<label class="col-md-4 control-label hidden-xs">{{ trans('Auth::forms.name') }}</label>
 							<div class="col-md-6">
 								<input type="text"
                                        class="form-control"
@@ -28,7 +28,7 @@
 						</div>
 
                         <div class="form-group @if (count($errors) > 0) has-error @endif ">
-							<label class="col-md-4 control-label hidden-xs">{{ trans('forms.email-address') }}</label>
+							<label class="col-md-4 control-label hidden-xs">{{ trans('Auth::forms.email-address') }}</label>
 							<div class="col-md-6">
 								<input type="email"
                                        class="form-control"
@@ -38,7 +38,7 @@
 							</div>
 						</div>
                         <div class="form-group @if (count($errors) > 0) has-error @endif ">
-							<label class="col-md-4 control-label hidden-xs">{{ trans('forms.password') }}</label>
+							<label class="col-md-4 control-label hidden-xs">{{ trans('Auth::forms.password') }}</label>
 							<div class="col-md-6">
 								<input type="password"
                                        class="form-control"
@@ -47,7 +47,7 @@
 							</div>
 						</div>
                         <div class="form-group @if (count($errors) > 0) has-error @endif ">
-							<label class="col-md-4 control-label hidden-xs">{{ trans('forms.confirm-password') }}</label>
+							<label class="col-md-4 control-label hidden-xs">{{ trans('Auth::forms.confirm-password') }}</label>
 							<div class="col-md-6">
 								<input type="password"
                                        class="form-control"
@@ -58,11 +58,11 @@
 						<div class="form-group">
 							<div class="col-md-6 col-md-offset-4">
 								<button type="submit" class="btn btn-success btn-block">
-                                    {{ trans('forms.create-account') }}
+                                    {{ trans('Auth::forms.create-account') }}
 								</button>
 							</div>
 						</div>
-                        <p class="help-block text-center">{{ trans('forms.agree_terms') }}</p>
+                        <p class="help-block text-center">{{ trans('Auth::forms.agree_terms') }}</p>
 					</form>
 				</div>
 			</div>
