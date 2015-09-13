@@ -17,6 +17,8 @@ return [
         'Blog',
         'Forum',
         'Pages',
-        'Social'
+        'Herd',
+        'Search',
+        'Sitemap',
     ],
 ];
