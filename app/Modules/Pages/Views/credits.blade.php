@@ -1,6 +1,6 @@
 @extends('layout.app')
 
-@section('title', ':: M-Credits')
+@section('title', ':: ' . trans('Pages::pages.credits.title'))
 
 @section('content')
 
@@ -10,8 +10,7 @@
         <div class="row">
             <div class="col-md-9">
                 <p>
-                    Although for the most part Mammoth App is home cooked I did make use of others work.<br> Here is a
-                    list (in alphabetical order) of the things I used in this app. Credit where credit is due!
+                    {{ trans('Pages::pages.credits.intro') }}
                 </p>
             </div>
         </div>
@@ -24,7 +23,7 @@
                     <div class="col-md-12">
                         <div class="panel panel-primary">
                             <div class="panel-heading">
-                                <h5 class="panel-title">Panel heading</h5>
+                                <h5 class="panel-title">{{ trans('Pages::pages.credits.credit_list') }}</h5>
                             </div>
                             <div class="panel-body">
 
