@@ -7,7 +7,7 @@
  * See LICENCE for license details.
  */
 
-namespace Mammoth;
+namespace Mammoth\Modules\Auth\Models;
 
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;

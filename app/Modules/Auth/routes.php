@@ -10,7 +10,7 @@
 Route::group(['module' => 'Auth', 'namespace' => 'Mammoth\Modules\Auth\Controllers'], function () {
 
     // Authentication routes
-    get('/sign-in', ['as' => 'sign-in', 'uses' => 'AuthController@getLogin']);
+    get('/sign-in', ['as' => 'sign-in', 'uses'   => 'AuthController@getLogin']);
     post('auth/login', 'AuthController@postLogin');
     get('auth/logout', ['as' => 'sign-out', 'uses' => 'AuthController@getLogout']);
 

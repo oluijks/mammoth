@@ -28,7 +28,7 @@ return [
     |
     */
 
-    'model' => Mammoth\User::class,
+    'model' => Mammoth\Modules\Auth\Models\User::class,
 
     /*
     |--------------------------------------------------------------------------

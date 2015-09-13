@@ -14,7 +14,7 @@ use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 use Mammoth\Http\Controllers\Controller;
-use Mammoth\User;
+use Mammoth\Modules\Auth\Models\User;
 use Validator;
 
 class AuthController extends Controller
