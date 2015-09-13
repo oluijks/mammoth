@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ config('app.locale')  }}" class="nojs">
 <head>
-@include('Admin::partials.meta')
+@include('Admin::layout.partials.meta')
 </head>
 <body>
 @include('Admin::layout.partials._navigation')

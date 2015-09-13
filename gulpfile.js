@@ -11,6 +11,8 @@ elixir(function(mix) {
 
   mix.sass('app.scss');
 
+  mix.sass(['admin/app.scss'], 'public/css/admin/app.css');
+
   mix.browserify([
     'app.js'
   ], 'public/js/app.js');
@@ -22,5 +24,8 @@ elixir(function(mix) {
   ], 'public/js/vendor/vendors.js');
 
   mix.version(['css/app.css', 'js/app.js', 'js/vendor/vendors.js']);
+
+  /** Admin */
+  mix.version(['css/admin/app.css', 'js/app.js', 'js/vendor/vendors.js']);
 
 });
