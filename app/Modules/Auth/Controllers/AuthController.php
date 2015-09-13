@@ -67,7 +67,7 @@ class AuthController extends Controller
         return redirect(property_exists($this, 'redirectAfterLogout') ? $this->redirectAfterLogout : '/')
             ->with('status', trans('auth.sign-out-message'))
             ->with('type', 'success')
-            ->with('image', 'Mammoth_Seated_48x48.png');
+            ->with('image', 'Mammoth_Seated_48x48.png'); // Todo: move this to config
     }
 
     /**
@@ -101,7 +101,7 @@ class AuthController extends Controller
         return redirect($this->redirectPath())
             ->with('status', trans('auth.sign-in-message', ['name' => Auth::user()->name]))
             ->with('type', 'success')
-            ->with('image', 'mammoth_happy.png');
+            ->with('image', 'Mammoth_Happy_48x48.png'); // Todo: move this to config
     }
 
     /**
@@ -157,7 +157,7 @@ class AuthController extends Controller
         return redirect('/')
             ->with('status', trans('auth.sign-in-message', ['name' => $user->name]))
             ->with('type', 'success')
-            ->with('image', 'Mammoth_Happy_48x48.png');
+            ->with('image', 'Mammoth_Happy_48x48.png'); // Todo: move this to config
     }
 
     /**
