@@ -10,6 +10,7 @@
 return [
 
     'version' => '0.0.1',
+    'admin_email' => 'admin@mammoth-app.com',
 
     'modules' => [
         'Admin',

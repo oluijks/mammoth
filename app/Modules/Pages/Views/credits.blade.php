@@ -82,7 +82,8 @@
 
                             </div>
                             <div class="panel-footer">
-                                Mail me if you think you should be on this list
+                                <a href="mailto:{{ config('mammoth.admin_email') }}">Mail me</a> if you think you should
+                                be on this list
                             </div>
                         </div>
                     </div>
