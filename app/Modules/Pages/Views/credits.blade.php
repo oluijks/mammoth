@@ -30,7 +30,9 @@
 
                                 <div class="list-group">
 
-                                    <a href="http://bootstrap-growl.remabledesigns.com/" class="list-group-item">
+                                    <a href="http://bootstrap-growl.remabledesigns.com/"
+                                       target="_blank"
+                                       class="list-group-item">
                                         <h4 class="list-group-item-heading">Bootstrap</h4>
                                         <p class="list-group-item-text">
                                             Bootstrap, a sleek, intuitive, and powerful mobile first front-end framework
@@ -46,21 +48,27 @@
                                         </p>
                                     </a>
 
-                                    <a href="http://www.favicon-generator.org/" class="list-group-item">
+                                    <a href="http://www.favicon-generator.org/"
+                                       target="_blank"
+                                       class="list-group-item">
                                         <h4 class="list-group-item-heading">Favicon & App Icon Generator</h4>
                                         <p class="list-group-item-text">
                                             Convert your GIF, PNG or JPEG into a favicon.ico and App icons.
                                         </p>
                                     </a>
 
-                                    <a href="http://laravel.com/" class="list-group-item">
+                                    <a href="http://laravel.com/"
+                                       target="_blank"
+                                       class="list-group-item">
                                         <h4 class="list-group-item-heading">Laravel</h4>
                                         <p class="list-group-item-text">
                                             The PHP Framework For Web Artisans.
                                         </p>
                                     </a>
 
-                                    <a href="http://fasticon.com/" class="list-group-item">
+                                    <a href="http://fasticon.com/"
+                                       target="_blank"
+                                       class="list-group-item">
                                         <h4 class="list-group-item-heading">Mammoth Icons</h4>
                                         <p class="list-group-item-text">
                                             By Fast Icon Design

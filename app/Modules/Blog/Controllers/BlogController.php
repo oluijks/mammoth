@@ -11,7 +11,7 @@ namespace Mammoth\Modules\Blog\Controllers;
 
 use Illuminate\Http\Request;
 
-use Mammoth\Blog;
+use Mammoth\Modules\Blog\Models\Blog;
 use Mammoth\Http\Requests;
 use Mammoth\Http\Controllers\Controller;
 

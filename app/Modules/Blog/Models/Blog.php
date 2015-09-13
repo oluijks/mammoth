@@ -7,7 +7,7 @@
  * See LICENCE for license details.
  */
 
-namespace Mammoth;
+namespace Mammoth\Modules\Blog\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
