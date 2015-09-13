@@ -4,7 +4,7 @@
 @include('partials.meta')
 </head>
 <body>
-@include('partials.browserupgrade')
+@include('partials.browsehappy')
 @include('layout.partials._navigation')
 <div class="container" id="app">{{ PHP_EOL  }}@yield('content'){{ PHP_EOL  }}</div>
 @include('layout.partials.footer')
