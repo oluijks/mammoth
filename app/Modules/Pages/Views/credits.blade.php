@@ -26,7 +26,6 @@
                                 <h5 class="panel-title">{{ trans('Pages::pages.credits.credit_list') }}</h5>
                             </div>
                             <div class="panel-body">
-
                                 <div class="list-group">
 
                                     <a href="http://bootstrap-growl.remabledesigns.com/"
@@ -73,16 +72,11 @@
                                             By Fast Icon Design
                                         </p>
                                     </a>
-
-
-
-
                                 </div>
-
                             </div>
                             <div class="panel-footer">
-                                <a href="mailto:{{ config('mammoth.admin_email') }}">Mail me</a> if you think you should
-                                be on this list
+                                {!! mailto(config('mammoth.admin_email'), 'Mail me') !!} if you think you should be on
+                                this list.
                             </div>
                         </div>
                     </div>
