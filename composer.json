@@ -22,7 +22,8 @@
             "database"
         ],
         "psr-4": {
-            "Mammoth\\": "app/"
+            "Mammoth\\": "app/",
+            "Modules\\": "app/Modules"
         }
     },
     "autoload-dev": {

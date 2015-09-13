@@ -29,18 +29,47 @@
                             <div class="panel-body">
 
                                 <div class="list-group">
+
+                                    <a href="http://bootstrap-growl.remabledesigns.com/" class="list-group-item">
+                                        <h4 class="list-group-item-heading">Bootstrap</h4>
+                                        <p class="list-group-item-text">
+                                            Bootstrap, a sleek, intuitive, and powerful mobile first front-end framework
+                                            for faster and easier web development.
+                                        </p>
+                                    </a>
+
                                     <a href="http://bootstrap-growl.remabledesigns.com/" class="list-group-item">
                                         <h4 class="list-group-item-heading">Bootstrap Notify</h4>
                                         <p class="list-group-item-text">
-                                            This plugin helps to turn standard bootstrap alerts into "growl" like notifications.
+                                            This plugin helps to turn standard bootstrap alerts into "growl" like
+                                            notifications.
                                         </p>
                                     </a>
+
+                                    <a href="http://www.favicon-generator.org/" class="list-group-item">
+                                        <h4 class="list-group-item-heading">Favicon & App Icon Generator</h4>
+                                        <p class="list-group-item-text">
+                                            Convert your GIF, PNG or JPEG into a favicon.ico and App icons.
+                                        </p>
+                                    </a>
+
                                     <a href="http://laravel.com/" class="list-group-item">
                                         <h4 class="list-group-item-heading">Laravel</h4>
                                         <p class="list-group-item-text">
-                                            The PHP Framework For Web Artisans
+                                            The PHP Framework For Web Artisans.
                                         </p>
                                     </a>
+
+                                    <a href="http://fasticon.com/" class="list-group-item">
+                                        <h4 class="list-group-item-heading">Mammoth Icons</h4>
+                                        <p class="list-group-item-text">
+                                            By Fast Icon Design
+                                        </p>
+                                    </a>
+
+
+
+
                                 </div>
 
                             </div>
@@ -63,7 +92,7 @@
                                    href="#collapseMenuListGroup"
                                    aria-expanded="true"
                                    aria-controls="collapseMenuListGroup">
-                                    M-Credits Links
+                                    M-App Partners
                                     <span class="caret"></span>
                                 </a>
                             </h4>

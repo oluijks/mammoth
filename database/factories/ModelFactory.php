@@ -39,5 +39,6 @@ $factory->define(Mammoth\Blog::class, function (Faker\Generator $faker) {
         'title' => $slug,
         'excerpt' => $faker->realText(500),
         'body' => $faker->realText(1000),
+        'created_at' => $faker->dateTimeBetween('-3 years'),
     ];
 });
