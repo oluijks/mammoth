@@ -12,6 +12,8 @@ return [
     'version' => '0.0.1',
     'admin_email' => 'admin@mammoth-app.com',
 
+    'ga_code' => 'UA-XXXXX-X',
+
     'modules' => [
         'Admin',
         'Auth',
