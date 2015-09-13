@@ -1,10 +1,10 @@
-@extends('layout.app')
+@extends('Admin::layout.admin')
 
 @section('title', ':: Admin')
 
 @section('content')
 
-    @include('partials.default-page-header', ['pageHeader' => 'Admin', 'quote' => true])
+    @include('partials.default-page-header', ['pageHeader' => 'Admin', 'quote' => false])
 
     <div class="container">
         <div class="row">
