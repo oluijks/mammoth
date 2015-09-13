@@ -1,17 +1,10 @@
 @extends('layout.app')
 
-@section('title', ':: Blog')
+@section('title', ':: M-Blog')
 
 @section('content')
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1 class="page-header">M-Blog</h1>
-                <p class="lead">Just one big idea. One big idea, and we can change the world.</p>
-            </div>
-        </div>
-    </div>
+    @include('partials.default-page-header', ['pageHeader' => 'M-Blog', 'quote' => true])
 
     <div class="container">
         <div class="row">
@@ -31,7 +24,9 @@
                             </div>
                             <div class="panel-footer">
                                 {!! $blog->created_at->formatLocalized('%A %d %B %Y') !!}
-                                <a class="pull-right" href="{{ url('blog', [$blog->slug])  }}">Read more</a>
+                                <a class="pull-right" href="{{ url('blog', [$blog->slug])  }}">
+                                    {{ trans('blog.read-more') }}
+                                </a>
                             </div>
                         </div>
                         @endforeach

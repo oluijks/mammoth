@@ -46,4 +46,13 @@ class PageController extends Controller
         return view('pages.contact');
     }
 
+    /**
+     * Shows the contact page
+     *
+     * @return \Illuminate\View\View
+     */
+    public function credits()
+    {
+        return view('pages.credits');
+    }
 }

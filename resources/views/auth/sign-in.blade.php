@@ -3,6 +3,9 @@
 @section('title', ':: ' . trans('forms.sign-in-account'))
 
 @section('content')
+
+@include('partials.default-page-header', ['pageHeader' => 'Sign in', 'quote' => false])
+
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-8 col-md-offset-4">

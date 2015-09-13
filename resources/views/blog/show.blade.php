@@ -4,14 +4,7 @@
 
 @section('content')
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1 class="page-header">M-Blog</h1>
-                <p class="lead">Just one big idea. One big idea, and we can change the world.</p>
-            </div>
-        </div>
-    </div>
+    @include('partials.default-page-header', ['pageHeader' => 'About', 'quote' => true])
 
     <div class="container">
         <div class="row">

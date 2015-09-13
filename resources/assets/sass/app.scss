@@ -38,6 +38,10 @@ body {
   margin: 0 0 70px;
 }
 
+p {
+  line-height: $line-height-base;
+}
+
 .navbar-brand {
   padding: 5.5px 15px;
 }
