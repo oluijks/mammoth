@@ -4,13 +4,13 @@
 
 @section('content')
 
-    @include('partials.default-page-header', ['pageHeader' => 'M-Credits', 'quote' => false])
+    @include('Pages::partials.default-page-header', ['pageHeader' => 'M-Credits', 'quote' => false])
 
     <div class="container">
         <div class="row">
             <div class="col-md-9">
                 <p>
-                    {{ trans('Pages::pages.credits.intro') }}
+                    {!! trans('Pages::pages.credits.intro') !!}
                 </p>
             </div>
         </div>
@@ -23,7 +23,7 @@
                     <div class="col-md-12">
                         <div class="panel panel-primary">
                             <div class="panel-heading">
-                                <h5 class="panel-title">{{ trans('Pages::pages.credits.credit_list') }}</h5>
+                                <h5 class="panel-title">{!! trans('Pages::pages.credits.credit_list') !!}</h5>
                             </div>
                             <div class="panel-body">
                                 <div class="list-group">
@@ -38,7 +38,9 @@
                                         </p>
                                     </a>
 
-                                    <a href="http://bootstrap-growl.remabledesigns.com/" class="list-group-item">
+                                    <a href="http://bootstrap-growl.remabledesigns.com/"
+                                       target="_blank"
+                                       class="list-group-item">
                                         <h4 class="list-group-item-heading">Bootstrap Notify</h4>
                                         <p class="list-group-item-text">
                                             This plugin helps to turn standard bootstrap alerts into "growl" like
@@ -109,7 +111,7 @@
                                 <a href="#" class="list-group-item">April</a>
                                 <a href="#" class="list-group-item">March</a>
                             </div>
-                            <a href="#" class="list-group-item blog-archive">Archive</a>
+                            <a href="#" class="list-group-item blog-archive">Partner up?</a>
                         </div>
                     </div>
                 </div>

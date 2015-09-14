@@ -4,7 +4,7 @@
 
 @section('content')
 
-    @include('partials.default-page-header', ['pageHeader' => 'About', 'quote' => true])
+    @include('Blog::partials.default-page-header', ['pageHeader' => 'About', 'quote' => true])
 
     <div class="container">
         <div class="row">

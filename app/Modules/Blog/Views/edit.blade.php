@@ -3,6 +3,9 @@
 @section('title', ':: Edit Blog')
 
 @section('content')
+
+    @include('Blog::partials.default-page-header', ['pageHeader' => 'M-Blog', 'quote' => true])
+
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-push-2">

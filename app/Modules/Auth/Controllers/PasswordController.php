@@ -26,6 +26,9 @@ class PasswordController extends Controller
      */
     protected $redirectTo = '/';
 
+    /**
+     * @var string
+     */
     protected $redirectPath = '/';
 
     /**
