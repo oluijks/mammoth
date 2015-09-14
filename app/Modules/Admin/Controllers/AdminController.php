@@ -30,8 +30,8 @@ class AdminController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function index()
+    public function dashboard()
     {
-        return view('Admin::index');
+        return view('Admin::dashboard');
     }
 }

@@ -11,14 +11,14 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{{ route('home') }}">
+            <a class="navbar-brand" href="{{ route('admin-dashboard') }}">
                 <img alt="Mammoth" src="{{ URL::asset('img/mammoth-icons/Mammooth_32x32.png')  }}">
             </a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="{{ Route::is('home') ? 'active' : '' }}">
-                    <a href="{{ route('home') }}">Home <span class="sr-only">(current)</span></a>
+                <li class="{{ Route::is('admin-dashboard') ? 'active' : '' }}">
+                    <a href="{{ route('admin-dashboard') }}">Dashboard <span class="sr-only">(current)</span></a>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -34,7 +34,10 @@
                         <li><a href="#">Profile</a></li>
                         <li><a href="#">Settings</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="{{ route('sign-out') }}">Sign out</a></li>
+                        <li>
+                            <a href="{{ route('sign-out') }}">
+                                <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp;&nbsp;Sign out</a>
+                        </li>
                     </ul>
                 </li>
             @else
@@ -45,3 +48,4 @@
         </div>
     </div>
 </nav>
+

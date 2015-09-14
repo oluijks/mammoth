@@ -154,7 +154,8 @@ class AuthController extends Controller
      */
     protected function authenticated(Request $request, User $user)
     {
-        return redirect('/')
+        // Todo, only admins should go everywere
+        return redirect()->intended('/')
             ->with('status', trans('Auth::auth.sign-in-message', ['name' => $user->name]))
             ->with('type', 'success')
             ->with('image', 'Mammoth_Happy_48x48.png'); // Todo: move this to config

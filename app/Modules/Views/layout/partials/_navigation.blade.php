@@ -47,7 +47,10 @@
                         <li><a href="#">Profile</a></li>
                         <li><a href="#">Settings</a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="{{ route('sign-out') }}">Sign out</a></li>
+                        <li>
+                            <a href="{{ route('sign-out') }}">
+                                <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp;&nbsp;Sign out</a>
+                        </li>
                     </ul>
                 </li>
             @else
