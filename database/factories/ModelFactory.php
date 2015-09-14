@@ -7,7 +7,7 @@
  * See LICENCE for license details.
  */
 
-$factory->defineAs(Mammoth\User::class, 'admin', function (Faker\Generator $faker) {
+$factory->defineAs(Mammoth\Modules\Auth\Models\User::class, 'admin', function (Faker\Generator $faker) {
     return [
         'name' => 'Administrator',
         'email' => 'admin@mammoth-app.com',
@@ -15,7 +15,7 @@ $factory->defineAs(Mammoth\User::class, 'admin', function (Faker\Generator $fake
     ];
 });
 
-$factory->defineAs(Mammoth\User::class, 'oluijks', function (Faker\Generator $faker) {
+$factory->defineAs(Mammoth\Modules\Auth\Models\User::class, 'oluijks', function (Faker\Generator $faker) {
     return [
         'name' => 'Olaf Luijks',
         'email' => 'oluijks@gmail.com',
@@ -23,7 +23,7 @@ $factory->defineAs(Mammoth\User::class, 'oluijks', function (Faker\Generator $fa
     ];
 });
 
-$factory->define(Mammoth\User::class, function (Faker\Generator $faker) {
+$factory->define(Mammoth\Modules\Auth\Models\User::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->name,
         'email' => $faker->email,
@@ -32,7 +32,7 @@ $factory->define(Mammoth\User::class, function (Faker\Generator $faker) {
     ];
 });
 
-$factory->define(Mammoth\Blog::class, function (Faker\Generator $faker) {
+$factory->define(Mammoth\Modules\Blog\Models\Blog::class, function (Faker\Generator $faker) {
     $slug = $faker->realText(50);
     return [
         'slug' => str_slug($slug),

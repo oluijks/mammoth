@@ -11,6 +11,6 @@ class BlogTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(Mammoth\Blog::class, 25)->create();
+        factory(Mammoth\Modules\Blog\Models\Blog::class, 25)->create();
     }
 }

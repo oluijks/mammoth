@@ -33,7 +33,7 @@
 
                 <p>Big mammoth is BIG!</p>
 
-                <p><a class="btn btn-default btn-block" href="#" role="button">View details &raquo;</a></p>
+                <p><a class="btn btn-default btn-block" href="{{ route('blog.index') }}" role="button">View M-App &raquo;</a></p>
             </div>
 
             <div class="col-md-6 col-lg-3">
@@ -46,7 +46,7 @@
 
                 <p>Big mammoth WRITES!</p>
 
-                <p><a class="btn btn-default btn-block" href="{{ route('blog.index') }}" role="button">View details &raquo;</a></p>
+                <p><a class="btn btn-default btn-block" href="{{ route('blog.index') }}" role="button">View M-Blog &raquo;</a></p>
             </div>
 
             <div class="col-md-6 col-lg-3">
@@ -59,7 +59,7 @@
 
                 <p>Big mammoth is BIG!</p>
 
-                <p><a class="btn btn-default btn-block" href="{{ route('blog.index') }}" role="button">View details &raquo;</a></p>
+                <p><a class="btn btn-default btn-block" href="{{ route('blog.index') }}" role="button">View M-Forum &raquo;</a></p>
             </div>
 
             <div class="col-md-6 col-lg-3">
@@ -72,7 +72,7 @@
 
                 <p>Big mammoth is SOCIAL!</p>
 
-                <p><a class="btn btn-default btn-block" href="#" role="button">View details &raquo;</a></p>
+                <p><a class="btn btn-default btn-block" href="{{ route('blog.index') }}" role="button">View M-Herd &raquo;</a></p>
             </div>
 
         </div>

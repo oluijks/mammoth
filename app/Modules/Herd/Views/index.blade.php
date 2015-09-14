@@ -4,7 +4,7 @@
 
 @section('content')
 
-    @include('partials.default-page-header', ['pageHeader' => 'Herd', 'quote' => true])
+    @include('Page::partials.default-page-header', ['pageHeader' => 'Herd', 'quote' => true])
 
     <div class="container">
         <div class="row">

@@ -18,8 +18,8 @@ class UserTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(Mammoth\User::class, 'admin')->create();
-        factory(Mammoth\User::class, 'oluijks')->create();
-        factory(Mammoth\User::class, 48)->create();
+        factory(Mammoth\Modules\Auth\Models\User::class, 'admin')->create();
+        factory(Mammoth\Modules\Auth\Models\User::class, 'oluijks')->create();
+        factory(Mammoth\Modules\Auth\Models\User::class, 48)->create();
     }
 }
