@@ -11,4 +11,6 @@ return [
 
     'read-more'     => 'Read more',
 
+    'create-blog'   => 'Create Blog',
+
 ];

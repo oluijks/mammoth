@@ -5,7 +5,7 @@
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
 			<div class="panel panel-default">
-				<div class="panel-heading">Reset Password</div>
+				<div class="panel-heading">{!! trans('Auth::forms.reset-password') !!}</div>
 				<div class="panel-body">
                     @include('layout.partials.session-error')
 
@@ -14,30 +14,40 @@
 						<input type="hidden" name="token" value="{{ $token }}">
 
 						<div class="form-group">
-							<label class="col-md-4 control-label">E-Mail Address</label>
+							<label class="col-md-4 control-label hidden-xs">{!! trans('Auth::forms.email-address') !!}</label>
 							<div class="col-md-6">
-								<input type="email" class="form-control" name="email" value="{{ old('email') }}">
+								<input type="email"
+                                       class="form-control"
+                                       name="email"
+                                       placeholder="{!! trans('Auth::forms.email-address') !!}"
+                                       value="{{ old('email') }}">
 							</div>
 						</div>
 
 						<div class="form-group">
-							<label class="col-md-4 control-label">Password</label>
+							<label class="col-md-4 control-label hidden-xs">{!! trans('Auth::forms.password') !!}</label>
 							<div class="col-md-6">
-								<input type="password" class="form-control" name="password">
+								<input type="password"
+                                       class="form-control"
+                                       name="password"
+                                       placeholder="{!! trans('Auth::forms.password') !!}">
 							</div>
 						</div>
 
 						<div class="form-group">
-							<label class="col-md-4 control-label">Confirm Password</label>
+							<label class="col-md-4 control-label hidden-xs">{!! trans('Auth::forms.confirm-password') !!}</label>
 							<div class="col-md-6">
-								<input type="password" class="form-control" name="password_confirmation">
+								<input type="password"
+                                       class="form-control"
+                                       name="password_confirmation"
+                                       placeholder="{!! trans('Auth::forms.confirm-password') !!}">
 							</div>
 						</div>
 
 						<div class="form-group">
 							<div class="col-md-6 col-md-offset-4">
-								<button type="submit" class="btn btn-primary">
-									Reset Password
+								<button type="submit" class="btn btn-primary btn-block">
+                                    {!! trans('Auth::forms.reset-password') !!}
 								</button>
 							</div>
 						</div>

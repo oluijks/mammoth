@@ -59,7 +59,7 @@
 
                 <p>Big mammoth is BIG!</p>
 
-                <p><a class="btn btn-default btn-block" href="" role="button">View details &raquo;</a></p>
+                <p><a class="btn btn-default btn-block" href="{{ route('blog.index') }}" role="button">View details &raquo;</a></p>
             </div>
 
             <div class="col-md-6 col-lg-3">

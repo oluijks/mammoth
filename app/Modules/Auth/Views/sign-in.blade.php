@@ -4,40 +4,39 @@
 
 @section('content')
 
-@include('partials.default-page-header', ['pageHeader' => 'Sign in', 'quote' => false])
+@include('Auth::partials.default-page-header', ['pageHeader' => 'Sign in', 'quote' => false])
 
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-8 col-md-offset-4">
 			<div class="panel panel-default">
-				<div class="panel-heading">{{ trans('Auth::forms.sign-in-account') }}</div>
+				<div class="panel-heading">{!! trans('Auth::forms.sign-in-account') !!}</div>
 				<div class="panel-body">
 					@include('layout.partials.session-error')
 					<form class="form-horizontal"
                           role="form"
                           method="POST"
                           action="{{ url('/auth/login') }}">
-                        {{-- <form class="form-horizontal" v-on="submit: login"> --}}
                         {!! csrf_field() !!}
                         <div class="form-group @if (count($errors) > 0) has-error @endif ">
-							<label class="col-md-4 control-label hidden-xs">{{ trans('Auth::forms.email-address') }}</label>
+							<label class="col-md-4 control-label hidden-xs">
+                                {!! trans('Auth::forms.email-address') !!}
+                            </label>
 							<div class="col-md-6">
 								<input type="email"
                                        class="form-control"
                                        name="email"
-                                       placeholder="E-Mail"
-                                       value="{{ old('email') }}"
-                                       {{-- v-model="email" --}}>
+                                       placeholder="{!! trans('Auth::forms.email-address') !!}"
+                                       value="{{ old('email') }}">
 							</div>
 						</div>
                         <div class="form-group @if (count($errors) > 0) has-error @endif ">
-							<label class="col-md-4 control-label hidden-xs">{{ trans('Auth::forms.password') }}</label>
+							<label class="col-md-4 control-label hidden-xs">{!! trans('Auth::forms.password') !!}</label>
 							<div class="col-md-6">
 								<input type="password"
                                        class="form-control"
                                        name="password"
-                                       placeholder="Password"
-                                       {{-- v-model="password" --}}>
+                                       placeholder="{!! trans('Auth::forms.password') !!}">
 							</div>
 						</div>
 						<div class="form-group">
@@ -45,23 +44,25 @@
 								<div class="checkbox">
 									<label>
 										<input type="checkbox"
-                                               name="remember"> {{ trans('Auth::forms.remember-me') }}
+                                               name="remember">{!! trans('Auth::forms.remember-me') !!}
 									</label>
 								</div>
 							</div>
 						</div>
 						<div class="form-group">
 							<div class="col-md-6 col-md-offset-4">
-								<button type="submit" class="btn btn-success">{{ trans('Auth::forms.sign-in') }}</button>
+								<button type="submit" class="btn btn-success">
+                                    {!! trans('Auth::forms.sign-in') !!}
+                                </button>
 								<a class="btn btn-link"
-                                   href="{{ route('sign-up') }}">{{ trans('Auth::forms.sign-up-account') }}</a>
+                                   href="{{ route('sign-up') }}">{!! trans('Auth::forms.sign-up-account') !!}</a>
 							</div>
 						</div>
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <a class="btn btn-link"
-                                   href="{{ url('/password/email') }}">{{ trans('Auth::forms.forgot-password') }}</a>
+                                   href="{{ url('/password/email') }}">{!! trans('Auth::forms.forgot-password') !!}</a>
                             </div>
                         </div>
 

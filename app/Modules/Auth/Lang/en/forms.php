@@ -14,6 +14,8 @@ return [
     'remember-me'       => 'Remember Me',
     'sign-in'           => 'Sign in',
     'forgot-password'   => 'Forgot Password?',
+    'reset-password'    => 'Reset Password',
+    'reset-password-button' => 'Reset Password',
     'sign-in-account'   => 'Sign in to your Mammoth account',
     'sign-up-account'   => 'Sign up for a Mammoth account',
     'name'              => 'Name',
