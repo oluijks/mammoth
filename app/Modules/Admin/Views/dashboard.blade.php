@@ -4,7 +4,7 @@
 
 @section('content')
 
-    @include('partials.default-page-header', ['pageHeader' => 'Admin Dashboard', 'quote' => false])
+    @include('Admin::partials.default-page-header', ['pageHeader' => 'Admin Dashboard', 'quote' => false])
 
     <div class="container">
         <div class="row">

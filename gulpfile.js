@@ -32,4 +32,6 @@ elixir(function(mix) {
   /** Admin */
   // mix.version(['css/admin/app.css', 'js/app.js', 'js/vendor/vendors.js']);
 
+  mix.phpUnit();
+
 });

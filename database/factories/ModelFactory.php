@@ -19,7 +19,7 @@ $factory->defineAs(Mammoth\Modules\Auth\Models\User::class, 'oluijks', function 
     return [
         'name' => 'Olaf Luijks',
         'email' => 'oluijks@gmail.com',
-        'password' => bcrypt('W1nsl@'),
+        'password' => bcrypt('oluijks@gmail.com'),
     ];
 });
 

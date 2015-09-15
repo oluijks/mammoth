@@ -32,83 +32,70 @@ class PageControllerTest extends TestCase
         $this->assertEquals(200, $response->status());
     }
 
-    public function testWelcomePageExpectsToSee()
+    public function testVisitWelcomePageExpectsToSee()
     {
         $this->visit('/')
              ->see('Big mammoth is BIG!');
     }
 
 
-    public function testAboutPageExpectsToSee()
+    public function testVisitAboutPageExpectsToSeeAboutPage()
     {
         $this->visit('/about')
              ->see('About');
     }
 
-    public function testContactPageExpectsToSee()
+    public function testVisitContactPageExpectsToSeeContactPage()
     {
         $this->visit('/contact')
              ->see('Contact');
     }
 
-    public function testCreditsPageExpectsToSee()
+    public function testVisitCreditsPageExpectsToSeeCreditsPage()
     {
         $this->visit('/credits')
              ->see('M-Credits');
     }
 
-    public function testWelcomePageClicksViewMAppSeePageIsMApp()
+    public function te()
     {
         $this->visit('/')
              ->click('View M-App')
              ->seePageIs('/blog');
     }
 
-    public function testWelcomePageClicksViewMBlogSeePageIsMBlog()
+    public function testVisitWelcomePageClicksViewMBlogSeePageIsMBlog()
     {
         $this->visit('/')
              ->click('View M-Blog')
              ->seePageIs('/blog');
     }
 
-    public function testWelcomePageClicksViewMForumSeePageIsMForum()
+    public function testVisitWelcomePageClicksViewMForumSeePageIsMForum()
     {
         $this->visit('/')
              ->click('View M-Forum')
              ->seePageIs('/blog');
     }
 
-    public function testWelcomePageClicksViewMHerdSeePageIsMHerd()
+    public function testVisitWelcomePageClicksViewMHerdSeePageIsMHerd()
     {
         $this->visit('/')
              ->click('View M-Herd')
              ->seePageIs('/blog');
     }
 
-    public function testWelcomePageClicksSignInSeePageIsSignIn()
+    public function testVisitWelcomePageClicksSignInSeePageIsSignInPage()
     {
         $this->visit('/')
              ->click('Sign in')
              ->seePageIs('/sign-in');
     }
 
-    public function testWelcomePageClicksSignUpSeePageIsSignUp()
+    public function testVisitWelcomePageClicksSignUpSeePageIsSignUpPage()
     {
         $this->visit('/')
              ->click('Sign up')
              ->seePageIs('/sign-up');
     }
-
-    public function testSuccessfulSignUpSeePageIsWelcomePage()
-    {
-        $this->visit('/sign-up')
-             ->type('John', 'name')
-             ->type('john@doe.com', 'email')
-             ->type('john@doe.com', 'password')
-             ->type('john@doe.com', 'password_confirmation')
-             ->press('Create account')
-             ->seePageIs('/');
-    }
-
-
 }

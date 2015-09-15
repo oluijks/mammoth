@@ -24,7 +24,9 @@
                             </div>
                             <div class="panel-footer">
                                 {!! $blog->created_at->formatLocalized('%A %d %B %Y') !!}
-                                <a class="pull-right" href="{{ url('blog', [$blog->slug])  }}">
+                                <a id="{{ $blog->id }}"
+                                   class="pull-right"
+                                   href="{{ url('blog', [$blog->slug])  }}">
                                     {{ trans('Blog::blog.read-more') }}
                                 </a>
                             </div>
