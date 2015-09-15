@@ -22,8 +22,8 @@ class SearchController extends Controller
      *
      * @return \Illuminate\View\View
      */
-    public function index()
+    public function index($query)
     {
-        return view('Search::index');
+        return view('Search::index')->with('query', $query);
     }
 }

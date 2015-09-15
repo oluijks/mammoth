@@ -4,14 +4,14 @@
 
 @section('content')
 
-    @include('partials.default-page-header', ['pageHeader' => 'Search', 'quote' => true])
+    @include('Search::partials.default-page-header', ['pageHeader' => 'Search', 'quote' => true])
 
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-push-2">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Search</h3>
+                        <h3 class="panel-title">Search for {{ $query }}</h3>
                     </div>
                     <div class="panel-body">
                         <p>

@@ -17,6 +17,23 @@
                         dolorum enim eveniet explicabo in nemo pariatur praesentium quibusdam sunt. Consequuntur, saepe,
                         suscipit! Id illum iste iusto molestiae odio voluptas?</p>
                 </div>
+
+                <div class="form-group">
+                    <span id="helpBlock" class="help-block text-center">Search this site</span>
+                    <div class="input-group col-sm-offset-2 col-sm-8">
+                        <input type="search" style="text-align: center; font-weight: bold;"
+                               id="searchInput"
+                               class="form-control"
+                               placeholder="Search for..."
+                               autocomplete="off">
+                        <span class="input-group-btn">
+                            <button id="searchButton"
+                                    class="btn btn-default"
+                                    type="button"
+                                    role="button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                        </span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -33,7 +50,9 @@
 
                 <p>Big mammoth is BIG!</p>
 
-                <p><a class="btn btn-default btn-block" href="{{ route('blog.index') }}" role="button">View M-App &raquo;</a></p>
+                <p><a class="btn btn-default btn-block"
+                      href="{{ route('blog.index') }}"
+                      role="button">View M-App &raquo;</a></p>
             </div>
 
             <div class="col-md-6 col-lg-3">
@@ -80,3 +99,23 @@
     </div>
 @endsection
 
+@section('scripts')
+  <script>
+      var searchForm   = $('#searchForm');
+      var searchInput  = $('#searchInput');
+      var searchButton = $('#searchButton');
+      searchInput.focus().val('');
+      searchInput.bind('keypress', {}, keyPress);
+      searchButton.bind('click', {}, submitSearchForm);
+      function submitSearchForm (e) {
+          e.preventDefault();
+          window.location.href = MAMMOTH.Url + '/search/' + searchInput.val();
+      }
+      function keyPress (e) {
+          var code = (e.keyCode ? e.keyCode : e.which);
+          if (code == 13) {
+              submitSearchForm(e);
+          }
+      }
+  </script>
+@stop
