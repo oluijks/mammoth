@@ -5,8 +5,6 @@
  * See LICENCE for license details.
  */
 
-// @import "mammoth-theme";
-
 @import "bootstrap";
 @import "mammoth-theme-variables";
 @import "mammoth-theme";
@@ -61,6 +59,15 @@ input[type="checkbox"] {
 
 .row-callout {
   padding-bottom: 20px;
+}
+
+#searchInput {
+  font-weight: bold;
+  text-align: center;
+}
+
+.help-block {
+  margin-bottom: 2px;
 }
 
 .footer-copyright {

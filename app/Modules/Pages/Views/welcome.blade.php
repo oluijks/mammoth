@@ -21,7 +21,7 @@
                 <div class="form-group">
                     <span id="helpBlock" class="help-block text-center">Search this site</span>
                     <div class="input-group col-sm-offset-2 col-sm-8">
-                        <input type="search" style="text-align: center; font-weight: bold;"
+                        <input type="search"
                                id="searchInput"
                                class="form-control"
                                placeholder="Search for..."
