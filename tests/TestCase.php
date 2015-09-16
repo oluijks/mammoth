@@ -23,4 +23,21 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase
         return $app;
     }
 
+    /**
+     * Setup tests
+     */
+    public function setUp()
+    {
+        parent::setUp();
+
+        $this->prepareForTests();
+    }
+
+    /**
+     * Prepare for tests
+     */
+    private function prepareForTests()
+    {
+        Mail::pretend(true);
+    }
 }
