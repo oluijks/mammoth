@@ -1,10 +1,13 @@
-## Mammoth
+# Mammoth
 
 ## Official Documentation
 
 ## Contributing
 
 ## Security Vulnerabilities
+
+If you discover a security vulnerability within Mammoth, please send an e-mail to Olaf Luijks at oluijks@gmail.com. 
+All security vulnerabilities will be promptly addressed.
 
 ### License
 
