@@ -9,6 +9,7 @@
 
 Route::group(['module' => 'Search', 'namespace' => 'Mammoth\Modules\Search\Controllers'], function () {
 
-    get('/search/{query?}', ['as' => 'search', 'uses' => 'SearchController@index']);
+    // get('/search/{query?}', ['as' => 'search', 'uses' => 'SearchController@index']);
+    post('/search', ['as' => 'search', 'uses' => 'SearchController@index']);
 
 });

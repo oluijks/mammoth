@@ -16,7 +16,8 @@
     },
     "autoload": {
         "files": [
-            "app/Helpers.php"
+            "app/Helpers.php",
+            "app/Modules/Quotes.php"
         ],
         "classmap": [
             "database"

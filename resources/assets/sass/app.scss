@@ -40,8 +40,35 @@ p {
   line-height: $line-height-base;
 }
 
+.label {
+  font-weight: bold;
+}
+
 .navbar-brand {
   padding: 5.5px 15px;
+}
+
+blockquote {
+  border-left: transparent;
+}
+
+.jumbotron {
+  padding-top: 55px;
+  background-color: lighten($body-bg, 5%);
+}
+
+.container .marketing {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  height: 100%;
+}
+
+.information {
+  background-color: darken($body-bg, 10%);
+  padding-top: 20px;
+  margin-top: 20px;
+  margin-bottom: 100px;
+  padding-bottom: 30px;
 }
 
 input[type="checkbox"] {
@@ -51,6 +78,12 @@ input[type="checkbox"] {
 
 .thumbnail {
   border: 1px solid #40403d;
+}
+
+#collapseMenuListGroupHeading a:nth-of-type(1) {
+  text-decoration: none;
+  display: block;
+  width: 100%;
 }
 
 .hearts {

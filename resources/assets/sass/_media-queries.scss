@@ -7,6 +7,11 @@
 
 // Small devices (tablets, 768px and up)
 @media (min-width: $screen-sm-min) {
+
+  .jumbotron {
+    padding-bottom: 30px;
+  }
+
   ::-webkit-input-placeholder { color: transparent !important; }
   ::-moz-placeholder          { color: transparent !important; }
   :-ms-input-placeholder      { color: transparent !important; }

@@ -6,3 +6,33 @@
  */
 
 @import "../app";
+
+body {
+  padding-top: 70px;
+}
+
+.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
+  background-color: #df691a !important;
+  /* background-color: transparent; */
+}
+
+/*
+body {
+  padding-top: 41px !important;
+  font-family: $font-family-sans-serif;
+  margin: 0 0 70px;
+}
+
+// Small devices (tablets, 768px and up)
+@media (min-width: $screen-md-min) {
+
+  body {
+    padding-top: 43px !important;
+  }
+
+  .admin-menu-sidebar {
+    margin-left: -29px;
+  }
+
+}
+*/

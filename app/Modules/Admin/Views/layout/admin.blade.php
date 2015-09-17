@@ -5,7 +5,7 @@
 </head>
 <body>
 @include('Admin::layout.partials._navigation')
-<div class="container" id="app">{{ PHP_EOL  }}@yield('content'){{ PHP_EOL  }}</div>
+<div class="container-fluid" id="app">{{ PHP_EOL  }}@yield('content'){{ PHP_EOL  }}</div>
 @include('Admin::layout.partials.footer')
 @include('partials.scripts')
 @yield('scripts')

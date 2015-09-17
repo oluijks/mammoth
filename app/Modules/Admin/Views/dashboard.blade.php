@@ -4,19 +4,34 @@
 
 @section('content')
 
-    @include('Admin::partials.default-page-header', ['pageHeader' => 'Admin Dashboard', 'quote' => false])
+    {{-- @include('Admin::partials.default-page-header', ['pageHeader' => 'Admin Dashboard', 'quote' => false]) --}}
 
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-md-8 col-md-push-2">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Admin Dashboard</h3>
-                    </div>
-                    <div class="panel-body">
+            <div class="col-md-3 admin-menu-sidebar">
+                @include('Admin::partials.admin-menu-sidebar')
+            </div>
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="lead">
+                            {{ Mammoth\Modules\Quotes::quote() }}
+                        </p>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h5 class="panel-title">Admin Dashboard</h5>
+                            </div>
+                            <div class="panel-body">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae deleniti dolorum exercitationem, fugiat, impedit incidunt inventore iusto nam non odio praesentium quibusdam.
+                                </p>
+                            </div>
+                            <div class="panel-footer">
+                                Footer
+                            </div>
+                        </div>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae deleniti dolorum exercitationem,
-                            fugiat, impedit incidunt inventore iusto nam non odio praesentium quibusdam.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae deleniti dolorum exercitationem, fugiat, impedit incidunt inventore iusto nam non odio praesentium quibusdam.
                         </p>
                     </div>
                 </div>
@@ -24,4 +39,3 @@
         </div>
     </div>
 @endsection
-

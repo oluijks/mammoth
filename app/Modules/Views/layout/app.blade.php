@@ -6,7 +6,7 @@
 <body>
 @include('partials.browsehappy')
 @include('layout.partials._navigation')
-<div class="container" id="app">{{ PHP_EOL  }}@yield('content'){{ PHP_EOL  }}</div>
+{{ PHP_EOL  }}@yield('content'){{ PHP_EOL  }}
 @include('layout.partials.footer')
 @include('partials.scripts')
 @yield('scripts')

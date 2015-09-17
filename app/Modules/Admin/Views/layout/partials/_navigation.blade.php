@@ -1,10 +1,10 @@
 <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
+    <div class="container-fluid">
         <div class="navbar-header">
             <button type="button"
                     class="navbar-toggle collapsed"
                     data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1"
+                    data-target="#admin-navbar-collapse"
                     aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
@@ -15,10 +15,13 @@
                 <img alt="Mammoth" src="{{ URL::asset('img/mammoth-icons/Mammooth_32x32.png')  }}">
             </a>
         </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="collapse navbar-collapse" id="admin-navbar-collapse">
             <ul class="nav navbar-nav">
                 <li class="{{ Route::is('admin-dashboard') ? 'active' : '' }}">
                     <a href="{{ route('admin-dashboard') }}">Dashboard <span class="sr-only">(current)</span></a>
+                </li>
+                <li>
+                    <a href="{{ route('home') }}">Visit site</a>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -34,10 +37,9 @@
                         <li><a href="#">Profile</a></li>
                         <li><a href="#">Settings</a></li>
                         <li role="separator" class="divider"></li>
-                        <li>
-                            <a href="{{ route('sign-out') }}">
-                                <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>&nbsp;&nbsp;Sign out</a>
-                        </li>
+                        <li><a href="{{ route('home') }}">Visit site</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="{{ route('sign-out') }}">Sign out</a></li>
                     </ul>
                 </li>
             @else

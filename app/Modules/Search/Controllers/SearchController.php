@@ -11,7 +11,7 @@ namespace Mammoth\Modules\Search\Controllers;
 
 use Illuminate\Http\Request;
 
-use Mammoth\Modules\Search\Models\Search;
+// use Mammoth\Modules\Search\Models\Search;
 use Mammoth\Http\Requests;
 use Mammoth\Http\Controllers\Controller;
 
@@ -20,10 +20,13 @@ class SearchController extends Controller
     /**
      * Shows the search page
      *
+     * @param Request $request
      * @return \Illuminate\View\View
      */
-    public function index($query)
+    public function index(Request $request)
     {
-        return view('Search::index')->with('query', $query);
+        $query = $request->input('searchInput');
+
+        return view('Search::index', compact('query'));
     }
 }

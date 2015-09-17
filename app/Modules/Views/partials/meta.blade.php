@@ -1,6 +1,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="_token" content="{!! csrf_token() !!}"/>
+{{-- <meta name="_token" content="{!! csrf_token() !!}"/> --}}
 <title>Mammoth @yield('title', ':: Welcome')</title>
 {{-- <link rel="apple-touch-icon" href="apple-icon-180x180.png"> --}}
 @include('partials.icons')

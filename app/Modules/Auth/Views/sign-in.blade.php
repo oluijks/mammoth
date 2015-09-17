@@ -6,11 +6,17 @@
 
 @include('Auth::partials.default-page-header', ['pageHeader' => 'Sign in', 'quote' => false])
 
-<div class="container-fluid">
+<div class="container">
 	<div class="row">
 		<div class="col-md-8 col-md-offset-4">
 			<div class="panel panel-default">
-				<div class="panel-heading">{!! trans('Auth::forms.sign-in-account') !!}</div>
+				<div class="panel-heading">
+                    {!! trans('Auth::forms.sign-in-account') !!}
+                    <span class="pull-right">
+                    <a class=""
+                       href="{{ route('sign-up') }}">{!! trans('Auth::forms.sign-up-account') !!}</a>
+                    </span>
+                </div>
 				<div class="panel-body">
 					@include('layout.partials.session-error')
 					<form class="form-horizontal"
@@ -39,6 +45,8 @@
                                        placeholder="{!! trans('Auth::forms.password') !!}">
 							</div>
 						</div>
+
+                        {{--
 						<div class="form-group">
 							<div class="col-md-6 col-md-offset-4">
 								<div class="checkbox">
@@ -47,22 +55,30 @@
                                                name="remember">{!! trans('Auth::forms.remember-me') !!}
 									</label>
 								</div>
+
 							</div>
 						</div>
+						--}}
+
 						<div class="form-group">
 							<div class="col-md-6 col-md-offset-4">
-								<button type="submit" class="btn btn-success">
+                                <button type="button"
+                                        class="btn btn-primary"
+                                        name="remember"
+                                        data-toggle="button"
+                                        aria-pressed="false"
+                                        autocomplete="off">
+                                    {!! trans('Auth::forms.remember-me') !!}
+                                </button>
+                                <button type="submit" class="btn btn-success">
                                     {!! trans('Auth::forms.sign-in') !!}
                                 </button>
-								<a class="btn btn-link"
-                                   href="{{ route('sign-up') }}">{!! trans('Auth::forms.sign-up-account') !!}</a>
 							</div>
 						</div>
 
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
-                                <a class="btn btn-link"
-                                   href="{{ url('/password/email') }}">{!! trans('Auth::forms.forgot-password') !!}</a>
+                                <a href="{{ url('/password/email') }}">{!! trans('Auth::forms.forgot-password') !!}</a>
                             </div>
                         </div>
 

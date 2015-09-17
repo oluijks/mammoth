@@ -9,13 +9,13 @@
 
 namespace Mammoth\Modules\Admin\Controllers;
 
-use Illuminate\Http\Request;
+// use Illuminate\Http\Request;
 
-use Mammoth\Modules\Admin\Models\Admin;
+// use Mammoth\Modules\Admin\Models\Admin;
 use Mammoth\Http\Requests;
 use Mammoth\Http\Controllers\Controller;
 
-class AdminController extends Controller
+class AdminDashboardController extends Controller
 {
     /**
      * Create a new authentication controller instance.
@@ -26,11 +26,11 @@ class AdminController extends Controller
     }
 
     /**
-     * Shows the admin index page
+     * Shows the admin dashboard page.
      *
      * @return \Illuminate\View\View
      */
-    public function dashboard()
+    public function index()
     {
         return view('Admin::dashboard');
     }

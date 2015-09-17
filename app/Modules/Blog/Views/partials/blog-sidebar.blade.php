@@ -2,10 +2,7 @@
         <div class="panel panel-default">
             <div class="panel-heading" role="tab" id="collapseMenuListGroupHeading">
                 <h4 class="panel-title">
-
-                    <a class=""
-                       style="text-decoration: none; display: block; width: 100%;"
-                       role="button"
+                    <a role="button"
                        data-toggle="collapse"
                        href="#collapseMenuListGroup"
                        aria-expanded="true"
