@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layout.' . config('mammoth.theme', 'default'))
 
 @section('title', ':: ' . trans('Auth::forms.sign-up-account'))
 

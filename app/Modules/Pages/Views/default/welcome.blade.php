@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layout.' . config('mammoth.theme', 'default'))
 
 @section('title', ':: ' . trans('Pages::pages.welcome.title'))
 
