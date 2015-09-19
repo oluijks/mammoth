@@ -4,25 +4,24 @@
 
 @section('content')
 
-@include('Auth::'.config('mammoth.theme', 'default').'.partials.default-page-header', ['pageHeader' => 'Sign in', 'quote' => false])
+@include('Auth::'.config('mammoth.theme', 'default').'.partials.default-page-header', [
+    'pageHeader' => 'Sign in', 'quote' => false
+])
 
 <div class="container">
 	<div class="row">
-
         <div class="col-md-5 text-center hidden-xs">
             <img src="{!! URL::asset('img/mammoth-icons/Mammoth_Seated_256x256.png') !!}"
-                 alt=""
+                 alt="Mammoth"
                  width="256"
                  height="256">
         </div>
-
 		<div class="col-md-7">
 			<div class="panel panel-default">
 				<div class="panel-heading">
                     {!! trans('Auth::forms.sign-in-account') !!}
                     <span class="pull-right">
-                    <a class=""
-                       href="{{ route('sign-up') }}">{!! trans('Auth::forms.sign-up-account') !!}</a>
+                    <a href="{{ route('sign-up') }}">{!! trans('Auth::forms.sign-up-account') !!}</a>
                     </span>
                 </div>
 				<div class="panel-body">
@@ -32,6 +31,7 @@
                           method="POST"
                           action="{{ url('/auth/login') }}">
                         {!! csrf_field() !!}
+                        <input type="hidden" id="remember" name="remember" value="">
                         <div class="form-group @if (count($errors) > 0) has-error @endif ">
 							<label class="col-md-4 control-label hidden-xs">
                                 {!! trans('Auth::forms.email-address') !!}
@@ -55,26 +55,11 @@
                                        placeholder="{!! trans('Auth::forms.password') !!}">
 							</div>
 						</div>
-
-                        {{--
-						<div class="form-group">
-							<div class="col-md-6 col-md-offset-4">
-								<div class="checkbox">
-									<label>
-										<input type="checkbox"
-                                               name="remember">{!! trans('Auth::forms.remember-me') !!}
-									</label>
-								</div>
-
-							</div>
-						</div>
-						--}}
-
 						<div class="form-group">
 							<div class="col-md-6 col-md-offset-4">
                                 <button type="button"
                                         class="btn btn-primary"
-                                        name="remember"
+                                        id="remember-button"
                                         tabindex="4"
                                         data-toggle="button"
                                         aria-pressed="false"
@@ -86,13 +71,11 @@
                                 </button>
 							</div>
 						</div>
-
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <a href="{{ url('/password/email') }}">{!! trans('Auth::forms.forgot-password') !!}</a>
                             </div>
                         </div>
-
 					</form>
 				</div>
 			</div>
@@ -101,46 +84,14 @@
 </div>
 @endsection
 
-{{--
 @section('scripts')
-    <script>
-        (function ($) {
-
-            'use strict';
-
-            var Vue = window.Vue;
-
-            Vue.http.headers.common['X-CSRF-TOKEN'] = document.querySelector('input[name="_token"]').getAttribute('value');
-            var url = "{{ url('/auth/login') }}";
-
-            var login = new Vue({
-                el: '.panel-body',
-                data: {
-                    email: '',
-                    password: '',
-                    response: []
-                },
-                methods: {
-                    login: function (event) {
-                        event.preventDefault();
-
-                        var payload = {
-                            email: this.email,
-                            password: this.password,
-                        };
-
-                        this.$http.post(url, payload, function (data, status, request) {
-
-                            this.response = data;
-                            console.info(this.response);
-
-                        }).error(function (data, status, request) {
-                            console.log("Error:" + JSON.stringify(data));
-                        });
-                    }
-                }
-            });
-        }(jQuery));
-    </script>
+<script>
+    (function ($) {
+        'use strict';
+        $('#remember-button').click(function () {
+            var $v = $('#remember').val();
+            $('#remember').val($v === "1" ? "" : "1");
+        });
+    }(jQuery));
+</script>
 @endsection
---}}

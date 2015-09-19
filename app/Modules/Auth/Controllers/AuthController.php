@@ -112,8 +112,6 @@ class AuthController extends Controller
      */
     public function postLogin(Request $request)
     {
-        // var_dump($request->all());
-
         $this->validate($request, [
             $this->loginUsername() => 'required', 'password' => 'required',
         ]);
@@ -129,7 +127,7 @@ class AuthController extends Controller
 
         $credentials = $this->getCredentials($request);
 
-        if (Auth::attempt($credentials, $request->has('remember'))) {
+        if (Auth::attempt($credentials, (int)$request->has('remember'))) {
             return $this->handleUserWasAuthenticated($request, $throttles);
         }
 
@@ -156,9 +154,11 @@ class AuthController extends Controller
      */
     protected function authenticated(Request $request, User $user)
     {
+        $loginMessage = trans('Auth::auth.sign-in-message', ['name' => $user->name]);
+
         // Todo, only admins should go everywere
         return redirect()->intended('/')
-            ->with('status', trans('Auth::auth.sign-in-message', ['name' => $user->name]))
+            ->with('status', $loginMessage)
             ->with('type', 'success')
             ->with('image', 'Mammoth_Happy_48x48.png'); // Todo: move this to config
     }
