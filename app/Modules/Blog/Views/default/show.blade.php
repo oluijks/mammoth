@@ -13,9 +13,14 @@
             <div class="col-md-3 col-md-push-9">
                 @include('Blog::'.config('mammoth.theme', 'default').'.partials.blog-sidebar')
             </div>
+
             <div class="col-md-9 col-md-pull-3">
                 <div class="row">
                     <div class="col-md-12">
+                        <ol class="breadcrumb">
+                            <li><a href="{{ route('home') }}">Home</a></li>
+                            <li><a href="{{ route('blog.index') }}">Blog</a></li>
+                        </ol>
                         <div class="panel panel-primary">
                             <div class="panel-heading">
                                 <h5 class="panel-title">{!! $blog->title !!}</h5>
