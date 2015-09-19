@@ -4,7 +4,9 @@
 @include('partials.meta')
 </head>
 <body>
+@if (config('mammoth.support_ie8'))
 @include('partials.browsehappy')
+@endif
 @include('layout.partials._navigation')
 {{ PHP_EOL  }}@yield('content'){{ PHP_EOL  }}
 @include('layout.partials.footer')

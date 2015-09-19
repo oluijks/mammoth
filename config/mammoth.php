@@ -14,6 +14,8 @@ return [
     'admin_email'   => 'admin@mammoth-app.com',
     'theme'         => 'default',
 
+    'support_ie8'   => true,
+
     'modules' => [
         'Admin',
         'Auth',
@@ -25,5 +27,5 @@ return [
         'Sitemap',
     ],
 
-    'ga_code' => 'UA-XXXXX-X',
+    'ga_code'       => 'UA-XXXXX-X',
 ];
