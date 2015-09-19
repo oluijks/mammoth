@@ -1,4 +1,4 @@
-    <div class="panel-group" role="tablist">
+        <div class="panel-group" role="tablist">
         <div class="panel panel-default">
             <div class="panel-heading" role="tab" id="collapseMenuListGroupHeading">
                 <h4 class="panel-title">
@@ -26,3 +26,4 @@
             </div>
         </div>
     </div>
+    @include('Blog::'.config('mammoth.theme', 'default').'.ads.dummy')
