@@ -7,8 +7,10 @@
 
 let WebFontConfig = WebFontConfig || {};
 WebFontConfig = {
-  google: { families: ['Roboto:400,400italic,500,500italic:latin'] },
-  classes: true
+  // google: { families: ['Roboto:400,400italic,500,500italic:latin'] },
+  google: { families: ['Lato:300,400,700'] },
+  classes: true,
+  timeout: 1500
 };
 window.WebFontConfig = WebFontConfig;
 (function() {
