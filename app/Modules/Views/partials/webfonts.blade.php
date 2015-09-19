@@ -1,6 +1,6 @@
 <script>
     WebFontConfig = {
-        google: { families: [ 'Roboto:400,400italic,500,500italic:latin' ] },
+        google: { families: ['Roboto:400,400italic,500,500italic:latin'] },
         classes: false
     };
     (function() {
@@ -11,5 +11,5 @@
         wf.async = 'true';
         var s = document.getElementsByTagName('script')[0];
         s.parentNode.insertBefore(wf, s);
-    })();
+    }());
 </script>

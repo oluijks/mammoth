@@ -1,6 +1,5 @@
 @if (count($errors) > 0)
     <div class="alert alert-danger">
-
         <div class="row">
             <div class="col-md-3">
                 <img class="img-responsive hidden-xs"
