@@ -14,6 +14,9 @@ use Illuminate\Support\ServiceProvider;
 
 class ModuleServiceProvider extends ServiceProvider
 {
+    /**
+     * @var
+     */
     protected $files;
 
     /**
@@ -23,19 +26,21 @@ class ModuleServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $modules = config('mammoth.modules');
+        // Setup modules structure and load routes, views and lang
+        $modules    = config('mammoth.modules');
+        $modulesDir = app_path() . '/Modules/';
 
-        if (is_dir(app_path() . '/Modules/')) {
-            $modules = (config('mammoth.modules')) ?:
+        if (is_dir($modulesDir)) {
+            $modules = $modules ?:
                 array_map('class_basename',
-                    $this->files->directories(app_path() . '/Modules/'));
+                    $this->files->directories($modulesDir));
 
             foreach ($modules as $module) {
-                $routes = app_path() . '/Modules/' . $module . '/routes.php';
-                $views  = app_path() . '/Modules/' . $module . '/Views';
-                $trans  = app_path() . '/Modules/' . $module . '/Lang';
+                $routes = $modulesDir . $module . '/routes.php';
+                $views  = $modulesDir . $module . '/Views';
+                $trans  = $modulesDir . $module . '/Lang';
 
-                if ($this->files->exists($routes)) { include $routes; }
+                if ($this->files->exists($routes))     { include $routes; }
                 if ($this->files->isDirectory($views)) { $this->loadViewsFrom($views, $module); }
                 if ($this->files->isDirectory($trans)) { $this->loadTranslationsFrom($trans, $module); }
             }
