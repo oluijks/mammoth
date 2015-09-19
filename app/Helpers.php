@@ -15,12 +15,13 @@
  * @param  array   $attributes
  * @return string
  */
-function mailto($email, $title = null, $attributes = array())
-{
-    $email = email($email);
-    $title = $title ?: $email;
-    $email = obfuscate('mailto:') . $email;
-    return '<a href="'.$email.'"'.attributes($attributes).'>'.entities($title).'</a>';
+if (! function_exists('mailto')) {
+    function mailto($email, $title = null, $attributes = []) {
+        $email = email($email);
+        $title = $title ?: $email;
+        $email = obfuscate('mailto:') . $email;
+        return '<a href="'.$email.'"'.attributes($attributes).'>'.entities($title).'</a>';
+    }
 }
 
 /**
@@ -29,9 +30,10 @@ function mailto($email, $title = null, $attributes = array())
  * @param  string  $email
  * @return string
  */
-function email($email)
-{
-    return str_replace('@', '&#64;', obfuscate($email));
+if (! function_exists('email')) {
+    function email($email) {
+        return str_replace('@', '&#64;', obfuscate($email));
+    }
 }
 
 /**
@@ -40,20 +42,20 @@ function email($email)
  * @param  array  $attributes
  * @return string
  */
-function attributes($attributes)
-{
-    $html = [];
-    // For numeric keys we will assume that the key and the value are the same
-    // as this will convert HTML attributes such as "required" to a correct
-    // form like required="required" instead of using incorrect numerics.
-    foreach ((array) $attributes as $key => $value)
-    {
-        $element = attributeElement($key, $value);
-        if ( ! is_null($element)) $html[] = $element;
+if (! function_exists('attributes')) {
+    function attributes($attributes) {
+        $html = [];
+        // For numeric keys we will assume that the key and the value are the same
+        // as this will convert HTML attributes such as "required" to a correct
+        // form like required="required" instead of using incorrect numerics.
+        foreach ((array) $attributes as $key => $value)
+        {
+            $element = attributeElement($key, $value);
+            if ( ! is_null($element)) $html[] = $element;
+        }
+        return count($html) > 0 ? ' '.implode(' ', $html) : '';
     }
-    return count($html) > 0 ? ' '.implode(' ', $html) : '';
 }
-
 
 /**
  * Build a single attribute element.
@@ -62,10 +64,11 @@ function attributes($attributes)
  * @param  string  $value
  * @return string
  */
-function attributeElement($key, $value)
-{
-    if (is_numeric($key)) $key = $value;
-    if ( ! is_null($value)) return $key.'="'.e($value).'"';
+if (! function_exists('attributeElement')) {
+    function attributeElement($key, $value) {
+        if (is_numeric($key)) $key = $value;
+        if (! is_null($value)) return $key.'="'.e($value).'"';
+    }
 }
 
 /**
@@ -74,27 +77,28 @@ function attributeElement($key, $value)
  * @param  string  $value
  * @return string
  */
-function obfuscate($value)
-{
-    $safe = '';
-    foreach (str_split($value) as $letter) {
-        if (ord($letter) > 128) return $letter;
-        // To properly obfuscate the value, we will randomly convert each letter to
-        // its entity or hexadecimal representation, keeping a bot from sniffing
-        // the randomly obfuscated letters out of the string on the responses.
-        switch (rand(1, 3)) {
-            case 1:
-                $safe .= '&#' . ord($letter) . ';';
-                break;
-            case 2:
-                $safe .= '&#x' . dechex(ord($letter)) . ';';
-                break;
-            case 3:
-                $safe .= $letter;
-                break;
+if (! function_exists('obfuscate')) {
+    function obfuscate($value) {
+        $safe = '';
+        foreach (str_split($value) as $letter) {
+            if (ord($letter) > 128) return $letter;
+            // To properly obfuscate the value, we will randomly convert each letter to
+            // its entity or hexadecimal representation, keeping a bot from sniffing
+            // the randomly obfuscated letters out of the string on the responses.
+            switch (rand(1, 3)) {
+                case 1:
+                    $safe .= '&#' . ord($letter) . ';';
+                    break;
+                case 2:
+                    $safe .= '&#x' . dechex(ord($letter)) . ';';
+                    break;
+                case 3:
+                    $safe .= $letter;
+                    break;
+            }
         }
+        return $safe;
     }
-    return $safe;
 }
 
 /**
@@ -103,9 +107,10 @@ function obfuscate($value)
  * @param  string  $value
  * @return string
  */
-function entities($value)
-{
-    return htmlentities($value, ENT_QUOTES, 'UTF-8', false);
+if (! function_exists('entities')) {
+    function entities($value) {
+        return htmlentities($value, ENT_QUOTES, 'UTF-8', false);
+    }
 }
 
 /**
@@ -120,16 +125,17 @@ function entities($value)
  * @param boolean $xml When true, an XML self-closing tag will be applied to break tags (<br />).
  * @return string
  */
-function nl2p($string, $line_breaks = true, $xml = true)
-{
-    // Remove existing HTML formatting to avoid double-wrapping things
-    $string = str_replace(array('<p>', '</p>', '<br>', '<br />'), '', $string);
+if (! function_exists('nl2p')) {
+    function nl2p($string, $line_breaks = true, $xml = true) {
+        // Remove existing HTML formatting to avoid double-wrapping things
+        $string = str_replace(array('<p>', '</p>', '<br>', '<br />'), '', $string);
 
-    // It is conceivable that people might still want single line-breaks
-    // without breaking into a new paragraph.
-    if ($line_breaks == true)
-        return '<p>'.preg_replace(array("/([\n]{2,})/i", "/([^>])\n([^<])/i"),
-            array("</p>\n<p>", '<br'.($xml == true ? ' /' : '').'>'), trim($string)).'</p>';
-    else
-        return '<p>'.preg_replace("/([\n]{1,})/i", "</p>\n<p>", trim($string)).'</p>';
+        // It is conceivable that people might still want single line-breaks
+        // without breaking into a new paragraph.
+        if ($line_breaks == true)
+            return '<p>'.preg_replace(array("/([\n]{2,})/i", "/([^>])\n([^<])/i"),
+                array("</p>\n<p>", '<br'.($xml == true ? ' /' : '').'>'), trim($string)).'</p>';
+        else
+            return '<p>'.preg_replace("/([\n]{1,})/i", "</p>\n<p>", trim($string)).'</p>';
+    }
 }
