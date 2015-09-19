@@ -4,7 +4,9 @@
 
 @section('content')
 
-    @include('Blog::'.config('mammoth.theme', 'default').'.partials.default-page-header', ['pageHeader' => trans('Blog::blog.create-blog'), 'quote' => true])
+    @include('Blog::'.config('mammoth.theme', 'default').'.partials.default-page-header', [
+        'pageHeader' => trans('Blog::blog.create-blog'), 'quote' => true
+    ])
 
     <div class="container">
         <div class="row">

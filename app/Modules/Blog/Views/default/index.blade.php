@@ -4,7 +4,9 @@
 
 @section('content')
 
-    @include('Blog::'.config('mammoth.theme', 'default').'.partials.default-page-header', ['pageHeader' => 'M-Blog', 'quote' => true])
+    @include('Blog::'.config('mammoth.theme', 'default').'.partials.default-page-header', [
+        'pageHeader' => 'M-Blog', 'quote' => true
+    ])
 
     <div class="container">
         <div class="row">
@@ -23,18 +25,17 @@
                                 <p>{!! $blog->excerpt !!}</p>
                             </div>
                             <div class="panel-footer">
-                                {!! $blog->created_at->diffForHumans()   !!}
+                                {!! $blog->created_at->diffForHumans() !!}
                                 <a id="{{ $blog->id }}"
                                    class="pull-right"
-                                   href="{{ url('blog', [$blog->slug])  }}">
-                                    {{ trans('Blog::blog.read-more') }}
+                                   href="{!! url('blog', [$blog->slug]) !!}">
+                                   {!! trans('Blog::blog.read-more') !!}
                                 </a>
                             </div>
                         </div>
                         @endforeach
                         {!! $blogs->render() !!}
                     </div>
-
                 </div>
             </div>
         </div>
