@@ -4,7 +4,8 @@
 
 @section('content')
 
-    @include('Pages::partials.default-page-header', ['pageHeader' => 'M-Credits', 'quote' => false])
+    @include('Pages::'.config('mammoth.theme', 'default').'.partials.default-page-header',
+            ['pageHeader' => 'M-Credits', 'quote' => false])
 
     <div class="container">
         <div class="row">

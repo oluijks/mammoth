@@ -8,91 +8,132 @@ class PageControllerTest extends TestCase
 {
     use DatabaseMigrations, DatabaseTransactions;
 
-    public function testGetWelcomePageExpectsResponseStatusOf200()
+    /**
+     * @test
+     */
+    public function GetWelcomePageExpectsResponseStatusOf200()
     {
         $response = $this->call('GET', '/');
         $this->assertEquals(200, $response->status());
     }
 
-    public function testGetAboutPageExpectsResponseStatusOf200()
+    /**
+     * @test
+     */
+    public function GetAboutPageExpectsResponseStatusOf200()
     {
         $response = $this->call('GET', '/about');
         $this->assertEquals(200, $response->status());
     }
 
-    public function testGetContactPageExpectsResponseStatusOf200()
+    /**
+     * @test
+     */
+    public function GetContactPageExpectsResponseStatusOf200()
     {
         $response = $this->call('GET', '/contact');
         $this->assertEquals(200, $response->status());
     }
 
-    public function testGetCreditsPageExpectsResponseStatusOf200()
+    /**
+     * @test
+     */
+    public function GetCreditsPageExpectsResponseStatusOf200()
     {
         $response = $this->call('GET', '/credits');
         $this->assertEquals(200, $response->status());
     }
 
-    public function testVisitWelcomePageExpectsToSee()
+    /**
+     * @test
+     */
+    public function VisitWelcomePageExpectsToSee()
     {
         $this->visit('/')
-             ->see('Big mammoth is BIG!');
+             ->see('Mammoth App is BIG, BIGGER, HUGE, HUMONGOUS!');
     }
 
-
-    public function testVisitAboutPageExpectsToSeeAboutPage()
+    /**
+     * @test
+     */
+    public function VisitAboutPageExpectsToSeeAboutPage()
     {
         $this->visit('/about')
              ->see('About');
     }
 
-    public function testVisitContactPageExpectsToSeeContactPage()
+    /**
+     * @test
+     */
+    public function VisitContactPageExpectsToSeeContactPage()
     {
         $this->visit('/contact')
              ->see('Contact');
     }
 
-    public function testVisitCreditsPageExpectsToSeeCreditsPage()
+    /**
+     * @test
+     */
+    public function VisitCreditsPageExpectsToSeeCreditsPage()
     {
         $this->visit('/credits')
              ->see('M-Credits');
     }
 
-    public function te()
+    /**
+     * @test
+     */
+    public function VisitWelcomePageClicksViewMAppSeePageIsMApp()
     {
         $this->visit('/')
-             ->click('View M-App')
+             ->click('mammoth-app')
              ->seePageIs('/blog');
     }
 
-    public function testVisitWelcomePageClicksViewMBlogSeePageIsMBlog()
+    /**
+     * @test
+     */
+    public function VisitWelcomePageClicksViewMBlogSeePageIsMBlog()
     {
         $this->visit('/')
-             ->click('View M-Blog')
+             ->click('mammoth-blog')
              ->seePageIs('/blog');
     }
 
-    public function testVisitWelcomePageClicksViewMForumSeePageIsMForum()
+    /**
+     * @test
+     */
+    public function VisitWelcomePageClicksViewMForumSeePageIsMForum()
     {
         $this->visit('/')
-             ->click('View M-Forum')
+             ->click('mammoth-forum')
              ->seePageIs('/blog');
     }
 
-    public function testVisitWelcomePageClicksViewMHerdSeePageIsMHerd()
+    /**
+     * @test
+     */
+    public function VisitWelcomePageClicksViewMHerdSeePageIsMHerd()
     {
         $this->visit('/')
-             ->click('View M-Herd')
+             ->click('mammoth-social')
              ->seePageIs('/blog');
     }
 
-    public function testVisitWelcomePageClicksSignInSeePageIsSignInPage()
+    /**
+     * @test
+     */
+    public function VisitWelcomePageClicksSignInSeePageIsSignInPage()
     {
         $this->visit('/')
              ->click('Sign in')
              ->seePageIs('/sign-in');
     }
 
-    public function testVisitWelcomePageClicksSignUpSeePageIsSignUpPage()
+    /**
+     * @test
+     */
+    public function VisitWelcomePageClicksSignUpSeePageIsSignUpPage()
     {
         $this->visit('/')
              ->click('Sign up')

@@ -4,11 +4,19 @@
 
 @section('content')
 
-@include('Auth::partials.default-page-header', ['pageHeader' => 'Sign in', 'quote' => false])
+@include('Auth::'.config('mammoth.theme', 'default').'.partials.default-page-header', ['pageHeader' => 'Sign in', 'quote' => false])
 
 <div class="container">
 	<div class="row">
-		<div class="col-md-8 col-md-offset-4">
+
+        <div class="col-md-5 text-center hidden-xs">
+            <img src="{!! URL::asset('img/mammoth-icons/Mammoth_Seated_256x256.png') !!}"
+                 alt=""
+                 width="256"
+                 height="256">
+        </div>
+
+		<div class="col-md-7">
 			<div class="panel panel-default">
 				<div class="panel-heading">
                     {!! trans('Auth::forms.sign-in-account') !!}
@@ -32,6 +40,7 @@
 								<input type="email"
                                        class="form-control"
                                        name="email"
+                                       tabindex="1"
                                        placeholder="{!! trans('Auth::forms.email-address') !!}"
                                        value="{{ old('email') }}">
 							</div>
@@ -42,6 +51,7 @@
 								<input type="password"
                                        class="form-control"
                                        name="password"
+                                       tabindex="2"
                                        placeholder="{!! trans('Auth::forms.password') !!}">
 							</div>
 						</div>
@@ -65,12 +75,13 @@
                                 <button type="button"
                                         class="btn btn-primary"
                                         name="remember"
+                                        tabindex="4"
                                         data-toggle="button"
                                         aria-pressed="false"
                                         autocomplete="off">
                                     {!! trans('Auth::forms.remember-me') !!}
                                 </button>
-                                <button type="submit" class="btn btn-success">
+                                <button type="submit" class="btn btn-success" tabindex="3">
                                     {!! trans('Auth::forms.sign-in') !!}
                                 </button>
 							</div>

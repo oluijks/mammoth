@@ -4,7 +4,7 @@
 
 @section('content')
 
-    @include('partials.default-page-header', ['pageHeader' => '503', 'quote' => false])
+    @include('Pages::partials.default-page-header', ['pageHeader' => '503', 'quote' => false])
 
     <div class="container">
         <div class="row">
@@ -14,7 +14,15 @@
                         <h3 class="panel-title">Page not found</h3>
                     </div>
                     <div class="panel-body">
-                        <p>Be right back.</p>
+                        <div class="col-md-5 text-center">
+                            <img src="{!! URL::asset('img/mammoth-icons/Mammoth_Back_256x256.png') !!}"
+                                 alt=""
+                                 width="256"
+                                 height="256">
+                        </div>
+                        <div class="col-md-7">
+                            <h3>Be right back...</h3><br>
+                        </div>
                     </div>
                 </div>
             </div>

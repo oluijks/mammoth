@@ -27,6 +27,6 @@ class SearchController extends Controller
     {
         $query = $request->input('searchInput');
 
-        return view('Search::index', compact('query'));
+        return view('Search::'.config('mammoth.theme', 'default').'.index', compact('query'));
     }
 }

@@ -9,10 +9,10 @@
 
 return [
 
-    'version' => '0.0.1',
-    'admin_email' => 'admin@mammoth-app.com',
+    'version'       => '0.0.1',
 
-    'ga_code' => 'UA-XXXXX-X',
+    'admin_email'   => 'admin@mammoth-app.com',
+    'theme'         => 'default',
 
     'modules' => [
         'Admin',
@@ -24,4 +24,6 @@ return [
         'Search',
         'Sitemap',
     ],
+
+    'ga_code' => 'UA-XXXXX-X',
 ];

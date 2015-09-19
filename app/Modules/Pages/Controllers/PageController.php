@@ -11,6 +11,7 @@ namespace Mammoth\Modules\Pages\Controllers;
 
 use Illuminate\Http\Request;
 
+use Mammoth\Modules\Quotes;
 use Mammoth\Http\Requests;
 use Mammoth\Http\Controllers\Controller;
 
@@ -23,7 +24,8 @@ class PageController extends Controller
      */
     public function welcome()
     {
-        return view('Pages::welcome');
+        $quote = Quotes::quote();
+        return view('Pages::'.config('mammoth.theme', 'default').'.welcome')->with('quote', $quote);
     }
 
     /**
@@ -33,7 +35,7 @@ class PageController extends Controller
      */
     public function about()
     {
-        return view('Pages::about');
+        return view('Pages::'.config('mammoth.theme', 'default').'.about');
     }
 
     /**
@@ -43,7 +45,7 @@ class PageController extends Controller
      */
     public function contact()
     {
-        return view('Pages::contact');
+        return view('Pages::'.config('mammoth.theme', 'default').'.contact');
     }
 
     /**
@@ -53,6 +55,6 @@ class PageController extends Controller
      */
     public function credits()
     {
-        return view('Pages::credits');
+        return view('Pages::'.config('mammoth.theme', 'default').'.credits');
     }
 }

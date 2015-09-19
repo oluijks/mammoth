@@ -4,7 +4,7 @@
 
 @section('content')
 
-    @include('partials.default-page-header', ['pageHeader' => '404', 'quote' => false])
+    @include('Pages::partials.default-page-header', ['pageHeader' => '404', 'quote' => false])
 
     <div class="container">
         <div class="row">
@@ -14,10 +14,26 @@
                         <h3 class="panel-title">Page not found</h3>
                     </div>
                     <div class="panel-body">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae deleniti dolorum exercitationem,
-                            fugiat, impedit incidunt inventore iusto nam non odio praesentium quibusdam.
-                        </p>
+                        <div class="col-md-5 text-center">
+                            <img src="{!! URL::asset('img/mammoth-icons/Mammooth_256x256.png') !!}"
+                                 alt=""
+                                 width="256"
+                                 height="256">
+                        </div>
+                        <div class="col-md-7">
+                            <h3>Something went wrong...</h3><br>
+
+                            <p>Try one of these links:</p>
+
+                            <ul class="">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">Credits</a></li>
+                            </ul>
+
+                        </div>
                     </div>
                 </div>
             </div>

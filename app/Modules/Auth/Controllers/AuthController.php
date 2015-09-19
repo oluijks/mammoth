@@ -52,7 +52,7 @@ class AuthController extends Controller
      */
     public function getLogin()
     {
-        return view('Auth::sign-in');
+        return view('Auth::'.config('mammoth.theme', 'default').'.sign-in');
     }
 
     /**
@@ -77,7 +77,7 @@ class AuthController extends Controller
      */
     public function getRegister()
     {
-        return view('Auth::sign-up');
+        return view('Auth::'.config('mammoth.theme', 'default').'.sign-up');
     }
 
     /**
@@ -112,6 +112,8 @@ class AuthController extends Controller
      */
     public function postLogin(Request $request)
     {
+        // var_dump($request->all());
+
         $this->validate($request, [
             $this->loginUsername() => 'required', 'password' => 'required',
         ]);

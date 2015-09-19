@@ -53,8 +53,13 @@ blockquote {
 }
 
 .jumbotron {
-  padding-top: 55px;
+  margin-top: -28px;
+  padding-top: 15px;
   background-color: lighten($body-bg, 5%);
+}
+
+.btn:active, .btn.active {
+  height: 39px;
 }
 
 .container .marketing {

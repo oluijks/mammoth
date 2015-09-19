@@ -4,12 +4,12 @@
 
 @section('content')
 
-    @include('Blog::partials.default-page-header', ['pageHeader' => trans('Blog::blog.create-blog'), 'quote' => true])
+    @include('Blog::'.config('mammoth.theme', 'default').'.partials.default-page-header', ['pageHeader' => trans('Blog::blog.create-blog'), 'quote' => true])
 
     <div class="container">
         <div class="row">
             <div class="col-md-3 col-md-push-9">
-                @include('Blog::partials.blog-sidebar')
+                @include('Blog::'.config('mammoth.theme', 'default').'.partials.blog-sidebar')
             </div>
             <div class="col-md-9 col-md-pull-3">
                 <div class="row">
