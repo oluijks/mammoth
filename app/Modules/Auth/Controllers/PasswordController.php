@@ -47,7 +47,7 @@ class PasswordController extends Controller
      */
     public function getEmail()
     {
-        return view('Auth::password');
+        return view('Auth::'.config('mammoth.theme', 'default').'.password');
     }
 
     /**
@@ -88,7 +88,7 @@ class PasswordController extends Controller
             throw new NotFoundHttpException;
         }
 
-        return view('Auth::reset')->with('token', $token);
+        return view('Auth::'.config('mammoth.theme', 'default').'.reset')->with('token', $token);
     }
 
     /**

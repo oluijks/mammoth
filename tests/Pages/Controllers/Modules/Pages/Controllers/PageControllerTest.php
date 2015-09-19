@@ -86,7 +86,7 @@ class PageControllerTest extends TestCase
     public function VisitWelcomePageClicksViewMAppSeePageIsMApp()
     {
         $this->visit('/')
-             ->click('mammoth-app')
+             ->click('mammoth-app-1')
              ->seePageIs('/blog');
     }
 
@@ -96,7 +96,7 @@ class PageControllerTest extends TestCase
     public function VisitWelcomePageClicksViewMBlogSeePageIsMBlog()
     {
         $this->visit('/')
-             ->click('mammoth-blog')
+             ->click('mammoth-app-2')
              ->seePageIs('/blog');
     }
 
@@ -106,7 +106,7 @@ class PageControllerTest extends TestCase
     public function VisitWelcomePageClicksViewMForumSeePageIsMForum()
     {
         $this->visit('/')
-             ->click('mammoth-forum')
+             ->click('mammoth-app-3')
              ->seePageIs('/blog');
     }
 
@@ -116,7 +116,7 @@ class PageControllerTest extends TestCase
     public function VisitWelcomePageClicksViewMHerdSeePageIsMHerd()
     {
         $this->visit('/')
-             ->click('mammoth-social')
+             ->click('mammoth-app-4')
              ->seePageIs('/blog');
     }
 

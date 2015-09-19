@@ -59,7 +59,7 @@ return [
     */
 
     'password' => [
-        'email' => 'Auth::emails.password',
+        'email' => 'Auth::'.config('mammoth.theme', 'default').'.emails.password',
         'table' => 'password_resets',
         'expire' => 60,
     ],

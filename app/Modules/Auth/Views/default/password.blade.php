@@ -3,9 +3,15 @@
 @section('title', ':: ' . trans('Auth::forms.reset-password'))
 
 @section('content')
-<div class="container-fluid">
+<div class="container">
 	<div class="row">
-		<div class="col-md-8 col-md-offset-4">
+        <div class="col-md-5 text-center hidden-xs">
+            <img src="{!! URL::asset('img/mammoth-icons/Mammoth_Seated_256x256.png') !!}"
+                 alt="Mammoth"
+                 width="256"
+                 height="256">
+        </div>
+		<div class="col-md-7">
 			<div class="panel panel-default">
 				<div class="panel-heading">{!! trans('Auth::forms.reset-password') !!}</div>
 				<div class="panel-body">
