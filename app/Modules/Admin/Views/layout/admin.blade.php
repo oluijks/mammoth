@@ -10,6 +10,5 @@
 @include('partials.scripts')
 @yield('scripts')
 @include('layout.partials.session-status')
-@include('partials.webfonts')
 </body>
 </html>
