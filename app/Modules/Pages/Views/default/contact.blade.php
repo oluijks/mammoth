@@ -4,7 +4,9 @@
 
 @section('content')
 
-    @include('Pages::'.config('mammoth.theme', 'default').'.partials.default-page-header', ['pageHeader' => 'Contact', 'quote' => true])
+    @include('Pages::'.config('mammoth.theme', 'default').'.partials.default-page-header', [
+        'pageHeader' => 'Contact', 'quote' => true
+    ])
 
     <div class="container">
         <div class="row">

@@ -4,7 +4,9 @@
 
 @section('content')
 
-    @include('Pages::'.config('mammoth.theme', 'default').'.partials.default-page-header', ['pageHeader' => trans('Pages::pages.about.title'), 'quote' => true])
+    @include('Pages::'.config('mammoth.theme', 'default').'.partials.default-page-header', [
+        'pageHeader' => trans('Pages::pages.about.title'), 'quote' => true
+    ])
 
     <div class="container">
         <div class="row">
