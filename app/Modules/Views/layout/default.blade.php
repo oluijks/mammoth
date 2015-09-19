@@ -11,7 +11,6 @@
 @include('partials.scripts')
 @yield('scripts')
 @include('layout.partials.session-status')
-@include('partials.webfonts')
 @if (app()->environment('production'))
 @include('partials.ga')
 @endif

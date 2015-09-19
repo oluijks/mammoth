@@ -11,6 +11,7 @@
 
   require('../console');
   require('../notify-defaults');
+  require('../webfonts');
 
   let Vue = require('vue');
   /* Vue.use(require('vue-resource')); */
