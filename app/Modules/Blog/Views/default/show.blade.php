@@ -29,7 +29,7 @@
                                 <p>{!! $blog->body !!}</p>
                             </div>
                             <div class="panel-footer">
-                                {!! $blog->created_at->formatLocalized('%A %d %B %Y') !!}
+                                <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> {!! $blog->created_at->formatLocalized('%A %d %B %Y') !!}
                             </div>
                         </div>
                     </div>

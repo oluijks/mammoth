@@ -25,7 +25,7 @@
                                 <p>{!! $blog->excerpt !!}</p>
                             </div>
                             <div class="panel-footer">
-                                {!! $blog->created_at->diffForHumans() !!}
+                                <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> {!! $blog->created_at->diffForHumans() !!}
                                 <a id="{{ $blog->id }}"
                                    class="pull-right"
                                    href="{!! url('blog', [$blog->slug]) !!}">
