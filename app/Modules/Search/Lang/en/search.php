@@ -9,4 +9,6 @@
 
 return [
 
+    'search_input_placeholder' => 'Search for....',
+
 ];
