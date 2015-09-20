@@ -1,3 +1,12 @@
+<?php
+/**
+ * Pages credits view
+ *
+ * Copyright 2015 Mammoth. All rights reserved.
+ * See LICENCE for license details.
+ */
+?>
+
 @extends('layout.' . config('mammoth.theme', 'default'))
 
 @section('title', ':: ' . trans('Pages::pages.credits.title'))
@@ -17,7 +26,6 @@
             </div>
         </div>
     </div>
-
     <div class="container">
         <div class="row">
             <div class="col-md-9">
@@ -29,7 +37,6 @@
                             </div>
                             <div class="panel-body">
                                 <div class="list-group">
-
                                     <a href="http://bootstrap-growl.remabledesigns.com/"
                                        target="_blank"
                                        class="list-group-item">
@@ -39,7 +46,6 @@
                                             for faster and easier web development.
                                         </p>
                                     </a>
-
                                     <a href="http://bootstrap-growl.remabledesigns.com/"
                                        target="_blank"
                                        class="list-group-item">
@@ -49,7 +55,6 @@
                                             notifications.
                                         </p>
                                     </a>
-
                                     <a href="http://www.favicon-generator.org/"
                                        target="_blank"
                                        class="list-group-item">
@@ -58,7 +63,15 @@
                                             Convert your GIF, PNG or JPEG into a favicon.ico and App icons.
                                         </p>
                                     </a>
-
+                                    <a href="http://www.google.com/recaptcha/"
+                                       target="_blank"
+                                       class="list-group-item">
+                                        <h4 class="list-group-item-heading">Google reCAPTCHA</h4>
+                                        <p class="list-group-item-text">
+                                            Protect your website from spam and abuse while letting real people pass
+                                            through with ease.
+                                        </p>
+                                    </a>
                                     <a href="http://laravel.com/"
                                        target="_blank"
                                        class="list-group-item">
@@ -67,7 +80,6 @@
                                             The PHP Framework For Web Artisans.
                                         </p>
                                     </a>
-
                                     <a href="http://fasticon.com/"
                                        target="_blank"
                                        class="list-group-item">

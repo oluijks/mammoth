@@ -1,3 +1,12 @@
+<?php
+/**
+ * Blog sidebar view
+ *
+ * Copyright 2015 Mammoth. All rights reserved.
+ * See LICENCE for license details.
+ */
+?>
+
 <div class="panel-group" role="tablist">
     <div class="panel panel-default">
         <div class="panel-heading" role="tab" id="collapseMenuListGroupHeading">

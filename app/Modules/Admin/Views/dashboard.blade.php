@@ -1,3 +1,12 @@
+<?php
+/**
+ * Admin dashboard view
+ *
+ * Copyright 2015 Mammoth. All rights reserved.
+ * See LICENCE for license details.
+ */
+?>
+
 @extends('Admin::layout.admin')
 
 @section('title', ':: Admin Dashboard')

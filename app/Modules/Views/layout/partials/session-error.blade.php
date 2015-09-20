@@ -1,3 +1,12 @@
+<?php
+/**
+ * Session error view
+ *
+ * Copyright 2015 Mammoth. All rights reserved.
+ * See LICENCE for license details.
+ */
+?>
+
 @if (count($errors) > 0)
     <div class="alert alert-danger">
         <div class="row">

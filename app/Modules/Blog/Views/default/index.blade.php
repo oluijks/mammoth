@@ -1,3 +1,12 @@
+<?php
+/**
+ * Blog index view
+ *
+ * Copyright 2015 Mammoth. All rights reserved.
+ * See LICENCE for license details.
+ */
+?>
+
 @extends('layout.' . config('mammoth.theme', 'default'))
 
 @section('title', ':: M-Blog')
@@ -25,7 +34,8 @@
                                 <p>{!! $blog->excerpt !!}</p>
                             </div>
                             <div class="panel-footer">
-                                <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> {!! $blog->created_at->diffForHumans() !!}
+                                <span class="glyphicon glyphicon-calendar"
+                                      aria-hidden="true"></span> {!! $blog->created_at->diffForHumans() !!}
                                 <a id="{{ $blog->id }}"
                                    class="pull-right"
                                    href="{!! url('blog', [$blog->slug]) !!}">

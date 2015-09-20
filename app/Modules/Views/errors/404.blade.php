@@ -1,3 +1,12 @@
+<?php
+/**
+ * Default 404 view
+ *
+ * Copyright 2015 Mammoth. All rights reserved.
+ * See LICENCE for license details.
+ */
+?>
+
 @extends('layout.app')
 
 @section('title', ':: 404 Page not found')

@@ -121,6 +121,24 @@ input[type="checkbox"] {
   text-align: center;
 }
 
+// Google reCAPTCHA
+.recaptcha {
+  visibility: none;
+  background-color: #fff;
+  padding-top: 10px;
+  padding-bottom: 8px;
+}
+
+.g-recaptcha {
+  transform: scale(0.98);
+  -webkit-transform: scale(0.98);
+  transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  margin:0 auto;
+  display: block;
+  width: 304px;
+}
+
 // Browser Upgrade Prompt
 // ==========================================================================
 

@@ -1,3 +1,12 @@
+<?php
+/**
+ * Blog create blog post view
+ *
+ * Copyright 2015 Mammoth. All rights reserved.
+ * See LICENCE for license details.
+ */
+?>
+
 @extends('layout.' . config('mammoth.theme', 'default'))
 
 @section('title', ':: ' . trans('Blog::blog.create-blog'))

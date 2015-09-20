@@ -9,13 +9,13 @@
 
 return [
 
-    'version'       => '0.0.1',
+    'version'           => '0.0.1',
+    'admin_email'       => 'admin@mammoth-app.com',
+    'theme'             => 'default',
+    'show_ads'          => true,
+    'google_recaptcha'  => true,
 
-    'admin_email'   => 'admin@mammoth-app.com',
-    'theme'         => 'default',
-    'show_ads'      => true,
-
-    'support_ie8'   => true,
+    'support_ie8'       => true,
 
     'modules' => [
         'Admin',

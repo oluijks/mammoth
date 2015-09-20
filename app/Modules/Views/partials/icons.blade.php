@@ -1,3 +1,12 @@
+<?php
+/**
+ * Meta icons view
+ *
+ * Copyright 2015 Mammoth. All rights reserved.
+ * See LICENCE for license details.
+ */
+?>
+
 <link rel="apple-touch-icon" sizes="57x57" href="{!! URL::asset('/apple-icon-57x57.png') !!}">
 <link rel="apple-touch-icon" sizes="60x60" href="{!! URL::asset('/apple-icon-60x60.png') !!}">
 <link rel="apple-touch-icon" sizes="72x72" href="{!! URL::asset('/apple-icon-72x72.png') !!}">

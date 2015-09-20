@@ -1,3 +1,12 @@
+<?php
+/**
+ * Default 503 view
+ *
+ * Copyright 2015 Mammoth. All rights reserved.
+ * See LICENCE for license details.
+ */
+?>
+
 @extends('layout.app')
 
 @section('title', ':: Be right back')
