@@ -25,7 +25,7 @@ class BlogController extends Controller
     public function index()
     {
         $blogs = Blog::latest()->paginate(5);
-        return view('Blog::'.config('mammoth.theme', 'default').'.index', compact('blogs'));
+        return view('Blog::'.config('mammoth.theme', 'default').'.index')->withBlogs($blogs);
     }
 
     /**
