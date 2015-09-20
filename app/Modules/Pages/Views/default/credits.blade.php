@@ -117,7 +117,9 @@
                         </div>
                     </div>
                 </div>
-                @include('Pages::'.config('mammoth.theme', 'default').'.ads.dummy')
+                @if (config('mammoth.show_ads'))
+                    @include('Pages::'.config('mammoth.theme', 'default').'.ads.dummy')
+                @endif
             </div>
         </div>
     </div>

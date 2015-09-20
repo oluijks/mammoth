@@ -13,6 +13,7 @@ return [
 
     'admin_email'   => 'admin@mammoth-app.com',
     'theme'         => 'default',
+    'show_ads'      => true,
 
     'support_ie8'   => true,
 

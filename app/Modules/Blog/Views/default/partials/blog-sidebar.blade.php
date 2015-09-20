@@ -26,4 +26,6 @@
         </div>
     </div>
 </div>
+@if (config('mammoth.show_ads'))
 @include('Blog::'.config('mammoth.theme', 'default').'.ads.dummy')
+@endif
