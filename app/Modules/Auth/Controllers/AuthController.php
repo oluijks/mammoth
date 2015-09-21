@@ -88,6 +88,28 @@ class AuthController extends Controller
      */
     public function postRegister(Request $request)
     {
+        if (config('mammoth.google_recaptcha')) {
+            if ('' !== env('GOOGLE_RECAPTCHA_SITE_KEY') && '' !== env('GOOGLE_RECAPTCHA_SECRET_KEY')) {
+                if ($request->has('g-recaptcha-response')) {
+                    $recaptcha = new \ReCaptcha\ReCaptcha(env('GOOGLE_RECAPTCHA_SECRET_KEY'));
+                    $resp = $recaptcha->verify($request->input('g-recaptcha-response'), $request->ip());
+                    if (! $resp->isSuccess()) {
+                        $errors = $resp->getErrorCodes();
+                        // Todo: fix this...
+                    }
+                } else {
+                    $validator = Validator::make($request->all(), [
+                        'g-recaptcha-response' => 'required',
+                    ]);
+                    if ($validator->fails()) {
+                        return back()
+                            ->withErrors($validator)
+                            ->withInput();
+                    }
+                }
+            }
+        }
+
         $validator = $this->validator($request->all());
 
         if ($validator->fails()) {
