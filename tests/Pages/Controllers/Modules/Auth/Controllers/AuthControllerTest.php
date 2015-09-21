@@ -13,6 +13,8 @@ class AuthControllerTest extends TestCase
      */
     public function VisitSignUpAndSuccessfulSignUpSeePageIsWelcomePageAndSeeUsersEmailInDatabase()
     {
+        config(['mammoth.google_recaptcha' => false]);
+
         $this->visit('/sign-up')
             ->type('John', 'name')
             ->type('john@doe.com', 'email')
