@@ -88,6 +88,7 @@ class AuthController extends Controller
      */
     public function postRegister(Request $request)
     {
+        // Do Google reCAPTCHA validation
         if (config('mammoth.google_recaptcha')) {
             if ('' !== env('GOOGLE_RECAPTCHA_SITE_KEY') && '' !== env('GOOGLE_RECAPTCHA_SECRET_KEY')) {
                 if ($request->has('g-recaptcha-response')) {
