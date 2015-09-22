@@ -15,6 +15,7 @@ use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 use Mammoth\Http\Controllers\Controller;
 use Mammoth\Modules\Auth\Models\User;
+use ReCaptcha\ReCaptcha;
 use Validator;
 
 class AuthController extends Controller
@@ -92,11 +93,11 @@ class AuthController extends Controller
         if (config('mammoth.google_recaptcha')) {
             if ('' !== env('GOOGLE_RECAPTCHA_SITE_KEY') && '' !== env('GOOGLE_RECAPTCHA_SECRET_KEY')) {
                 if ($request->has('g-recaptcha-response')) {
-                    $recaptcha = new \ReCaptcha\ReCaptcha(env('GOOGLE_RECAPTCHA_SECRET_KEY'));
+                    $recaptcha = new ReCaptcha(env('GOOGLE_RECAPTCHA_SECRET_KEY'));
                     $resp = $recaptcha->verify($request->input('g-recaptcha-response'), $request->ip());
                     if (! $resp->isSuccess()) {
                         $errors = $resp->getErrorCodes();
-                        // Todo: fix this...
+                        // Todo: fix this, same as below; add errors
                     }
                 } else {
                     $validator = Validator::make($request->all(), [
@@ -108,6 +109,9 @@ class AuthController extends Controller
                             ->withInput();
                     }
                 }
+            } else {
+                // Todo: Throw exception?
+                Log::error('Google reCAPTCHA Site key or Secret key not set.');
             }
         }
 
@@ -177,11 +181,9 @@ class AuthController extends Controller
      */
     protected function authenticated(Request $request, User $user)
     {
-        $loginMessage = trans('Auth::auth.sign-in-message', ['name' => $user->name]);
-
         // Todo, only admins should go everywere
         return redirect()->intended('/')
-            ->with('status', $loginMessage)
+            ->with('status', trans('Auth::auth.sign-in-message', ['name' => $user->name]))
             ->with('type', 'success')
             ->with('image', 'Mammoth_Happy_48x48.png'); // Todo: move this to config
     }
@@ -209,6 +211,7 @@ class AuthController extends Controller
      */
     protected function validator(array $data)
     {
+        // Todo: put validator settings in config
         return Validator::make($data, [
             'name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
