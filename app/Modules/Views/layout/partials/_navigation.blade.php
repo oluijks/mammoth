@@ -13,7 +13,7 @@
             <button type="button"
                     class="navbar-toggle collapsed"
                     data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1"
+                    data-target="#main-navbar-collapse"
                     aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
@@ -23,25 +23,11 @@
             <a class="navbar-brand" href="{{ route('home') }}">
                 <img alt="Mammoth" src="{{ asset('img/mammoth-icons/Mammooth_32x32.png')  }}">
             </a>
-
         </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        {{-- Programmatically build up this menu for the static pages --}}
+        <div class="collapse navbar-collapse" id="main-navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="{{ Route::is('home') ? 'active' : '' }}">
-                    <a href="{{ route('home') }}">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="{{ Route::is('about') ? 'active' : '' }}">
-                    <a href="{{ route('about') }}">About</a>
-                </li>
-                <li class="{{ Route::is('blog') ? 'active' : '' }}">
-                    <a href="{{ route('blog.index') }}">Blog</a>
-                </li>
-                <li class="{{ Route::is('contact') ? 'active' : '' }}">
-                    <a href="{{ route('contact') }}">Contact</a>
-                </li>
-                <li class="{{ Route::is('credits') ? 'active' : '' }}">
-                    <a href="{{ route('credits') }}">Credits</a>
-                </li>
+                @include('layout.partials.static-pages-menu')
             </ul>
             <ul class="nav navbar-nav navbar-right">
             @if (auth()->check())
@@ -63,8 +49,8 @@
                     </ul>
                 </li>
             @else
-            <li class="{{ Route::is('sign-in') ? 'active' : '' }}"><a href="{{ route('sign-in') }}">Sign in</a></li>
-            <li class="{{ Route::is('sign-up') ? 'active' : '' }}"><a href="{{ route('sign-up') }}">Sign up</a></li>
+                <li class="{{ Route::is('sign-in') ? 'active' : '' }}"><a href="{{ route('sign-in') }}">Sign in</a></li>
+                <li class="{{ Route::is('sign-up') ? 'active' : '' }}"><a href="{{ route('sign-up') }}">Sign up</a></li>
             @endif
             </ul>
         </div>

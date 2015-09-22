@@ -20,7 +20,6 @@ use Validator;
 
 class AuthController extends Controller
 {
-
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
 
     /**
@@ -139,6 +138,7 @@ class AuthController extends Controller
      */
     public function postLogin(Request $request)
     {
+        // Todo: perhaps Google reCAPTCHA validation here as well
         $this->validate($request, [
             $this->loginUsername() => 'required', 'password' => 'required',
         ]);
