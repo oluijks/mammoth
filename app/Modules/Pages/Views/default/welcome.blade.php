@@ -82,17 +82,17 @@
 
 @section('scripts')
 <script>
-    (function() {
-        var searchForm = $('#searchForm');
-        var searchInput = $('#searchInput');
-        searchInput.focus();
-        searchInput.bind('keypress', {}, keyPress);
-        function keyPress(e) {
-            var code = (e.keyCode ? e.keyCode : e.which);
-            if (code == 13) {
-                searchForm.submit();
-            }
+(function() {
+    var searchForm = $('#searchForm');
+    var searchInput = $('#searchInput');
+    searchInput.focus();
+    searchInput.bind('keypress', {}, keyPress);
+    function keyPress(e) {
+        var code = (e.keyCode ? e.keyCode : e.which);
+        if (code == 13) {
+            searchForm.submit();
         }
-    }());
+    }
+}());
 </script>
 @stop

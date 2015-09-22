@@ -14,7 +14,7 @@ $.notifyDefaults({
   },
   offset: {
     x: 15,
-    y: 70
+    y: 150
   },
   z_index: 1031,
   delay: 5000,

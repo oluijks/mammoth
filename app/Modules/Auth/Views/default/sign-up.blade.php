@@ -35,7 +35,7 @@
                     @include('layout.partials.session-error')
 					<form class="form-horizontal" role="form" method="POST" action="{{ url('/auth/register') }}">
                         {!! csrf_field() !!}
-						<div class="form-group @if (count($errors) > 0) has-error @endif ">
+						<div class="form-group form-group-sm @if (count($errors) > 0) has-error @endif ">
 							<label class="col-md-4 control-label hidden-xs">{!! trans('Auth::forms.name') !!}</label>
 							<div class="col-md-6">
 								<input type="text"
@@ -45,7 +45,7 @@
                                        value="{{ old('name') }}">
 							</div>
 						</div>
-                        <div class="form-group @if (count($errors) > 0) has-error @endif ">
+                        <div class="form-group form-group-sm @if (count($errors) > 0) has-error @endif ">
 							<label class="col-md-4 control-label hidden-xs">
                                 {!! trans('Auth::forms.email-address') !!}
                             </label>
@@ -57,7 +57,7 @@
                                        value="{{ old('email') }}">
 							</div>
 						</div>
-                        <div class="form-group @if (count($errors) > 0) has-error @endif ">
+                        <div class="form-group form-group-sm @if (count($errors) > 0) has-error @endif ">
 							<label class="col-md-4 control-label hidden-xs">{!! trans('Auth::forms.password') !!}</label>
 							<div class="col-md-6">
 								<input type="password"
@@ -66,7 +66,7 @@
                                        placeholder="Password">
 							</div>
 						</div>
-                        <div class="form-group @if (count($errors) > 0) has-error @endif ">
+                        <div class="form-group form-group-sm @if (count($errors) > 0) has-error @endif ">
 							<label class="col-md-4 control-label hidden-xs">
                                 {!! trans('Auth::forms.confirm-password') !!}
 							</label>

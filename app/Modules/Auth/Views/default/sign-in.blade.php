@@ -41,7 +41,7 @@
                           action="{{ url('/auth/login') }}">
                         {!! csrf_field() !!}
                         <input type="hidden" id="remember" name="remember" value="">
-                        <div class="form-group @if (count($errors) > 0) has-error @endif ">
+                        <div class="form-group form-group-sm @if (count($errors) > 0) has-error @endif ">
 							<label class="col-md-4 control-label hidden-xs">
                                 {!! trans('Auth::forms.email-address') !!}
                             </label>
@@ -54,7 +54,7 @@
                                        value="{{ old('email') }}">
 							</div>
 						</div>
-                        <div class="form-group @if (count($errors) > 0) has-error @endif ">
+                        <div class="form-group form-group-sm @if (count($errors) > 0) has-error @endif ">
 							<label class="col-md-4 control-label hidden-xs">{!! trans('Auth::forms.password') !!}</label>
 							<div class="col-md-6">
 								<input type="password"
@@ -64,7 +64,7 @@
                                        placeholder="{!! trans('Auth::forms.password') !!}">
 							</div>
 						</div>
-						<div class="form-group">
+						<div class="form-group form-group-sm">
 							<div class="col-md-6 col-md-offset-4">
                                 <button type="button"
                                         class="btn btn-primary"
