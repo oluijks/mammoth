@@ -91,7 +91,7 @@ return [
 
     'custom' => [
         'g-recaptcha-response' => [
-            'required' => 'The reCAPTCHA field is required.',
+            'required' => 'The Captcha verification field is required.',
         ],
     ],
 

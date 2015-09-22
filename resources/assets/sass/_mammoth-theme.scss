@@ -2264,12 +2264,14 @@ th {
 .table > tfoot > tr > td {
   padding: 6px;
   line-height: 1.42857143;
-  vertical-align: top;
+  /*vertical-align: top;*/
+  vertical-align: middle;
   border-top: 1px solid #4e5d6c;
 }
 .table > thead > tr > th {
   vertical-align: bottom;
   border-bottom: 2px solid #4e5d6c;
+  font-size: 15px;
 }
 .table > caption + thead > tr:first-child > th,
 .table > colgroup + thead > tr:first-child > th,
@@ -6834,7 +6836,7 @@ body {
 }
 table,
 .table {
-  font-size: 12px;
+  font-size: 14px;
 }
 table a,
 .table a {

@@ -153,6 +153,27 @@ input[type="checkbox"] {
   width: 304px;
 }
 
+/* CSS used here will be applied after bootstrap.css */
+.caret-container {
+  float: right;
+}
+
+.nav-container {
+  background-color: #19242f;
+  /*text-transform: uppercase;*/
+  /* font-weight: bold; */
+}
+
+.nav-sub-container {
+  background-color: #344b61;
+  /* font-weight: bold; */
+  cursor: pointer;
+}
+
+ul.nav-stacked ul.nav-stacked > li > a {
+  padding-left: 25px;
+}
+
 // Browser Upgrade Prompt
 // ==========================================================================
 

@@ -17,10 +17,10 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-3 admin-menu-sidebar">
+            <div class="col-md-2 admin-menu-sidebar">
                 @include('Admin::partials.admin-menu-sidebar')
             </div>
-            <div class="col-md-9">
+            <div class="col-md-10">
                 <div class="row">
                     <div class="col-md-12">
                         <p class="lead">

@@ -12,6 +12,8 @@ Route::group(['module' => 'Admin', 'namespace' => 'Mammoth\Modules\Admin\Control
     // get('/admin', ['as' => 'admin', 'uses' => 'AdminController@index']);
     get('/admin', ['as' => 'admin-dashboard', 'uses' => 'AdminDashboardController@index']);
 
+    get('/admin/users', ['as' => 'admin-users', 'uses' => 'AdminUsersController@index']);
+
     Route::resource('/admin/blog', 'AdminBlogController');
 
 });
