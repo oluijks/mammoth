@@ -12,3 +12,7 @@ All security vulnerabilities will be promptly addressed.
 ### License
 
 Mammoth is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+
+## Todo's
+
+- Remove unused CSS from your project (https://github.com/addyosmani/grunt-uncss)

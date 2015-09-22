@@ -24,6 +24,6 @@ class HerdController extends Controller
      */
     public function index()
     {
-        return view('Herd::index');
+        return view('Herd::'.config('mammoth.theme', 'default').'.index');
     }
 }

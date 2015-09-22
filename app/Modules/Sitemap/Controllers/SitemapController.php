@@ -24,6 +24,6 @@ class SitemapController extends Controller
      */
     public function index()
     {
-        return view('Sitemap::index');
+        return view('Sitemap::'.config('mammoth.theme', 'default').'.index');
     }
 }

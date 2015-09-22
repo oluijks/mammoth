@@ -13,7 +13,9 @@
 
 @section('content')
 
-    @include('Page::partials.default-page-header', ['pageHeader' => 'Herd', 'quote' => true])
+    @include('Sitemap::'.config('mammoth.theme', 'default').'.partials.default-page-header', [
+        'pageHeader' => 'M-Herd', 'quote' => true
+    ])
 
     <div class="container">
         <div class="row">

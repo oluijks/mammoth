@@ -13,7 +13,9 @@
 
 @section('content')
 
-    @include('partials.default-page-header', ['pageHeader' => 'Sitemap', 'quote' => true])
+    @include('Sitemap::'.config('mammoth.theme', 'default').'.partials.default-page-header', [
+        'pageHeader' => 'M-Sitemap', 'quote' => true
+    ])
 
     <div class="container">
         <div class="row">

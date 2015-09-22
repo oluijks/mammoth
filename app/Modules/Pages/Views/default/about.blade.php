@@ -26,8 +26,8 @@
                     </div>
                     <div class="panel-body">
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae deleniti dolorum exercitationem,
-                            fugiat, impedit incidunt inventore iusto nam non odio praesentium quibusdam.
+                            Out of the box Mammoth comes with everything you need to run a successful website.<br>
+                            All modules are ready to go, responsive & Mobile friendly, fully customizable and extensible.
                         </p>
                         <br>
                         <h4>Available Modules:</h4>

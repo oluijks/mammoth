@@ -24,6 +24,6 @@ class ForumController extends Controller
      */
     public function index()
     {
-        return view('Forum::index');
+        return view('Forum::'.config('mammoth.theme', 'default').'.index');
     }
 }
