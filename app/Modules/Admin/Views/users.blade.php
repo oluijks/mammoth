@@ -88,16 +88,16 @@
     <script>
     var data = [
         {
-            value: 18,
-            color: "#FF5A5E",
-            highlight: "#FF5A5E",
-            label: "Inactive"
-        },
-        {
             value: '{{ $activeUsers }}',
             color: "#449d44",
             highlight: "#449d44",
             label: "Active"
+        },
+        {
+            value: 18,
+            color: "#FF5A5E",
+            highlight: "#FF5A5E",
+            label: "Inactive"
         },
         {
             value: 16,

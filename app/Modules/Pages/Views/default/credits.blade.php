@@ -55,6 +55,14 @@
                                             notifications.
                                         </p>
                                     </a>
+                                    <a href="http://www.chartjs.org/"
+                                       target="_blank"
+                                       class="list-group-item">
+                                        <h4 class="list-group-item-heading">Chart.js</h4>
+                                        <p class="list-group-item-text">
+                                            Simple, clean and engaging charts for designers and developers.
+                                        </p>
+                                    </a>
                                     <a href="http://www.favicon-generator.org/"
                                        target="_blank"
                                        class="list-group-item">
