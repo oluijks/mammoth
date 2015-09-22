@@ -62,7 +62,7 @@ class AuthController extends Controller
      */
     public function getLogout()
     {
-        Auth::logout();
+        auth()->logout();
 
         return redirect(property_exists($this, 'redirectAfterLogout') ? $this->redirectAfterLogout : '/')
             ->with('status', trans('Auth::auth.sign-out-message'))
@@ -119,10 +119,10 @@ class AuthController extends Controller
             );
         }
 
-        Auth::login($this->create($request->all()));
+        auth()->login($this->create($request->all()));
 
         return redirect($this->redirectPath())
-            ->with('status', trans('Auth::auth.sign-in-message', ['name' => Auth::user()->name]))
+            ->with('status', trans('Auth::auth.sign-in-message', ['name' => auth()->user()->name]))
             ->with('type', 'success')
             ->with('image', 'Mammoth_Happy_48x48.png'); // Todo: move this to config
     }
@@ -150,7 +150,7 @@ class AuthController extends Controller
 
         $credentials = $this->getCredentials($request);
 
-        if (Auth::attempt($credentials, (int)$request->has('remember'))) {
+        if (auth()->attempt($credentials, (int)$request->has('remember'))) {
             return $this->handleUserWasAuthenticated($request, $throttles);
         }
 
