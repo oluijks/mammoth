@@ -24,7 +24,7 @@
                     </div>
                     <div class="panel-body">
                         <div class="col-md-5 text-center">
-                            <img src="{!! URL::asset('img/mammoth-icons/Mammooth_256x256.png') !!}"
+                            <img src="{!! asset('img/mammoth-icons/Mammooth_256x256.png') !!}"
                                  alt=""
                                  width="256"
                                  height="256">

@@ -21,7 +21,7 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="{{ route('admin-dashboard') }}">
-                <img alt="Mammoth" src="{{ URL::asset('img/mammoth-icons/Mammooth_32x32.png')  }}">
+                <img alt="Mammoth" src="{{ asset('img/mammoth-icons/Mammooth_32x32.png')  }}">
             </a>
         </div>
         <div class="collapse navbar-collapse" id="admin-navbar-collapse">

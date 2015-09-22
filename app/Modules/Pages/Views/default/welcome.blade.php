@@ -44,7 +44,7 @@
         <div class="row text-center">
             @for ($i = 1; $i <= 4; $i++)
                 <div class="col-md-6 col-lg-3 col-lg-12">
-                    <img src="{!! URL::asset(trans('Pages::pages.welcome.marketing.block_'.$i.'.image.src')) !!}"
+                    <img src="{!! asset(trans('Pages::pages.welcome.marketing.block_'.$i.'.image.src')) !!}"
                          alt="{!! trans('Pages::pages.welcome.marketing.block_'.$i.'.image.alt') !!}"
                          width="{!! trans('Pages::pages.welcome.marketing.block_'.$i.'.image.width') !!}"
                          height="{!! trans('Pages::pages.welcome.marketing.block_'.$i.'.image.height') !!}">

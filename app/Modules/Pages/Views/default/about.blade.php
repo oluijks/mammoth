@@ -47,7 +47,7 @@
             </div>
             <div class="col-xs-6 col-md-3">
                 <div class="thumbnail">
-                    <img class="img-responsive" alt="Olaf Luijks" src="{{ URL::asset('img/olaf.png') }}" lazyload>
+                    <img class="img-responsive" alt="Olaf Luijks" src="{{ asset('img/olaf.png') }}" lazyload>
                     <div class="caption">
                         <h3>Olaf Luijks</h3><p>PHP Developer</p>
                         <p><i>You learn the wisest lessons from your enemy. If you live.</i> <br>&mdash; Aleksandr Voinov</p>

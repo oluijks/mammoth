@@ -20,7 +20,7 @@
 <div class="container">
 	<div class="row">
         <div class="col-md-5 text-center hidden-xs">
-            <img src="{!! URL::asset('img/mammoth-icons/Mammoth_Seated_256x256.png') !!}"
+            <img src="{!! asset('img/mammoth-icons/Mammoth_Seated_256x256.png') !!}"
                  alt=""
                  width="256"
                  height="256">

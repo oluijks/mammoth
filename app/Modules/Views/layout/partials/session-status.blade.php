@@ -11,7 +11,7 @@
 <script>
 (function() {
     $.notify({
-        icon: '{!! URL::asset('img/mammoth-icons/' . session('image')) !!}',
+        icon: '{!! asset('img/mammoth-icons/' . session('image')) !!}',
         message: '{!! session('status') !!}'
     },{
         type: '{{ session('type') }}',

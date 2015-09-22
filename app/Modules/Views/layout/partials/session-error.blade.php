@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col-md-3">
                 <img class="img-responsive hidden-xs session-error-icon"
-                     src="{!! URL::asset('img/icon_error.png') !!}"
+                     src="{!! asset('img/icon_error.png') !!}"
                      alt="{!! trans('validation.form_problems') !!}"
                      width="128"
                      height="128">
