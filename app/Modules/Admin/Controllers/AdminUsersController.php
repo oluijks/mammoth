@@ -34,7 +34,7 @@ class AdminUsersController extends Controller
     public function index()
     {
         $activeUsers = User::count();
-        $users = User::paginate(10);
+        $users = User::latest()->paginate(10);
         return view('Admin::users', compact('users', 'activeUsers'));
     }
 }

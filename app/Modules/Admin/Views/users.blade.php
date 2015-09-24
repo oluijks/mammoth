@@ -26,7 +26,7 @@
                     <div class="col-md-2">
                         <div class="text-center">
                             <h3 class="text-center">User stats</h3>
-                            <canvas id="userChart" width="155" height="155"></canvas>
+                            <canvas id="userChart" width="135" height="135"></canvas>
                             <div class="text-center" id="legend"></div>
                         </div>
                     </div>
@@ -111,7 +111,7 @@
         // Boolean - Whether we should show a stroke on each segment
         segmentShowStroke : true,
         // String - The colour of each segment stroke
-        segmentStrokeColor : "#fff",
+        segmentStrokeColor : "#2b3e50",
         // Number - The width of each segment stroke
         segmentStrokeWidth : 1,
         // Number - The percentage of the chart that we cut out of the middle
@@ -125,8 +125,10 @@
         // Boolean - Whether we animate scaling the Doughnut from the centre
         animateScale : false,
         // String - A legend template
-        legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend list-inline\"><% for (var i=0; i<segments.length; i++){%><li><span style=\"color:<%=segments[i].fillColor%>\"><%if(segments[i].label){%><%=segments[i].label%><%}%></span></li><%}%></ul>"
-
+        legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend list-inline\">" +
+                            "<% for (var i=0; i<segments.length; i++){%><li>" +
+                            "<span style=\"color:<%=segments[i].fillColor%>\">" +
+                            "<%if(segments[i].label){%><%=segments[i].label%><%}%></span></li><%}%></ul>",
     };
 
     var ctx = document.getElementById("userChart").getContext("2d");
