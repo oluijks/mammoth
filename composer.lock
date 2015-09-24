@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "aeaea306d11089b7d3558b7be7bcfced",
-    "content-hash": "8acebdaa612f23cc4c03f2d64a81c97e",
+    "hash": "68f0a9f538e45de2b7ca0086d1b6fda2",
+    "content-hash": "1426249dcaf5f4d1457fe40909897ef4",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -537,16 +537,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "1.0.13",
+            "version": "1.0.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "76caed01a57527599b55919f0746104f288b3d56"
+                "reference": "202c7775d959f377e2e302d93e7127c47604438a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/76caed01a57527599b55919f0746104f288b3d56",
-                "reference": "76caed01a57527599b55919f0746104f288b3d56",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/202c7775d959f377e2e302d93e7127c47604438a",
+                "reference": "202c7775d959f377e2e302d93e7127c47604438a",
                 "shasum": ""
             },
             "require": {
@@ -617,7 +617,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2015-09-20 13:05:34"
+            "time": "2015-09-22 19:18:28"
         },
         {
             "name": "monolog/monolog",
@@ -830,56 +830,6 @@
                 "php"
             ],
             "time": "2015-09-19 14:15:08"
-        },
-        {
-            "name": "predis/predis",
-            "version": "v1.0.3",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/nrk/predis.git",
-                "reference": "84060b9034d756b4d79641667d7f9efe1aeb8e04"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/nrk/predis/zipball/84060b9034d756b4d79641667d7f9efe1aeb8e04",
-                "reference": "84060b9034d756b4d79641667d7f9efe1aeb8e04",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.2"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.0"
-            },
-            "suggest": {
-                "ext-curl": "Allows access to Webdis when paired with phpiredis",
-                "ext-phpiredis": "Allows faster serialization and deserialization of the Redis protocol"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Predis\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Daniele Alessandri",
-                    "email": "suppakilla@gmail.com",
-                    "homepage": "http://clorophilla.net"
-                }
-            ],
-            "description": "Flexible and feature-complete PHP client library for Redis",
-            "homepage": "http://github.com/nrk/predis",
-            "keywords": [
-                "nosql",
-                "predis",
-                "redis"
-            ],
-            "time": "2015-07-30 18:34:15"
         },
         {
             "name": "psr/log",
@@ -1741,6 +1691,44 @@
                 "dump"
             ],
             "time": "2015-08-31 12:28:11"
+        },
+        {
+            "name": "vetruvet/laravel-phpredis",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vetruvet/laravel-phpredis.git",
+                "reference": "1d108ad1e8f7f713ccc88c97c6652c630e79bc6b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vetruvet/laravel-phpredis/zipball/1d108ad1e8f7f713ccc88c97c6652c630e79bc6b",
+                "reference": "1d108ad1e8f7f713ccc88c97c6652c630e79bc6b",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Vetruvet\\PhpRedis": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache"
+            ],
+            "authors": [
+                {
+                    "name": "Valera Trubachev",
+                    "email": "vetruvet@gmail.com"
+                }
+            ],
+            "description": "Use phpredis as the redis connection in Laravel",
+            "keywords": [
+                "laravel",
+                "phpredis",
+                "redis"
+            ],
+            "time": "2015-07-09 14:48:22"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -3017,7 +3005,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "vetruvet/laravel-phpredis": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
