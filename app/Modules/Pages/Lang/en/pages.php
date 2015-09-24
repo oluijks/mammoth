@@ -38,10 +38,10 @@ list (in alphabetical order) of the things I used in this app. Credit where cred
             'block_1' => [
                 'head'   => 'M-App',
                 'image'  => [
-                    'src' => 'img/mammoth-icons/Mammoth_Happy_256x256.png',
+                    'src' => 'img/mammoth-icons/Mammoth_Happy_150x150.png',
                     'alt'    => 'Mammoth App is BIG!',
-                    'width' => '256',
-                    'height' => '256',
+                    'width' => '150',
+                    'height' => '150',
                 ],
                 'text'   => 'Mammoth App is BIG, BIGGER, HUGE, HUMONGOUS!',
                 'route'  => 'blog.index',
@@ -50,10 +50,10 @@ list (in alphabetical order) of the things I used in this app. Credit where cred
             'block_2' => [
                 'head'   => 'M-Blog',
                 'image'  => [
-                    'src' => 'img/mammoth-icons/Mammoth_Seated_256x256.png',
+                    'src' => 'img/mammoth-icons/Mammoth_Seated_150x150.png',
                     'alt' => 'M-Blog. Write, post, done!',
-                    'width' => '256',
-                    'height' => '256',
+                    'width' => '150',
+                    'height' => '150',
                 ],
                 'alt'    => '',
                 'text'   => 'Maintaining your has never been more easy. Write, post, done!',
@@ -63,10 +63,10 @@ list (in alphabetical order) of the things I used in this app. Credit where cred
             'block_3' => [
                 'head'   => 'M-Forum',
                 'image'  => [
-                    'src' => 'img/mammoth-icons/Mammooth_256x256.png',
+                    'src' => 'img/mammoth-icons/Mammooth_150x150.png',
                     'alt'    => 'Forum for questions and answers',
-                    'width' => '256',
-                    'height' => '256',
+                    'width' => '150',
+                    'height' => '150',
                 ],
                 'text'   => 'Setup a forum where people can post questions and answers.',
                 'route'  => 'blog.index',
@@ -75,10 +75,10 @@ list (in alphabetical order) of the things I used in this app. Credit where cred
             'block_4' => [
                 'head'   => 'M-Social',
                 'image'  => [
-                    'src' => 'img/mammoth-icons/Mammoth_Back_256x256.png',
+                    'src' => 'img/mammoth-icons/Mammoth_Back_150x150.png',
                     'alt'    => 'Community Website',
-                    'width' => '256',
-                    'height' => '256',
+                    'width' => '150',
+                    'height' => '150',
                 ],
                 'text'   => 'A community were your website users can interact with each other.',
                 'route'  => 'blog.index',
