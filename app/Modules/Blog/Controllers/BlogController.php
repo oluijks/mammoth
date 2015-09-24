@@ -9,6 +9,8 @@
 
 namespace Mammoth\Modules\Blog\Controllers;
 
+use DB;
+use Cache;
 use Illuminate\Http\Request;
 
 use Mammoth\Modules\Blog\Models\Blog;
@@ -57,6 +59,17 @@ class BlogController extends Controller
      */
     public function show($slug)
     {
+        /*
+        DB::connection()->enableQueryLog();
+
+        $blog = Cache::remember($slug, 10, function () use ($slug) {
+            return Blog::where('slug', $slug)->first();
+        });
+
+        $q = DB::getQueryLog();
+        var_dump($q);
+        */
+
         $blog = Blog::where('slug', $slug)->first();
 
         return view('Blog::'.config('mammoth.theme', 'default').'.show', compact('blog'));
