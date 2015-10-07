@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        Model::unguard();
+        // Model::unguard();
 
         $this->call(UserTableSeeder::class);
         $this->command->info('User table seeded!');
@@ -27,6 +27,6 @@ class DatabaseSeeder extends Seeder
         $this->call(BlogTableSeeder::class);
         $this->command->info('Blog table seeded!');
 
-        Model::reguard();
+        // Model::reguard();
     }
 }
