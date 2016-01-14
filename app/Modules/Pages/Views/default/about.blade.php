@@ -19,7 +19,7 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-xs-6 col-md-9">
+            <div class="col-xs-12 col-md-9">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
                         <h3 class="panel-title">{!! trans('Pages::pages.about.title') !!}</h3>
@@ -27,7 +27,7 @@
                     <div class="panel-body">
                         <p>
                             Out of the box Mammoth comes with everything you need to run a successful website.<br>
-                            All modules are ready to go, responsive & Mobile friendly, fully customizable and extensible.
+                            All modules are ready to go, responsive &amp; Mobile friendly, fully customizable and extensible.
                         </p>
                         <br>
                         <h4>Available Modules:</h4>
@@ -45,7 +45,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xs-6 col-md-3">
+            <div class="col-xs-12 col-md-3">
                 <div class="thumbnail">
                     <img class="img-responsive" alt="Olaf Luijks" src="{{ asset('img/olaf.png') }}" lazyload>
                     <div class="caption">
@@ -57,4 +57,3 @@
         </div>
     </div>
 @endsection
-
