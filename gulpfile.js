@@ -1,7 +1,7 @@
 /**
  * Elixir Asset Management
  *
- * Copyright © 2015 Mammoth. All rights reserved.
+ * Copyright © 2016 Mammoth. All rights reserved.
  * See LICENCE for license details.
  */
 
@@ -17,14 +17,17 @@ elixir(function(mix) {
     'app.js'
   ], 'public/js/app.js');
 
+  /*
   mix.browserify([
-    'app.js'
+    'admin/app.js'
   ], 'public/js/admin/app.js');
+  */
 
   mix.scripts([
     '/../../../node_modules/jquery/dist/jquery.js',
     '/../../../node_modules/bootstrap-sass/assets/javascripts/bootstrap.js',
-    '/../../../bower_components/remarkable-bootstrap-notify/bootstrap-notify.js'
+    '/../../../bower_components/remarkable-bootstrap-notify/bootstrap-notify.js',
+    'vendor/Chart.min.js'
   ], 'public/js/vendor/vendors.js');
 
   // Todo copy bootstrap fonts

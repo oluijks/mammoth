@@ -9,7 +9,7 @@
 
 return [
 
-    'version' => '0.0.1',
+    'version' => '0.0.2',
     'admin_email' => 'admin@mammoth-development.tk',
     'theme' => 'default',
     'show_ads' => true,
@@ -17,6 +17,7 @@ return [
 
     'support_ie8' => true,
 
+    // Active modules
     'modules' => [
         'Admin',
         'Auth',

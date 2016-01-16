@@ -11,6 +11,7 @@
 
   require('../console');
   require('../notify-defaults');
+  // require('../vendor/Chart.min.js');
   // require('../webfonts');
 
   let Vue = require('vue');

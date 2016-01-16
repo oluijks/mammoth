@@ -24,7 +24,7 @@ class AuthController extends Controller
     /**
      * @var string
      */
-    // protected $loginPath = '/sign-in';
+    protected $loginPath = '/sign-in';
 
     /**
      * @var string
@@ -166,7 +166,7 @@ class AuthController extends Controller
             $this->incrementLoginAttempts($request);
         }
 
-        return redirect($this->loginPath())
+        return redirect($this->loginPath)
             ->withInput($request->only($this->loginUsername(), 'remember'))
             ->withErrors([
                 $this->loginUsername() => $this->getFailedLoginMessage(),

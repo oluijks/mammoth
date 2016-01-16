@@ -83,7 +83,7 @@
 
 @section('scripts')
 
-    <script src="http://www.chartjs.org/assets/Chart.min.js"></script>
+    {{--<script src="http://www.chartjs.org/assets/Chart.min.js"></script>--}}
 
     <script>
     var data = [

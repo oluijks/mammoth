@@ -7,7 +7,7 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase
      *
      * @var string
      */
-    protected $baseUrl = 'http://mammoth.sytes.net';
+    protected $baseUrl = 'https://mammoth-development.tk';
 
     /**
      * Creates the application.
@@ -30,7 +30,7 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase
     {
         parent::setUp();
 
-        $this->prepareForTests();
+        // $this->prepareForTests();
     }
 
     /**

@@ -48,8 +48,8 @@ return [
 
         'sqlite' => [
             'driver' => 'sqlite',
-            // 'database' => database_path('testing.sqlite'),
-            'database' => ':memory:',
+            'database' => storage_path('testing.sqlite'),
+            //'database' => ':memory:',
             'prefix' => '',
         ],
 
