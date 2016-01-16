@@ -25,7 +25,7 @@ class AuthController extends Controller
     /**
      * @var string
      */
-    protected $loginPath = '/sign-in';
+    // protected $loginPath = '/sign-in';
 
     /**
      * @var string

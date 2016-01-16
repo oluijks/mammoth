@@ -1,6 +1,6 @@
 # Mammoth
 
-![alt text](public/img/mammoth-homepage.jpeg "Title")
+![alt text](public/img/mammoth-homepage.jpeg "Mammoth")
 
 ## Official Documentation
 
