@@ -1,12 +1,11 @@
 <?php
 
 /**
- * Admin model
+ * Admin model.
  *
  * Copyright 2015 Mammoth. All rights reserved.
  * See LICENCE for license details.
  */
-
 namespace Mammoth\Modules\Admin\Models;
 
 use Illuminate\Database\Eloquent\Model;
@@ -26,5 +25,4 @@ class Admin extends Model
      * @var array
      */
     protected $fillable = [];
-
 }

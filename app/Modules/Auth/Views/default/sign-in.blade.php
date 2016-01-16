@@ -1,6 +1,6 @@
 <?php
 /**
- * Auth Sign in view
+ * Auth Sign in view.
  *
  * Copyright 2015 Mammoth. All rights reserved.
  * See LICENCE for license details.

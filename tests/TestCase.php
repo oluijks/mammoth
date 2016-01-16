@@ -24,7 +24,7 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase
     }
 
     /**
-     * Setup tests
+     * Setup tests.
      */
     public function setUp()
     {
@@ -34,7 +34,7 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase
     }
 
     /**
-     * Prepare for tests
+     * Prepare for tests.
      */
     private function prepareForTests()
     {

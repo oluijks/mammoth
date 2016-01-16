@@ -1,12 +1,11 @@
 <?php
 
 /**
- * Herd model
+ * Herd model.
  *
  * Copyright 2015 Mammoth. All rights reserved.
  * See LICENCE for license details.
  */
-
 namespace Mammoth\Modules\Herd\Models;
 
 use Illuminate\Database\Eloquent\Model;
@@ -26,5 +25,4 @@ class Herd extends Model
      * @var array
      */
     protected $fillable = [];
-
 }

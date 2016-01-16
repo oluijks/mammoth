@@ -1,6 +1,6 @@
 <?php
 /**
- * Meta icons view
+ * Meta icons view.
  *
  * Copyright 2015 Mammoth. All rights reserved.
  * See LICENCE for license details.

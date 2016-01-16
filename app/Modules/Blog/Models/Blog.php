@@ -1,12 +1,11 @@
 <?php
 
 /**
- * Blog model
+ * Blog model.
  *
  * Copyright 2015 Mammoth. All rights reserved.
  * See LICENCE for license details.
  */
-
 namespace Mammoth\Modules\Blog\Models;
 
 use Illuminate\Database\Eloquent\Model;
@@ -26,5 +25,4 @@ class Blog extends Model
      * @var array
      */
     protected $fillable = ['slug', 'title', 'excerpt', 'body'];
-
 }

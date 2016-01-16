@@ -1,16 +1,15 @@
 <?php
 
 /**
- * Blog routes
+ * Blog routes.
  *
  * Copyright © 2015 Mammoth. All rights reserved.
  * See LICENCE for license details.
  */
-
 Route::group(['module' => 'Auth', 'namespace' => 'Mammoth\Modules\Auth\Controllers'], function () {
 
     // Authentication routes
-    Route::get('/sign-in', ['as' => 'sign-in', 'uses'   => 'AuthController@getLogin']);
+    Route::get('/sign-in', ['as' => 'sign-in', 'uses' => 'AuthController@getLogin']);
     Route::post('auth/login', 'AuthController@postLogin');
     Route::get('auth/logout', ['as' => 'sign-out', 'uses' => 'AuthController@getLogout']);
 

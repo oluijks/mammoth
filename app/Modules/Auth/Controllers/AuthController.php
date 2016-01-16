@@ -1,12 +1,11 @@
 <?php
 
 /**
- * Registration & Login Controller
+ * Registration & Login Controller.
  *
  * Copyright 2015 Mammoth. All rights reserved.
  * See LICENCE for license details.
  */
-
 namespace Mammoth\Modules\Auth\Controllers;
 
 use Auth;
@@ -83,7 +82,8 @@ class AuthController extends Controller
     /**
      * Handle a registration request for the application.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
+     *
      * @return \Illuminate\Http\Response
      */
     public function postRegister(Request $request)
@@ -94,7 +94,7 @@ class AuthController extends Controller
                 if ($request->has('g-recaptcha-response')) {
                     $recaptcha = new ReCaptcha(env('GOOGLE_RECAPTCHA_SECRET_KEY'));
                     $resp = $recaptcha->verify($request->input('g-recaptcha-response'), $request->ip());
-                    if (! $resp->isSuccess()) {
+                    if (!$resp->isSuccess()) {
                         $errors = $resp->getErrorCodes();
                         // Todo: fix this, same as below; add errors
                     }
@@ -133,7 +133,8 @@ class AuthController extends Controller
     /**
      * Handle a login request to the application.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
+     *
      * @return \Illuminate\Http\Response
      */
     public function postLogin(Request $request)
@@ -154,7 +155,7 @@ class AuthController extends Controller
 
         $credentials = $this->getCredentials($request);
 
-        if (auth()->attempt($credentials, (int)$request->has('remember'))) {
+        if (auth()->attempt($credentials, (int) $request->has('remember'))) {
             return $this->handleUserWasAuthenticated($request, $throttles);
         }
 
@@ -176,7 +177,8 @@ class AuthController extends Controller
      * Handle an authentication attempt.
      *
      * @param Request $request
-     * @param User $user
+     * @param User    $user
+     *
      * @return Response
      */
     protected function authenticated(Request $request, User $user)
@@ -191,7 +193,8 @@ class AuthController extends Controller
     /**
      * Create a new user instance after a valid registration.
      *
-     * @param  array  $data
+     * @param array $data
+     *
      * @return User
      */
     protected function create(array $data)
@@ -206,7 +209,8 @@ class AuthController extends Controller
     /**
      * Get a validator for an incoming registration request.
      *
-     * @param  array  $data
+     * @param array $data
+     *
      * @return \Illuminate\Contracts\Validation\Validator
      */
     protected function validator(array $data)

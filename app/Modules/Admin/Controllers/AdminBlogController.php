@@ -1,18 +1,14 @@
 <?php
 
 /**
- * Admin Blog Controller
+ * Admin Blog Controller.
  *
  * Copyright 2015 Mammoth. All rights reserved.
  * See LICENCE for license details.
  */
-
 namespace Mammoth\Modules\Admin\Controllers;
 
-use Illuminate\Http\Request;
-
 use Mammoth\Modules\Admin\Models\Admin;
-use Mammoth\Http\Requests;
 use Mammoth\Http\Controllers\Controller;
 
 class AdminBlogController extends Controller
@@ -26,7 +22,7 @@ class AdminBlogController extends Controller
     }
 
     /**
-     * Shows the admin index page
+     * Shows the admin index page.
      *
      * @return \Illuminate\View\View
      */

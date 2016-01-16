@@ -1,6 +1,6 @@
 <?php
 /**
- * Default 503 view
+ * Default 503 view.
  *
  * Copyright 2015 Mammoth. All rights reserved.
  * See LICENCE for license details.

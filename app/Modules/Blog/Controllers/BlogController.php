@@ -1,20 +1,17 @@
 <?php
 
 /**
- * Blog Controller
+ * Blog Controller.
  *
  * Copyright 2015 Mammoth. All rights reserved.
  * See LICENCE for license details.
  */
-
 namespace Mammoth\Modules\Blog\Controllers;
 
 use DB;
 use Cache;
 use Illuminate\Http\Request;
-
 use Mammoth\Modules\Blog\Models\Blog;
-use Mammoth\Http\Requests;
 use Mammoth\Http\Controllers\Controller;
 
 class BlogController extends Controller
@@ -27,6 +24,7 @@ class BlogController extends Controller
     public function index()
     {
         $blogs = Blog::latest()->paginate(5);
+
         return view('Blog::'.config('mammoth.theme', 'default').'.index')->withBlogs($blogs);
     }
 
@@ -43,7 +41,8 @@ class BlogController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  Request  $request
+     * @param Request $request
+     *
      * @return Response
      */
     public function store(Request $request)
@@ -54,7 +53,8 @@ class BlogController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
+     *
      * @return Response
      */
     public function show($slug)
@@ -78,7 +78,8 @@ class BlogController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
+     *
      * @return Response
      */
     public function edit($id)
@@ -89,8 +90,9 @@ class BlogController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  Request  $request
-     * @param  int  $id
+     * @param Request $request
+     * @param int     $id
+     *
      * @return Response
      */
     public function update(Request $request, $id)
@@ -101,7 +103,8 @@ class BlogController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param int $id
+     *
      * @return Response
      */
     public function destroy($id)

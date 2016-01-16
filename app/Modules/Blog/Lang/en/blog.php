@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Blog Language Lines
+ * Blog Language Lines.
  *
  * Copyright 2015 Mammoth. All rights reserved.
  * See LICENCE for license details.
@@ -9,8 +9,8 @@
 
 return [
 
-    'read-more'     => 'Read more',
+    'read-more' => 'Read more',
 
-    'create-blog'   => 'Create Blog',
+    'create-blog' => 'Create Blog',
 
 ];

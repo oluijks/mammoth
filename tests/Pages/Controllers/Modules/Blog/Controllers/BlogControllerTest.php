@@ -14,7 +14,7 @@ class BlogControllerTest extends TestCase
     public function VisitBlogPostPageExpectsToSeeBlogTitle()
     {
         $blog = factory(Mammoth\Modules\Blog\Models\Blog::class, 25)->create();
-        $url  = config('app.url') . '/blog/' . $blog[0]->slug;
+        $url = config('app.url').'/blog/'.$blog[0]->slug;
 
         $this->visit($url)
              ->see($blog[0]->title);

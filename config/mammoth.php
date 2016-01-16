@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Main application config file
+ * Main application config file.
  *
  * Copyright 2015 Mammoth. All rights reserved.
  * See LICENCE for license details.
@@ -9,13 +9,13 @@
 
 return [
 
-    'version'           => '0.0.1',
-    'admin_email'       => 'admin@mammoth-app.com',
-    'theme'             => 'default',
-    'show_ads'          => true,
-    'google_recaptcha'  => true,
+    'version' => '0.0.1',
+    'admin_email' => 'admin@mammoth-app.com',
+    'theme' => 'default',
+    'show_ads' => true,
+    'google_recaptcha' => true,
 
-    'support_ie8'       => true,
+    'support_ie8' => true,
 
     'modules' => [
         'Admin',
@@ -28,5 +28,5 @@ return [
         'Sitemap',
     ],
 
-    'ga_code'       => 'UA-XXXXX-X',
+    'ga_code' => 'UA-XXXXX-X',
 ];

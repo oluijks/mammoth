@@ -1,6 +1,6 @@
 <?php
 /**
- * Admin Internet Explorer 8 view
+ * Admin Internet Explorer 8 view.
  *
  * Copyright 2015 Mammoth. All rights reserved.
  * See LICENCE for license details.

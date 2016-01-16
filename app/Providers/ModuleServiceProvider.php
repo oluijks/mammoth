@@ -1,12 +1,11 @@
 <?php
 
 /**
- * Mammoth module service provider
+ * Mammoth module service provider.
  *
  * Copyright 2015 Mammoth. All rights reserved.
  * See LICENCE for license details.
  */
-
 namespace Mammoth\Providers;
 
 use Illuminate\Filesystem\Filesystem;
@@ -21,14 +20,12 @@ class ModuleServiceProvider extends ServiceProvider
 
     /**
      * Bootstrap the application services.
-     *
-     * @return void
      */
     public function boot()
     {
         // Setup modules structure and load routes, views and lang
-        $modules    = config('mammoth.modules');
-        $modulesDir = app_path() . '/Modules/';
+        $modules = config('mammoth.modules');
+        $modulesDir = app_path().'/Modules/';
 
         if (is_dir($modulesDir)) {
             $modules = $modules ?:
@@ -36,24 +33,28 @@ class ModuleServiceProvider extends ServiceProvider
                     $this->files->directories($modulesDir));
 
             foreach ($modules as $module) {
-                $routes = $modulesDir . $module . '/routes.php';
-                $views  = $modulesDir . $module . '/Views';
-                $trans  = $modulesDir . $module . '/Lang';
+                $routes = $modulesDir.$module.'/routes.php';
+                $views = $modulesDir.$module.'/Views';
+                $trans = $modulesDir.$module.'/Lang';
 
-                if ($this->files->exists($routes))     { include $routes; }
-                if ($this->files->isDirectory($views)) { $this->loadViewsFrom($views, $module); }
-                if ($this->files->isDirectory($trans)) { $this->loadTranslationsFrom($trans, $module); }
+                if ($this->files->exists($routes)) {
+                    include $routes;
+                }
+                if ($this->files->isDirectory($views)) {
+                    $this->loadViewsFrom($views, $module);
+                }
+                if ($this->files->isDirectory($trans)) {
+                    $this->loadTranslationsFrom($trans, $module);
+                }
             }
         }
     }
 
     /**
      * Register the application services.
-     *
-     * @return void
      */
     public function register()
     {
-        $this->files = new Filesystem;
+        $this->files = new Filesystem();
     }
 }

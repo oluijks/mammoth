@@ -1,12 +1,11 @@
 <?php
 
 /**
- * Model Factories
+ * Model Factories.
  *
  * Copyright 2015 Mammoth. All rights reserved.
  * See LICENCE for license details.
  */
-
 $factory->defineAs(Mammoth\Modules\Auth\Models\User::class, 'admin', function (Faker\Generator $faker) {
     return [
         'name' => 'Administrator',
@@ -34,6 +33,7 @@ $factory->define(Mammoth\Modules\Auth\Models\User::class, function (Faker\Genera
 
 $factory->define(Mammoth\Modules\Blog\Models\Blog::class, function (Faker\Generator $faker) {
     $slug = $faker->realText(50);
+
     return [
         'slug' => str_slug($slug),
         'title' => $slug,

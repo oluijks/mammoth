@@ -1,35 +1,32 @@
 <?php
 
 /**
- * Pages controller
+ * Pages controller.
  *
  * Copyright © 2015 Mammoth. All rights reserved.
  * See LICENCE for license details.
  */
-
 namespace Mammoth\Modules\Pages\Controllers;
 
-use Illuminate\Http\Request;
-
 use Mammoth\Modules\Quotes;
-use Mammoth\Http\Requests;
 use Mammoth\Http\Controllers\Controller;
 
 class PageController extends Controller
 {
     /**
-     * Shows the welcome page
+     * Shows the welcome page.
      *
      * @return \Illuminate\View\View
      */
     public function welcome()
     {
         $quote = Quotes::quote();
+
         return view('Pages::'.config('mammoth.theme', 'default').'.welcome')->with('quote', $quote);
     }
 
     /**
-     * Shows the about page
+     * Shows the about page.
      *
      * @return \Illuminate\View\View
      */
@@ -39,7 +36,7 @@ class PageController extends Controller
     }
 
     /**
-     * Shows the contact page
+     * Shows the contact page.
      *
      * @return \Illuminate\View\View
      */
@@ -49,7 +46,7 @@ class PageController extends Controller
     }
 
     /**
-     * Shows the contact page
+     * Shows the contact page.
      *
      * @return \Illuminate\View\View
      */

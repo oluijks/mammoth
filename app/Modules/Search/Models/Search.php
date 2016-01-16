@@ -1,12 +1,11 @@
 <?php
 
 /**
- * Search model
+ * Search model.
  *
  * Copyright 2015 Mammoth. All rights reserved.
  * See LICENCE for license details.
  */
-
 namespace Mammoth\Modules\Search\Models;
 
 use Illuminate\Database\Eloquent\Model;
@@ -26,5 +25,4 @@ class Search extends Model
      * @var array
      */
     protected $fillable = [];
-
 }
