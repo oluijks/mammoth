@@ -1,3 +1,12 @@
+<?php
+/**
+ * Search default page header view.
+ *
+ * Copyright 2016 Mammoth. All rights reserved.
+ * See LICENCE for license details.
+ */
+?>
+
 <div class="container">
     <div class="row">
         <div class="col-md-12">

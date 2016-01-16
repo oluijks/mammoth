@@ -26,6 +26,7 @@ return [
         'Herd',
         'Search',
         'Sitemap',
+        'Webshop',
     ],
 
     'ga_code' => 'UA-72526016-1',
