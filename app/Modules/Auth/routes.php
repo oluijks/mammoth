@@ -10,20 +10,20 @@
 Route::group(['module' => 'Auth', 'namespace' => 'Mammoth\Modules\Auth\Controllers'], function () {
 
     // Authentication routes
-    get('/sign-in', ['as' => 'sign-in', 'uses'   => 'AuthController@getLogin']);
-    post('auth/login', 'AuthController@postLogin');
-    get('auth/logout', ['as' => 'sign-out', 'uses' => 'AuthController@getLogout']);
+    Route::get('/sign-in', ['as' => 'sign-in', 'uses'   => 'AuthController@getLogin']);
+    Route::post('auth/login', 'AuthController@postLogin');
+    Route::get('auth/logout', ['as' => 'sign-out', 'uses' => 'AuthController@getLogout']);
 
     // Registration routes
-    get('/sign-up', ['as' => 'sign-up', 'uses' => 'AuthController@getRegister']);
-    post('auth/register', 'AuthController@postRegister');
+    Route::get('/sign-up', ['as' => 'sign-up', 'uses' => 'AuthController@getRegister']);
+    Route::post('auth/register', 'AuthController@postRegister');
 
     // Password reset link request routes
-    get('password/email', ['as' => 'email-password', 'uses' => 'PasswordController@getEmail']);
-    post('password/email', 'PasswordController@postEmail');
+    Route::get('password/email', ['as' => 'email-password', 'uses' => 'PasswordController@getEmail']);
+    Route::post('password/email', 'PasswordController@postEmail');
 
     // Password reset routes
-    get('password/reset/{token}', ['as' => 'reset-password', 'uses' => 'PasswordController@getReset']);
-    post('password/reset', 'PasswordController@postReset');
+    Route::get('password/reset/{token}', ['as' => 'reset-password', 'uses' => 'PasswordController@getReset']);
+    Route::post('password/reset', 'PasswordController@postReset');
 
 });

@@ -9,6 +9,6 @@
 
 Route::group(['module' => 'Herd', 'namespace' => 'Mammoth\Modules\Herd\Controllers'], function () {
 
-    get('/herd', ['as' => 'herd', 'uses' => 'HerdController@index']);
+    Route::get('/herd', ['as' => 'herd', 'uses' => 'HerdController@index']);
 
 });

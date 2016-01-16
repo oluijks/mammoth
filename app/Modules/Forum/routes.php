@@ -9,6 +9,6 @@
 
 Route::group(['module' => 'Forum', 'namespace' => 'Mammoth\Modules\Forum\Controllers'], function () {
 
-    get('/forum', ['as' => 'forum', 'uses' => 'ForumController@index']);
+    Route::get('/forum', ['as' => 'forum', 'uses' => 'ForumController@index']);
 
 });

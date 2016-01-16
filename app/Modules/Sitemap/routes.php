@@ -9,6 +9,6 @@
 
 Route::group(['module' => 'Sitemap', 'namespace' => 'Mammoth\Modules\Sitemap\Controllers'], function () {
 
-    get('/sitemap', ['as' => 'sitemap', 'uses' => 'SitemapController@index']);
+    Route::get('/sitemap', ['as' => 'sitemap', 'uses' => 'SitemapController@index']);
 
 });
