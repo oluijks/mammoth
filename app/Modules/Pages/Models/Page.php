@@ -3,7 +3,7 @@
 /**
  * Page model.
  *
- * Copyright 2015 Mammoth. All rights reserved.
+ * Copyright 2016 Mammoth. All rights reserved.
  * See LICENCE for license details.
  */
 namespace Mammoth\Modules\Pages\Models;
