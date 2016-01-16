@@ -54,7 +54,10 @@ return [
     |
     */
 
-    'from' => ['address' => 'admin@mammoth-app.com', 'name' => 'Mammoth Administrator'],
+    'from' => [
+        'address' => 'info@mammoth-development.tk',
+        'name' => 'Mammoth Administrator'
+    ],
 
     /*
     |--------------------------------------------------------------------------

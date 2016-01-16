@@ -10,7 +10,7 @@
 return [
 
     'version' => '0.0.1',
-    'admin_email' => 'admin@mammoth-app.com',
+    'admin_email' => 'admin@mammoth-development.tk',
     'theme' => 'default',
     'show_ads' => true,
     'google_recaptcha' => true,
@@ -28,5 +28,5 @@ return [
         'Sitemap',
     ],
 
-    'ga_code' => 'UA-XXXXX-X',
+    'ga_code' => 'UA-72526016-1',
 ];
