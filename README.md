@@ -1,5 +1,7 @@
 # Mammoth
 
+[![Build Status](https://travis-ci.org/oluijks/mammoth.svg?branch=master)](https://travis-ci.org/oluijks/mammoth)
+
 ![alt text](public/img/mammoth-homepage.jpeg "Mammoth")
 
 ## Official Documentation
