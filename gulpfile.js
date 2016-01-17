@@ -27,12 +27,12 @@ elixir(function(mix) {
     '/../../../node_modules/jquery/dist/jquery.js',
     '/../../../node_modules/bootstrap-sass/assets/javascripts/bootstrap.js',
     '/../../../bower_components/remarkable-bootstrap-notify/bootstrap-notify.js',
-    'vendor/Chart.min.js'
+    'vendor/Chart.js'
   ], 'public/js/vendor/vendors.js');
 
   // Todo copy bootstrap fonts
 
-  mix.version(['css/app.css', 'css/admin/app.css', 'js/app.js', 'js/admin/app.js', 'js/vendor/vendors.js']);
+  mix.version(['css/app.css', 'css/admin/app.css', 'js/app.js', 'js/vendor/vendors.js']);
 
   /** Admin */
   // mix.version(['css/admin/app.css', 'js/app.js', 'js/vendor/vendors.js']);
