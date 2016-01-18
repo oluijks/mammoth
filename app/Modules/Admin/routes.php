@@ -10,6 +10,10 @@ Route::group(['module' => 'Admin', 'namespace' => 'Mammoth\Modules\Admin\Control
 
     // get('/admin', ['as' => 'admin', 'uses' => 'AdminController@index']);
     Route::get('/admin', ['as' => 'admin-dashboard', 'uses' => 'AdminDashboardController@index']);
+    //Route::get('/admin', ['middleware' => 'auth:admin',
+    //    'uses' => 'AdminDashboardController@index',
+    //    'as' => 'admin-dashboard'
+    //]);
 
     Route::get('/admin/users', ['as' => 'admin-users', 'uses' => 'AdminUsersController@index']);
 
