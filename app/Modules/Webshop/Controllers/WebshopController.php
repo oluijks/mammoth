@@ -8,7 +8,6 @@
  */
 namespace Mammoth\Modules\Webshop\Controllers;
 
-use Mammoth\Modules\Webshop\Models\Sitemap;
 use Mammoth\Http\Controllers\Controller;
 
 class WebshopController extends Controller
