@@ -22,6 +22,8 @@
 @include('partials.scripts')
 @yield('scripts')
 @include('layout.partials.session-status')
+@if (App::environment('production'))
 @include('partials.ga')
+@endif
 </body>
 </html>
