@@ -31,6 +31,8 @@ elixir(function(mix) {
   ], 'public/js/vendor/vendors.js');
 
   // Todo copy bootstrap fonts
+  mix.copy('node_modules/bootstrap-sass/assets/fonts/bootstrap', 'public/fonts/bootstrap');
+  mix.copy('node_modules/bootstrap-sass/assets/fonts/bootstrap', 'public/build/fonts/bootstrap');
 
   mix.version(['css/app.css', 'css/admin/app.css', 'js/app.js', 'js/vendor/vendors.js']);
 
