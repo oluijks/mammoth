@@ -1,0 +1,21 @@
+{
+  "name": "mammoth-development.tk",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Olaf Luijks <oluijks@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/oluijks/mammoth",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "remarkable-bootstrap-notify": "~3.1.3"
+  }
+}

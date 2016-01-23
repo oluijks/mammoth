@@ -6,6 +6,10 @@
  * See LICENCE for license details.
  */
 ?>
-
-<script src="{!! asset(elixir('js/vendor/vendors.js')) !!}"></script>
-<script src="{!! asset(elixir('js/app.js')) !!}" async></script>
+@if (App::environment('production'))
+<script src="{!! elixir('js/vendor/vendors.js') !!}"></script>
+<script src="{!! elixir('js/app.js') !!}" async></script>
+@else
+<script src="{!! url('js/vendor/vendors.js') !!}"></script>
+<script src="{!! url('js/app.js') !!}" async></script>    
+@endif
