@@ -5,12 +5,15 @@
  * See LICENCE for license details.
  */
 
+window.$ = window.jQuery = require('jquery');
+
 (function ($) {
 
   'use strict';
 
   require('./console');
-  require('./notify-defaults');
+  // require('./notify-defaults');
+  require('bootstrap-sass');
   // require('./webfonts');
 
   let MAMMOTH = MAMMOTH || {};
